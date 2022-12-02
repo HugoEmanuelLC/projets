@@ -1,0 +1,68 @@
+header{
+    // border: solid white 4px;
+    // position: sticky;
+    // top: 0;
+    background-color: var(--bckgd_color_light_1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.header_contenu{
+    position: relative;
+    line-height: 52px;
+    display: flex;
+    flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+.header_contenu h1{
+    font-size: 6rem; 
+    text-shadow: var(--shadowText);
+    color: var(--bckgd_color_light_2);
+    font-family: 'Rochester', cursive;
+}
+.header_contenu h3{
+    color: var(--bckgd_color_light_2);
+    font-size: 1.2rem;
+    text-shadow: var(--shadowText);
+}
+// .header_contenu .reseaux_social{
+//     position: absolute;
+//         top: 5px;
+//         right: 5px;
+// }
+// .header_contenu .reseaux_social i{
+//     background-color: var(--bckgd_color_light_2);
+//     // color: white;
+//     font-size: 1.5rem;
+//     padding: 4px 6px;
+// }
+.header_contenu .btn_reservation{
+    position: absolute;
+        bottom: 100px;
+    background-color: var(--bckgd_color_light_2);
+    border-radius: 20px;
+    padding: 5px 25px;
+    box-shadow: var(--shadowObjet);
+    font-size: 1.5rem;
+}
+.header_contenu .btn_reservation:hover{
+    background-color: var(--bckgd_color_light_1);
+}
+
+@media screen AND (max-width: 800px) {
+    .header_contenu{
+        line-height: 35px;
+    }
+    .header_contenu h1{
+        font-size: 4rem; 
+    }
+    .header_contenu h3{
+        font-size: 0.8rem;
+    }
+}

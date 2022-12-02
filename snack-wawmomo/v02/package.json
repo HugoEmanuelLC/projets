@@ -1,0 +1,19 @@
+{
+  "name": "wawmomo-v2",
+  "version": "2.0.0",
+  "description": "Site web de la sandwicherie wawmomo à Braine-L'Alleud ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./assets/styles/main.scss:./assets/styles/css/style.css --style compressed"
+  },
+  "author": "Hugo L Clavinas",
+  "license": "ISC",
+  "keywords": [
+    "sandwicherie",
+    "take",
+    "away",
+    "petite",
+    "restauration"
+  ]
+}
