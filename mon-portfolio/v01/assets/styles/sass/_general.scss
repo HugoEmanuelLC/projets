@@ -57,9 +57,9 @@ footer{
 
 .box_slide_image_simple{
     height: 80vh;
-    background-position: center 30%;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 150%;
+    background-size: cover;
     background-attachment: fixed;
 }
 
@@ -149,8 +149,7 @@ footer{
 
 @media (min-width: 801px) {
     .box_slide_image_simple{
-        background-position: center;
-        background-size: contain;
+        background-position: 0 30%;
     }
     .box_slide_images div{
         background-position: center;

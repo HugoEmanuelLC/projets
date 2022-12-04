@@ -8,26 +8,35 @@
 }
 .box_articles .article{
     background-color: var(--bg_color_light_1);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 200px;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    height: 250px;
     width: 200px;
     margin: 10px;
+    overflow: hidden;
 }
 .box_articles .article h1{
-    // background-color: red;
+    background-color: var(--backColorOrange);
     color: var(--txt_color_dark_1);
     text-align: center;
     font-size: 1.5rem;
 }
 .box_articles .article div{
-    background-color: gold;
+    background-color: rgba(255, 255, 255, 0.5);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+    display: flex;
+        justify-content: center;
+        align-items: center;
 }
+.box_articles .article div img{
+    max-height: 100%;
+}
+
+
 @media (min-width: 801px) {
     .box_articles .article{
         height: 240px;

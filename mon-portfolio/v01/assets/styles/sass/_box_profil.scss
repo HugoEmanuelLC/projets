@@ -1,7 +1,10 @@
 
 .box_profil{
     display: flex;
+        justify-content: center;
+        align-items: center;
     padding: 100px 0;
+    min-height: 80vh;
 }
 .box_profil .photo_profil,
 .box_profil .text_profil{
