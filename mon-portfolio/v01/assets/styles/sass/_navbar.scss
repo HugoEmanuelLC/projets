@@ -1,0 +1,30 @@
+.box_links{
+    margin-top: 50px;
+    // padding: 10px;
+}
+.box_links a{
+    font-size: 1.3em;
+    border: solid 1px white;
+    color: white;
+    padding: 4px 6px;
+    margin: 10px;
+}
+.box_links a:hover{
+    background-color: white;
+    color: black;
+}
+
+@media screen AND (min-width: 801px) {
+    .box_links a{
+        width: 50%;
+        justify-content: flex-end;
+        padding-right: 50px;
+    }
+}
+
+@media screen AND (max-width: 800px) {
+    .box_links a{
+        margin: 10px auto;
+        max-width: 400px;
+    }
+}

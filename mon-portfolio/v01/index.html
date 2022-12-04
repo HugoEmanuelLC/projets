@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="HTML5, CSS3, SASS, PHP, JQUERY, JS">
+    <meta name="description" content="Modele de base pour un developpement plus rapide">
+    <meta name="author" content="Hugo L Clavinas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--BIBLIOTHEQUE AOS ANIMATION SCROLL-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <link rel="icon" type="image/png" href="assets/images/icons/logo-hc.png" />
+    <link rel="stylesheet" href="assets/styles/css/style.css">
+    <title>Mon Portfolio | Hugo L. Clavinas</title>
+</head>
+
+
+
+
+<body>
+    <div id="page">
+        <!-- ACTIVE SLIDE BOX-->
+        <a class="btn_slide_box a_in_slide_box"><i class="fa-regular fa-indent"></i></a>
+        
+
+        <!--SLIDE BOX-->
+        <div class="slide_box hide">
+            <!-- DEACTIVE SLIDE BOX-->
+            <a class=" btn_slide_box a_out_slide_box"><i class="fa-regular fa-outdent"></i></a>
+            
+            <div class="box_links">
+                <a class="a_scroll_up a_out_slide_box">Up</a>
+                <a class="a_scroll_down a_out_slide_box">Down</a>
+            </div>
+        </div>
+
+        <!-- ADD PAGE-->
+        <div id="AddComponents"></div>
+
+
+    </div>
+    
+    <footer id="footer">
+        <ul>
+            <!-- MAIL -->
+            <li><a href="mailto:helc85.info@gmail.com" target="_blank"><i class="fa-duotone fa-envelopes-bulk"></i></a></li>
+            <li><a href="" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+        </ul>
+    
+        <ul class="copyright">
+            <li><i class="far fa-copyright"></i>&nbsp; 2022 Hugo Clavinas</li>
+        </ul>
+    </footer>
+
+
+    
+    <!-- BIBLIOTHEQUE JQUERY -->
+    <script type="text/javascript" src="./src/jquery/jquery.min.js"></script>
+
+    <!--BIBLIOTHEQUE AOS ANIMATION SCROLL-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script type="text/javascript" src="./routes/AddComponents.js"></script>
+    <script type="text/javascript" src="./assets/js/slide_box.js"></script>
+</body>
+</html>

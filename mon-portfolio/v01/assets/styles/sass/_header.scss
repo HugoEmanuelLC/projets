@@ -1,0 +1,59 @@
+header{
+    // border: solid red 2px;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-attachment: fixed;
+    position: relative;
+}
+header .dark_opo{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+header .dark_opo h1{
+    font-size: 5rem;
+    text-shadow: var(--txt_shadow);
+    font-family: 'Fjalla One', serif;
+}
+header .dark_opo h3{
+    font-size: 2.5rem;
+    text-shadow: var(--txt_shadow);
+    line-height: 1px;
+    font-family: 'Fjalla One', serif;
+}
+header .link_social{
+    position: absolute;
+        bottom: 0;
+        right: 0;
+    display: flex;
+}
+header .link_social a{
+    background-color: var(--txt_color_light_1);
+    padding: 5px;
+    margin: 5px;
+}
+header .link_social a:hover{
+    background-color: var(--txt_color);
+}
+header .link_social a i{
+    color: var(--txt_color_dark_1);
+}
+
+
+// @media (max-width: 800px) {
+// }
+@media (min-width: 801px) {
+    header{
+        background-position: center;
+        background-size: contain;
+    }
+    header .dark_opo h1{
+        font-size: 8rem;
+    }
+    header .dark_opo h3{
+        font-size: 4rem;
+    }
+}

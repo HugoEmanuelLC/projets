@@ -1,0 +1,12 @@
+{
+  "name": "model-mark01",
+  "version": "1.0.0",
+  "description": "Mon Portfolio | Hugo L. Clavinas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./assets/styles/main.scss:./assets/styles/css/style.css --style compressed"
+  },
+  "author": "Hugo L. Clavinas",
+  "license": "ISC"
+}

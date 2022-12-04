@@ -1,0 +1,35 @@
+footer{
+    color: white;
+    
+    ul{
+        display: flex;
+        justify-content: center;
+        // border: solid red 3px;
+    }
+    li{
+        // background-color: yellow;
+        font-size: 20px;
+        margin: 5px;
+    }
+    a{
+        // background-color: white;
+        border-radius: 10px;
+        border: solid 2px transparent;
+        padding: 10px;
+    }
+    i{
+        color: var(--txt_color);
+    }
+    a:hover{
+        background-color: rgb(255, 255, 255, 0.2);
+    }
+    .copyright li,
+    .copyright i{
+        font-size: 11px;
+        color: white;
+    }
+}
+
+footer ul:first-child{
+    margin-bottom: 30px;
+}
