@@ -21,17 +21,16 @@ header{
         align-items: center;
 }
 .header_contenu h1{
-    font-size: 6rem; 
-    text-shadow: var(--txt_shadow);
     color: var(--backColorOrange);
+    font-size: 10rem;
     font-family: 'Gentium Plus', serif;
-    // line-height: 1;
+    line-height: 0.5;
 }
 .header_contenu h3{
     color: var(--backColorOrange);
-    font-size: 1.2rem;
-    letter-spacing: 1.5px;
-    text-shadow: var(--txt_shadow);
+    font-size: 1.5rem;
+    letter-spacing: 6px;
+    // letter-spacing: 2px;
     font-family: 'Gentium Plus', serif;
 }
 // .header_contenu .reseaux_social{
@@ -50,10 +49,11 @@ header{
     position: absolute;
         bottom: 150px;
     background-color: var(--backColorOrange);
-    border-radius: 20px;
-    padding: 5px 25px;
     box-shadow: var(--box_shadow);
-    font-size: 1.5rem;
+    color: var(--txt_color_dark_1);
+    border-radius: 20px;
+    padding: 12px 20px;
+    font-size: 1.8rem;
 }
 .header_contenu .btn_reservation:hover{
     background-color: var(--backColorGreen);
@@ -79,16 +79,39 @@ header{
 }
 
 @media screen AND (max-width: 800px) {
-    .header_contenu{
-        line-height: 35px;
-    }
-    .header_contenu h1{
-        font-size: 4.5rem; 
-    }
-    .header_contenu h3{
-        font-size: 0.8rem;
-    }
     .header_contenu .btn_reservation{
-        display: block;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 1312px){
+    .header_contenu h1{
+        font-size: 7rem;
+    }
+    
+    .header_contenu h3{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .header_contenu h1{
+        font-size: 4.5rem;
+    }
+    
+    .header_contenu h3{
+        font-size: 0.7rem;
+        letter-spacing: 2.5px;
+    }
+}
+
+@media screen and (max-width: 688px){
+    // .header_contenu h1{
+    //     // font-size: 4.2rem;
+    // }
+    
+    .header_contenu h3{
+        font-size: 0.75rem;
+        letter-spacing: 2.2px;
     }
 }

@@ -51,7 +51,7 @@ if ($(".box_list_menus")) {
                     if(nameMenu){
                         titre.html(nameMenu.toUpperCase());
                     }else{
-                        titre.html("menu".toUpperCase());
+                        titre.html("<h1>menu</h1>".toUpperCase());
                     }
 
                     if( i %2==0 ){
