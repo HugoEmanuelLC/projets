@@ -16,11 +16,11 @@
 }
 
 .horaires h2 {
-    background-color: var(--bckgd_color_light_2);
+    background-color: var(--bg_color_dark_1);
     color: white;
     position: absolute;
         top: -22px;
-        left: 24%;
+        left: 25%;
         right: 25%;
     padding: 2px 0;
     font-size: 1.5rem;
@@ -35,12 +35,16 @@
     color: white;
 }
 .sous_div_heures td{
+    // background-color: pink;
     color: white;
-    padding: 8px 0;
+    padding: 8px 5px;
     font-size: 1.2rem;
 }
 .sous_div_heures td:last-child{
     text-align: center;
+}
+.sous_div_heures tr:last-child{
+    font-size: 1rem;
 }
 
 .horaires .lienContact{
@@ -85,16 +89,16 @@
         right: 25px;
     width: 50px;
     border-radius: 20px;
-    border: 2px white solid;
+    border: 2px var(--backColorOrange) solid;
 }
 .flecheUp i{
-    color: white;
+    color: var(--backColorOrange);
 }
 .flecheUp:hover{
-    border-color: var(--bckgd_color_light_1);
+    border-color: var(--backColorGreen);
 }
 .flecheUp:hover i{
-    color: var(--bckgd_color_light_1);
+    color: var(--backColorGreen);
 }
 
 @media screen and (max-width: 688px){

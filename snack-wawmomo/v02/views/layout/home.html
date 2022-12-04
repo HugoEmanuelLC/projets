@@ -8,7 +8,9 @@
         <h1>WAWMOMO</h1>
         <h3>SANDWICHERIE - PETITE RESTAURATION - TAKE AWAY</h3>
 
-        <a class="btn_reservation" href="tel:02.203.43.00">Reservation</a>
+        <a class="btn_reservation" href="tel:02.203.43.00"><i class="fa-solid fa-phone"></i></a>
+
+        <i class="fleche fas fa-long-arrow-alt-down"></i>
     </div>
 </header>
 
@@ -46,7 +48,14 @@
 
 
     <div class="box_list_produits ">
-        <table>
+        <div class="produits" style="background-image: url('<?= $AficherImgBackgroundPageProduit = (isset($imgBackgroundPageProduit)) ? $imgBackgroundPageProduit : false ?>');">
+
+            <h1></h1>
+
+            <table>
+            </table>
+        </div>
+        <!--<table>
             <tbody>
                 <tr>
                     <td style="border-bottom: none;">
@@ -54,7 +63,7 @@
                     </td>
                 </tr>
             </tbody>
-        </table>
+        </table>-->
     </div>
 
     
@@ -79,7 +88,7 @@
 
 
     <div id="gallerie" class="gallerie">
-        <h1 class="titre_Portfolio">Gellerie :</h1>
+        <h1 class="titre_Portfolio">Local :</h1>
         <div style="background-image: url('./assets/images/background/facade.jpg');"></div>
         <div style="background-image: url('./assets/images/background/tablesinterieur.jpg');"></div>
         <div style="background-image: url('./assets/images/background/tablesexterieurs.jpg');"></div>

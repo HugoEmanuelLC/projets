@@ -48,7 +48,7 @@
 .box_list_produits{
     // margin: 10px;
     padding: 10px;
-    // border: solid red 2px;
+    border: solid red 2px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -60,22 +60,27 @@
         align-items: center;
 }
 .box_list_produits h1{
-    // background-color: green;
-    padding: 50px 0;
-    font-size: 1.8rem;
-    text-decoration: underline 2px;
+    background-color: green;
+    // display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    padding: 30px 0;
+    font-size: 3rem;
+    text-decoration: underline 2px var(--bg_color_light_1);
+    text-shadow: var(--txt_shadow);
+    // border: solid green 2px;
     // width: 100%;
     // align-self: flex-start;
 }
-.box_list_produits table{
-    // border: solid 4px red;
-    width: 50%;
-    max-width: 800px;
-}
-.box_list_produits table td{
-    padding: 10px 20px;
-    border-bottom: solid 1.5px black;
-}
+// .box_list_produits table{
+//     // border: solid 4px red;
+//     width: 50%;
+//     max-width: 800px;
+// }
+// .box_list_produits table td{
+//     padding: 10px 20px;
+//     border-bottom: solid 1.5px var(--bg_color_light_1);
+// }
 // .box_list_produits table .color1{
 //     background-color: var(--bckgd_color_light_12);
 // }
@@ -84,6 +89,10 @@
 // }
 
 @media screen And (max-width: 800px) {
+    .box_list_produits h1{
+        font-size: 2rem;
+        padding: 40px 0;
+    }
     .box_list_produits table{
         width: 100%;
     }

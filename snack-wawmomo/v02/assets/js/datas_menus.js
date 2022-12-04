@@ -28,12 +28,14 @@ if ($(".box_list_menus")) {
 
 
     /*AFICHAGE des produits*/
-    let list_produits = $(".box_list_produits table tbody"); 
+    let list_produits = $(".box_list_produits .produits table"); 
+    let titre = $(".box_list_produits .produits h1")
     function idvalue(id){
-        let produit = "";
-        let produitColor = "";
+        let produitName = "";
+        let produitPrix ;
         let nameMenu = "";
-        // let i = 0;
+        let item = "";
+        let i = 0;
         $.ajax({
             async: true,
             url: "http://localhost/tests/Api/api-wawmomo/produits.php?i="+id,
@@ -42,18 +44,38 @@ if ($(".box_list_menus")) {
                 
                 data.forEach(dataProduits => {
 
-                    nameMenu = '<h1>'+dataProduits.NAME+' :</h1>';
-                    produit += '<tr> <td>'+dataProduits.nom+'</td>';
-                    produit += '<td>'+dataProduits.PRIX+' €</td> </tr>';
+                    i = i +1;
+
+                    nameMenu = dataProduits.NAME;
+
+                    if(nameMenu){
+                        titre.html(nameMenu.toUpperCase());
+                    }else{
+                        titre.html("menu".toUpperCase());
+                    }
+
+                    if( i %2==0 ){
+                        produitName = '<tr class="pair"> <td>'+dataProduits.nom+'</td>';
+                        produitPrix = '<td>'+dataProduits.PRIX+' €</td> </tr>';
+
+                        item += produitName+produitPrix;
+                    }else{
+                        produitName = '<tr> <td>'+dataProduits.nom+'</td>';
+                        produitPrix = '<td>'+dataProduits.PRIX+' €</td> </tr>';
+
+                        item += produitName+produitPrix;
+                    }
+
+                    list_produits.html(item).slice(1);
                     
-                    list_produits.html(nameMenu+produit+produitColor);
 
                     // i = i+1;
                     // if (i %2==0) {
                     //     produit += '<tr> <td>'+dataProduits.nom+'</td>';
                     //     produit += '<td>'+dataProduits.PRIX+' €</td> </tr>';
                     // }
-                    
+                    // .slice(1)
+                    // .toUpperCase()
                 })
             }
         });
