@@ -4,10 +4,22 @@
     padding: 200px 30px;
 }
 .about h1{
+    background-color: gray;
     color: var(--txt_color_light_1);
+    // border-bottom: solid 1px black;
     font-size: 1.5rem;
     // border: solid green 2px;
-    padding: 0 0 20px;
+    padding: 5px 0 5px 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.about hr{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.about h3{
+    // border: solid green 2px;
+    padding: 40px 0 5px 0;
     max-width: 800px;
     margin: 0 auto;
 }

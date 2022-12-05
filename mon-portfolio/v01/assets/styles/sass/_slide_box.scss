@@ -13,12 +13,12 @@
     position: fixed;
         top: 0;
 }
-.btn_slide_box:hover i{
-    color: var(--backColorGreen);
-}
 .btn_slide_box i{
     font-size: 1.7rem;
-    color: var(--backColorOrange);
+    color: blue;
+}
+.btn_slide_box:hover i{
+    color: var(--backColorGreen);
 }
 
 

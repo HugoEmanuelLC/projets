@@ -40,16 +40,10 @@ footer{
     background-color: var(--bg_color_dark_1);
 }
 
-// #page{
-//     position: relative;
+// #AddComponents{
+//     display: flex;
+//         flex-direction: column;
 // }
-// footer{
-//     border: solid 4px blue;
-// }
-#AddComponents{
-    display: flex;
-        flex-direction: column;
-}
 .contenu{
     min-height: 100vh;
     // border: solid pink 3px;
