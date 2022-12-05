@@ -1,17 +1,19 @@
 
-.description{
+.about{
     background-color: var(--backColorOrange);
     padding: 200px 30px;
-    max-width: 800px;
-    margin: 0 auto;
 }
-.description h1{
+.about h1{
     color: var(--txt_color_light_1);
     font-size: 1.5rem;
     // border: solid green 2px;
     padding: 0 0 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
-.description p{
+.about p{
     color: var(--txt_color_light_1);
+    max-width: 800px;
+    margin: 0 auto;
     // border: solid green 2px;
 }
