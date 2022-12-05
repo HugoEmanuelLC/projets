@@ -6,12 +6,16 @@ $(function(){
     let contact = $('.contact');
     let objectifs = $('.objectifs');
     let competences = $('.competences');
+    let projets = $('.projets');
+    let demos = $('.demos');
     let footer = $('footer');
 
     let a_scroll_up = $(".a_scroll_up");
     let a_contact = $(".a_contact");
     let a_objectifs = $(".a_objectifs");
     let a_competences = $(".a_competences");
+    let a_projets = $(".a_projets");
+    let a_demos = $(".a_demos");
     let a_scroll_down = $(".a_scroll_down");
 
     a_scroll_up.click(function(){
@@ -33,6 +37,16 @@ $(function(){
     a_competences.click(function(){
         html_body.animate({
             scrollTop: competences.offset().top
+        }, 2000);
+    })
+    a_projets.click(function(){
+        html_body.animate({
+            scrollTop: projets.offset().top
+        }, 2000);
+    })
+    a_demos.click(function(){
+        html_body.animate({
+            scrollTop: demos.offset().top
         }, 2000);
     })
     a_scroll_down.click(function(){

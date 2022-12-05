@@ -17,19 +17,27 @@
 .box_profil .photo_profil img{
     width: 200px;
 }
+
+
+
 .box_profil .text_profil ul{
     border-left: solid 10px blue;
     padding-left: 15px;
 }
-.box_profil .text_profil ul li h1{
-    font-size: 2rem;
+.box_profil .text_profil ul li{
+    font-size: 1.3rem;
 }
+.box_profil .text_profil ul li h1{
+    font-size: 3rem;
+}
+
+
 
 @media screen AND (max-width: 800px) {
     .box_profil{
         flex-direction: column;
     }
     .box_profil .text_profil{
-        padding-top: 50px;
+        padding-top: 100px;
     }
 }
