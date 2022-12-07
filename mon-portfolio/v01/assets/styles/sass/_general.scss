@@ -63,23 +63,23 @@ footer{
     color: white;
     font-size: 2rem;
 }
-// .titre_Portfolio a{
-//     cursor: pointer;
-//     position: absolute;
-//         top: 0;
-//         right: 5px;
-//     height: 100%;
-//     padding: 0 10px;
-//     font-size: 3em;
-// }
-// .titre_Portfolio a i{
-//     font-size: 0.25em;
-//     color: var(--backColorOrange);
-// }
-// .titre_Portfolio a:hover > i{
-//     font-size: 0.2em;
-//     color: white;
-// }
+.titre_Portfolio a{
+    cursor: pointer;
+    position: absolute;
+        top: 0;
+        right: 5px;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 3em;
+}
+.titre_Portfolio a i{
+    font-size: 0.25em;
+    color: var(--txt_color_light_2);
+}
+.titre_Portfolio a:hover > i{
+    font-size: 0.2em;
+    color: var(--txt_color_choco);
+}
 
 
 

@@ -52,6 +52,17 @@
     width: 50%;
     height: 400px;
     min-width: 400px;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.box_slide_images .box_slide_images_item .description ul{
+    border: solid 2px black;
+    width: 90%;
+    height: 90%;
+}
+.box_slide_images .box_slide_images_item .description ul li{
+    color: black;
 }
 
 
