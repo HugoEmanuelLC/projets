@@ -4,13 +4,14 @@
 }
 .box_links a{
     font-size: 1.3em;
-    border: solid 1px white;
-    color: white;
+    border: solid 1px var(--txt_color_light_1);
+    color: var(--txt_color_light_1);
     padding: 4px 6px;
     margin: 10px;
 }
 .box_links a:hover{
-    background-color: white;
+    background-color: var(--txt_color_choco);
+    border: solid 1px var(--txt_color_choco);
     color: black;
 }
 

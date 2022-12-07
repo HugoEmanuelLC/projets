@@ -2,16 +2,21 @@
 
 // BIBLIOTHEQUE JQUERY
 $(function(){
+
+    // SIBLES
     let html_body = $('html, body');
     let contact = $('.contact');
+    let formations = $('.formations');
     let objectifs = $('.objectifs');
     let competences = $('.competences');
     let projets = $('.projets');
     let demos = $('.demos');
     let footer = $('footer');
 
+    // BTS
     let a_scroll_up = $(".a_scroll_up");
     let a_contact = $(".a_contact");
+    let a_formations = $(".a_formations");
     let a_objectifs = $(".a_objectifs");
     let a_competences = $(".a_competences");
     let a_projets = $(".a_projets");
@@ -27,6 +32,11 @@ $(function(){
     a_contact.click(function(){
         html_body.animate({
             scrollTop: contact.offset().top
+        }, 2000);
+    })
+    a_formations.click(function(){
+        html_body.animate({
+            scrollTop: formations.offset().top
         }, 2000);
     })
     a_objectifs.click(function(){
