@@ -8,6 +8,7 @@ var routes = [
     {path: "#/notfound", name: "notfound", component: "errorPage.html"},
     {path: "#/", name: "home", component: "home.html"},
     {path: "#/home", name: "home", component: "home.html"},
+    {path: "#/todolist", name: "todolist", component: "toDoListPage.html"},
     {path: "#/pagetest", name: "page", component: "pageTest.html"},
 
     // mode target
