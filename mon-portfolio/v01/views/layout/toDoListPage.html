@@ -1,0 +1,108 @@
+
+<div class="box_contenu_todolist_page">
+    <h1>To do list projet :</h1>
+
+
+    <div class="box_contenu_list">
+        
+        <div class="list">
+            <h1>LIST</h1>
+            <div class="items">
+                <p>Vide</p>
+                <select name="list" id="list">
+                </select>
+            </div>
+        </div>
+
+        <div class="done">
+            <h1>DONE</h1>
+            <div class="items">
+                <p>Vide</p>
+            </div>
+        </div>
+
+        <div class="later">
+            <h1>LATER</h1>
+            <div class="items">
+                <p>Vide</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    let tablist = [{id:0,item:"pokemon"},{id:1,item:"sport"},{id:2,item:"cinema"},{id:3,item:"football"}];
+    let tabdone = [];
+    let tablater = [];
+
+    let list = $(".list .items");
+    let listSpan = $("#list");
+    let done = $(".done .items");
+    let later = $(".later .items");
+
+    let itemlist = "";
+    let itemdone = "";
+    let itemlater = "";
+
+    let TabList = tablist.map(function(data){
+        return data.item;
+    })
+    let TabDone = tabdone.map(function(data){
+        return data.item;
+    })
+    let TabLAter = tablater.map(function(data){
+        return data.item;
+    })
+
+    console.log("LIST ->" + TabList);
+    console.log("DONE ->" + TabDone);
+    console.log("LATER ->" + TabLAter);
+    
+
+    let affTabList = tablist.map(function(data){
+        //itemlist += '<p>'+data.item+data.id+'<span onclick="spanX()" class="X" value="data.id">X</span> <span onclick="spanV()" class="V" value="data.id">V</span></p>';
+        itemlist += '<option value="'+data.id+'" >'+data.item+'</option>';
+        listSpan.html(itemlist);
+    })
+
+    
+
+
+    TabList.forEach(elem => {
+        if(elem == "sport"){
+           return tabdone = [{id:1,item:elem}];
+        }else{false}
+    })
+
+
+    let affTabDone = tabdone.map(function(data){
+        console.log(data);
+        itemdone += '<p>'+data.item+'</p>';
+        done.html(itemdone);
+    })
+
+
+
+    listSpan.change(function(id){
+        console.log("test change" + `${id.target.value}`)
+    })
+
+
+
+    function spanX(){
+        console.log("test spanX")
+    }
+    function spanV(){
+        console.log("test spanV")
+    }
+    
+
+
+
+
+    
+
+
+</script>
