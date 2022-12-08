@@ -2,15 +2,23 @@
 <div class="box_contenu_todolist_page">
     <h1>To do list projet :</h1>
 
+    <div class="boxAddField">
+        <h1>Ajouter elements :</h1>
+        <div class="items">
+            <input type="text" id="inputAdd" placeholder="ajouter un element à la list">
+            <button id="addToDo">Add</button>
+        </div>
+    </div>
+
 
     <div class="box_contenu_list">
         
         <div class="list">
             <h1>LIST</h1>
-            <div class="items">
-                <p>Vide</p>
-                <select name="list" id="list">
-                </select>
+            <div class="items" id="AddFiel">
+                <ul>
+                    <li>Vide</li>
+                </ul>
             </div>
         </div>
 
@@ -33,73 +41,49 @@
 
 
 <script>
-    let tablist = [{id:0,item:"pokemon"},{id:1,item:"sport"},{id:2,item:"cinema"},{id:3,item:"football"}];
-    let tabdone = [];
-    let tablater = [];
 
-    let list = $(".list .items");
-    let listSpan = $("#list");
+    let addToDoButton = $("#addToDo");
+    let inputAdd = $("#inputAdd");
+    let list = $("#AddFiel ul");
+    let li = $("#AddFiel li");
+
     let done = $(".done .items");
     let later = $(".later .items");
-
-    let itemlist = "";
-    let itemdone = "";
-    let itemlater = "";
-
-    let TabList = tablist.map(function(data){
-        return data.item;
-    })
-    let TabDone = tabdone.map(function(data){
-        return data.item;
-    })
-    let TabLAter = tablater.map(function(data){
-        return data.item;
-    })
-
-    console.log("LIST ->" + TabList);
-    console.log("DONE ->" + TabDone);
-    console.log("LATER ->" + TabLAter);
     
+    //'<p>'+data.item+'<span onclick="spanX('+data.id+')" class="X" value="data.id">X</span> <span onclick="spanV('+data.id+')" class="V" value="data.id">V</span></p>';
 
-    let affTabList = tablist.map(function(data){
-        //itemlist += '<p>'+data.item+data.id+'<span onclick="spanX()" class="X" value="data.id">X</span> <span onclick="spanV()" class="V" value="data.id">V</span></p>';
-        itemlist += '<option value="'+data.id+'" >'+data.item+'</option>';
-        listSpan.html(itemlist);
-    })
-
-    
-
-
-    TabList.forEach(elem => {
-        if(elem == "sport"){
-           return tabdone = [{id:1,item:elem}];
+    addToDoButton.click(function(){
+        console.log("click " + inputAdd.val())
+        if( inputAdd.val() != ""){
+            li.html("");
+            list.append('<li value="'+inputAdd.val()+'">'+inputAdd.val()+'</li>');
+            inputAdd.val("");
         }else{false}
     })
 
-
-    let affTabDone = tabdone.map(function(data){
-        console.log(data);
-        itemdone += '<p>'+data.item+'</p>';
-        done.html(itemdone);
+    
+    li.click(function(){
+        console.log(li.val());
     })
+    //if( li.val() == "hugo" ){
+    //    console.log("ça marche " +li.val())
+    //}
+ 
 
+    
 
-
-    listSpan.change(function(id){
-        console.log("test change" + `${id.target.value}`)
-    })
-
-
-
-    function spanX(){
-        console.log("test spanX")
+    function spanV(val){
+        console.log("test spanV " +val)
     }
-    function spanV(){
-        console.log("test spanV")
+
+    function spanX(val){
+        console.log("test spanX " +val)
     }
     
 
+    //si l'input n'est pas vide
 
+    //rajouter au contener 
 
 
     
