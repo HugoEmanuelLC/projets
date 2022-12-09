@@ -1,6 +1,11 @@
 
 .about{
     background-color: var(--backColorOrange);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+
     padding: 200px 30px;
 }
 .about h1{
