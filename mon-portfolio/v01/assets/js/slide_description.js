@@ -8,10 +8,10 @@ $(function(){
 
 
     a_in_description.click(function(){
-        description_snack.addClass("show2").removeClass("hide2");
+        description_snack.addClass("show2").removeClass("hide");
     });
     a_out_description.click(function(){
-        description_snack.addClass("hide2").removeClass("show2");
+        description_snack.addClass("hide").removeClass("show2");
     });
 
 })

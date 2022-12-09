@@ -12,18 +12,25 @@
 //     min-height: 80vh;
 // }
 .box_slide_images .dark_opo{
+    // border: solid red 5px;
     display: flex;
         justify-content: center;
         align-items: center;
+    
+    .titre{
+        background-color: var(--bg_color_light_2);
+        color: var(--txt_color_dark_1);
+        font-size: 1.5rem;
+        padding: 5px 10px;
+        opacity: 0.8;
+        border-radius: 25px;
+    }
+    .titre:hover{
+        background-color: var(--backColorGreen);
+        color: white;
+    }
 }
-.box_slide_images div a{
-    background-color: var(--bg_color_light_2);
-    color: var(--txt_color_dark_1);
-    font-size: 2rem;
-    padding: 5px 10px;
-    opacity: 0.8;
-    border-radius: 25px;
-}
+
 .box_slide_images div a:hover{
     background-color: var(--backColorOrange);
 }
@@ -37,8 +44,23 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+
+    .a_in_description,
+    .a_out_description{
+        background-color: rgb(255, 0, 0, 0.7);
+        color: black;
+        position: absolute;
+            top: 5px;
+            right: 5px;
+        font-size: 1rem;
+    }
+    .a_in_description:hover,
+    .a_out_description:hover{
+        background-color: rgb(255, 0, 0, 1);
+    }
 }
 .box_slide_images .box_slide_images_item .image{
+    position: relative;
     // border: solid 2px green;
     background-position: left;
     background-repeat: no-repeat;
@@ -48,15 +70,10 @@
     min-width: 400px;
     height: 400px;
 
-    .a_in_description{
-        position: absolute;
-            top: 5px;
-            right: 5px;
-    }
+    
 }
 .box_slide_images .box_slide_images_item .description{
     background-color: var(--bg_color_light_2);
-    width: 70%;
     height: 400px;
     min-width: 400px;
     position: absolute;
@@ -67,17 +84,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    a{
-        background-color: rgb(255, 0, 0, 0.7);
-        color: black;
-        position: absolute;
-            top: 10px;
-            right: 10px;
-        font-size: 1rem;
-    }
-    a:hover{
-        background-color: rgb(255, 0, 0, 1);
-    }
 }
 .box_slide_images .box_slide_images_item .description ul{
     border: solid 2px black;
@@ -86,7 +92,7 @@
     padding: 5px;
 }
 .box_slide_images .box_slide_images_item .description ul li{
-    border: solid 5px red;
+    // border: solid 5px red;
     color: black;
     font-size: 1rem;
 }
