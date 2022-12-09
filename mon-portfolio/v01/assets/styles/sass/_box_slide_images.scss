@@ -40,6 +40,7 @@
 .box_slide_images .box_slide_images_item{
     position: relative;
     // border: solid 2px white;
+    padding: 50px 0;
     display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -47,16 +48,27 @@
 
     .a_in_description,
     .a_out_description{
-        background-color: rgb(255, 0, 0, 0.7);
-        color: black;
+        border-radius: 10px;
+        padding: 4px 8px;
         position: absolute;
             top: 5px;
             right: 5px;
         font-size: 1rem;
     }
-    .a_in_description:hover,
+    .a_in_description{
+        background-color: white;
+        color: black;
+    }
+    .a_out_description{
+        background-color: red;
+        color: white;
+    }
+    .a_in_description:hover{
+        background-color: green;
+        color: white;
+    }
     .a_out_description:hover{
-        background-color: rgb(255, 0, 0, 1);
+        background-color: green;
     }
 }
 .box_slide_images .box_slide_images_item .image{

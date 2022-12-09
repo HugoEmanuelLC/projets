@@ -7,11 +7,12 @@
     padding: 200px 0 ;
 }
 .box_articles .article{
+    border: solid 4px white;
     background-color: var(--bg_color_light_1);
     // background-position: center;
     // background-repeat: no-repeat;
     // background-size: cover;
-    height: 250px;
+    min-height: 300px;
     width: 200px;
     margin: 10px;
     overflow: hidden;

@@ -16,14 +16,16 @@
     // border: solid green 2px;
     padding: 5px 0 5px 10px;
     max-width: 800px;
-    margin: 0 auto 50px;
+    margin: 0 auto 20px;
 }
 .formations h1{
     margin: 0 auto 0px;
 }
 // .about .about_contenu{
-//     border: solid 2px red;
 // }
+.about .about_contenu p:last-child{
+    border-bottom: solid 2px gray;
+}
 
 // .about hr{
 //     max-width: 800px;
@@ -31,7 +33,7 @@
 // }
 .about h3{
     // border: solid green 2px;
-    padding: 40px 0 5px 0;
+    padding: 30px 0 5px 0;
     max-width: 800px;
     margin: 0 auto;
 }
