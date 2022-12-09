@@ -1,6 +1,6 @@
 // LIST DE MENUS
 .box_list_menus{
-    border-top: solid 10px var(--bckgd_color_light_1);
+    // border-top: solid 10px var(--bckgd_color_light_1);
     // border: solid red 3px;
     // background-color: var(--);
     // background-repeat: no-repeat;
@@ -67,12 +67,14 @@
         align-items: center;
 }
 .box_list_produits .produits table{
-    background-color: rgb(255, 255, 255,0.9);
     padding: 20px;
     border-radius: 20px;
     width: 90%;
     max-width: 920px;
-    margin-bottom: 100px;
+    // margin-bottom: 100px;
+}
+.none{
+    background-color: transparent;
 }
 .box_list_produits .produits tr{
     background-color: rgb(255, 255, 255,0.6);

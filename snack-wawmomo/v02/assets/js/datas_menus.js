@@ -3,6 +3,7 @@
     
 
 if ($(".box_list_menus")) {
+
     /*AFICHAGE des Menus*/
     let list_menus = $(".box_list_menus"); 
     let menus = "";
@@ -15,11 +16,12 @@ if ($(".box_list_menus")) {
             data.forEach(dataMenus => {
                 menus += '<div class="item" style="background-image: url(./assets/images/menus/'+dataMenus.URL_IMG+');">';
                 menus +=    '<div onclick="idvalue('+dataMenus.ID+')" class="dark_opo">';
-                menus +=        '<h1>'+dataMenus.NAME+'</h1>';
+                menus +=        '<h1 style="text-transform: capitalize">'+dataMenus.NAME+'</h1>';
                 menus += '</div></div>';
     
                 list_menus.html(menus);
             })
+            
         },
         error: ()=>{
             console.log("n'as pas chargé");
@@ -31,6 +33,11 @@ if ($(".box_list_menus")) {
     let list_produits = $(".box_list_produits .produits table"); 
     let titre = $(".box_list_produits .produits h1")
     function idvalue(id){
+
+        if( $(".box_list_produits .produits table") ){
+            $(".box_list_produits .produits table").css("background-color", "rgb(255, 255, 255,0.9)")
+        }
+
         let produitName = "";
         let produitPrix ;
         let nameMenu = "";
@@ -41,6 +48,8 @@ if ($(".box_list_menus")) {
             url: "http://localhost/tests/Api/api-wawmomo/produits.php?i="+id,
             dataType: "json",
             success: function(data){
+
+                fond_none = true;
                 
                 data.forEach(dataProduits => {
 
@@ -60,13 +69,13 @@ if ($(".box_list_menus")) {
 
                         item += produitName+produitPrix;
                     }else{
-                        produitName = '<tr> <td>'+dataProduits.nom+'</td>';
+                        produitName = '<tr> <td style="text-transform: capitalize">'+dataProduits.nom+'</td>';
                         produitPrix = '<td>'+dataProduits.PRIX+' €</td> </tr>';
 
                         item += produitName+produitPrix;
                     }
 
-                    list_produits.html(item).slice(1);
+                    list_produits.html(item);
                     
 
                     // i = i+1;
@@ -81,8 +90,6 @@ if ($(".box_list_menus")) {
         });
     }
 }else{}
-
-
 
 
 

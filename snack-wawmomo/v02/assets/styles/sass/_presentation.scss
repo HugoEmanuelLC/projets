@@ -1,7 +1,7 @@
 
 .presentation{
     // border: solid 4px red;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 .presentation h1{
     font-size: 1.8rem;
@@ -30,7 +30,7 @@
 
 @media screen AND (max-width: 800px) {
     // .presentation{
-    //     flex-direction: column;
+    //     padding-top: 25px;
     // }
     .presentation_contenu div{
         margin: 0px;
