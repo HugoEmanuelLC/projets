@@ -1,0 +1,129 @@
+
+/* GLOBAL */
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    transition: 600ms;
+    font-family: 'Courier New', Courier, monospace;
+}
+li{
+    list-style: none;
+    padding: 4px;
+}
+
+
+body{
+    background-color: gray;
+    min-height: 100vh;
+}
+
+.blocParentDePage{
+    margin: 0 5px;
+}
+
+section{
+    position: relative;
+    text-align: center;
+}
+#fixe{
+    position: absolute;top: 0;
+    display: flex;justify-content: center;align-items: center;
+    opacity: 1;
+    color: black;
+    background-color: transparent;
+    font-size: 2rem;
+}
+
+
+
+/* NAV */
+header{
+    background-color: black;color: white;
+    min-height: 100px;
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+}
+header a{
+    background-color: white;color: black;
+    margin: 5px;padding: 5px 10px;
+    border-radius: 5px;
+}
+
+header .navig ul{
+    display: flex;justify-content: center;align-items: center;
+    flex-wrap: wrap;
+}
+header .navig ul li{
+    display: flex;justify-content: center;align-items: center;
+    position: relative;
+}
+header .navig ul li:hover{
+    background-color: yellow;
+}
+header .navig ul li ul{
+    display: flex;justify-content: center;align-items: center;
+    flex-wrap: wrap;
+    position: absolute;left: -1800px;top: 46px;
+    transition: ease-in-out 900ms;
+}
+header .navig ul li:hover ul{
+    background-color: yellow;
+    position: absolute;left: 0;
+}
+header .navig ul li ul li{
+    display: flex;justify-content: center;align-items: center;
+    flex-direction: column;
+}
+header .navig ul li ul li:hover{
+    background-color: red;
+}
+
+
+
+header .navig ul li ul li .sous_lien_3eme_niveau{
+    display: flex;justify-content: center;align-items: center;
+    flex-wrap: wrap;
+    position: absolute;left: -1800px;top: 46px;z-index: 1;
+    transition: ease-in-out 700ms;
+}header .navig ul li ul li:hover .sous_lien_3eme_niveau{
+    background-color: red;
+    position: absolute;left: -80px;
+}
+
+
+
+
+
+
+
+
+/* TARGET */
+div:target{
+    position: absolute;top: 40px;
+    opacity: 1;
+    color: black;
+    
+    overflow: hidden;
+}
+section div{
+    text-align: left;
+    position: absolute;top: -1000px;z-index: -1;
+    transition: ease 900ms;
+    border-radius: 5px;
+    min-height: 300px;width: 100%;
+    background-color: crimson;
+    background-color: white;
+    margin: 5px 0;padding: 10px 20px;
+    opacity: 0;color: transparent;
+}
+section div h1{
+    text-align: center;
+}
+section div h1,h2,h3,h4,p,code{
+    margin: 10px;
+}
+
+code{
+    border: 2px solid red;
+    display: flex;justify-content: center;align-items: center;
+}

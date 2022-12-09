@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ma biblioteque</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="images/RPkFVa.png"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="blocParentDePage">
+<!-- NAVBAR -->
+        <header>
+            <div class="navig">
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#php">Php</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Css</a>
+                        <ul>
+                            <li><a href="#displayFlex">display Flex</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">Jave Script</a>
+                        <ul>
+                            <li><a href="#functions">Functions / Methodes</a></li>
+                            <li><a href="#node">node</a></li>
+                            <li>
+                                <a href="#express">Express</a>
+                                <ul class="sous_lien_3eme_niveau">
+                                    <li><a href="#lesRoutes">Les Routes</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#body_parser">Body Parser</a></li>
+                            <li><a href="#template_ejs">Template ejs</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <section>
+            <div id="fixe">
+                <h1>Biblioteque au besoin :<br>Web Apps</h1>
+            </div>
+
+
+<!-- HTML -->
+            <div id="html">
+                <h3></h3>
+            </div>
+
+
+<!-- PHP -->
+            <div id="php">
+                <h1>PHP</h1>
+                <code>
+                    &lt;?php 
+                        
+                    ?&lt;
+                </code>
+            </div>
+
+
+<!-- CSS -->            
+            <div id="displayFlex">
+                <h1>Css : display Flex</h1>
+            </div>
+            
+
+<!-- JAVA SCRIPT JS -->   
+            <div id="functions">
+                <h3>Les functions / Methodes :</h3>
+                <p>Tableau d'objets</p>
+                <code style="background-color: red;color: white;">
+                    let tabPersonnages = [ <br>
+                    &nbsp; &nbsp;{"nom": "Zeus", "puissance": 300, "prix": 10000} <br>
+                    &nbsp; &nbsp;{"nom": "Hadès", "puissance": 200, "prix": 6000} <br>
+                    &nbsp; &nbsp;{"nom": "Poséidon", "puissance": 175, "prix": 5000} <br>
+                    &nbsp; &nbsp;{"nom": "Achille", "puissance": 165, "prix": 4500} <br>
+                    &nbsp; &nbsp;{"nom": "Cyclope", "puissance": 100, "prix": 3000} <br>
+                    ]
+                </code>
+
+                <!-- forEach -->
+                <p><mark>forEach</mark></p>
+                <p>Affichera dans la console, tour à tour le nom de tout les personnages.</p>
+                <code>
+                    tabPersonnages.forEach(element => { <br>
+                        &nbsp; &nbsp;console.log(tabPersonnages.nom); <br>
+                    })
+                </code>
+                
+                <!-- map -->
+                <p><mark>map</mark></p>
+                <p>Cette methode permet de prendre un tableau pour le convertir dans un autre tableau, 
+                    ainsi mettre de dans tout ce qu'ont a besoin.</p>
+                <code>
+                    let personnages = tabPersonnages.map(element => { <br>
+                        &nbsp; &nbsp;return element.nom; <br>
+                    }) <br>
+                    console.log(personnages);
+                </code>
+
+                <p>exemple d'un tableau qui contient le prix (uniquement les prix) des personnages en reduction de 30%</p>
+                <code>
+                    let reduction = tabPersonnages.map(element => { <br>
+                        &nbsp; &nbsp;return element.prix - 0.3 * element.prix; <br>
+                    }) <br>
+                    console.log(reduction);
+                </code>
+                
+                <!-- filter -->
+                <p><mark>filter</mark></p>
+                <p>Cette methode permet de filtrer (condition) un tableau. </p>
+                <p>Les informations seront
+                    convertir dans un nouveau tableau.</p>
+                <p>Affichera un tableau avec tout les objets où la puissance depasse 150</p>
+                <code>
+                    let puissants = tabPersonnages.filter(element => { <br>
+                        &nbsp; &nbsp;return element.puissance > 150; <br>
+                    }) <br>
+                    console.log(puissants);
+                </code>
+                
+                <!-- find -->
+                <p><mark>find</mark></p>
+                <p>Permet de trouver un element dans un tableau. </p>
+                <p>Ici il va me trouver l'objet "Achille" dans son intégrité</p>
+                <code>
+                    let achille = tabPersonnages.find(element => { <br>
+                        &nbsp; &nbsp;return element.nom === "Achille"; <br>
+                    }) <br>
+                    console.log(achille);
+                </code>
+                
+                <!-- some -->
+                <p><mark>some</mark></p>
+                <p>Un peu differente des autres methodes, elle reenvois "true" ou "false".</p>
+                <p>S'il y a dans le tableau des elements où le prix depasse de 6000, ils me reenvera "true", si non
+                    "false".
+                </p>
+                <code>
+                    let chers = tabPersonnages.some(element => { <br>
+                        &nbsp; &nbsp;return element.prix > 6000; <br>
+                    }) <br>
+                    console.log(chers);
+                </code>
+                
+                <!-- every -->
+                <p><mark>every</mark></p>
+                <p>Cette methode me reenvois aussi un boolean "true" ou "false".</p>
+                <p>Si TOUT les objets correspendent à la condition "true", si non "false".</p>
+                <code>
+                    let ensembleFort = tabPersonnages.every(element => { <br>
+                        &nbsp; &nbsp;return element.puissance > 100; <br>
+                    }) <br>
+                    console.log(ensembleFort);
+                </code>
+                
+                <!-- reduce -->
+                <p><mark>reduce</mark></p>
+                <p>Permet de faire une operation sur un tableau et de reenvoyes une combinaisent des operations.</p>
+                <p>Exemple la somme total des prix de tout les personnages (objets)</p>
+                <p>Il creera une boucle sur l'element demander (prix) et le accumulera au "accumulateur".</p>
+                <p>Le 3eme paramettre "}, 0)" ça sera la valeur de depart, donc le calcul ici comence à "0".</p>
+                <code>
+                    let sommePrix = tabPersonnages.reduce((accumulateur, element) => { <br>
+                        &nbsp; &nbsp;return accumulateur + element.prix; <br>
+                    }, 0) <br>
+                    console.log(sommePrix);
+                </code>
+                
+                <!-- includes -->
+                <p><mark>includes</mark></p>
+                <p>Simple tableau</p>
+                <code style="background-color: red;color: white;">
+                    let notes = [1, 4, 5, 20];
+                </code>
+                <p>Cette methode ne prend pas une function mais un simple argument.</p>
+                <p>Ici on regarde si une simple note est prensente dans le tableau.</p>
+                <p>La reponce sera booleane.</p>
+                <code>
+                    let estPresent = notes.includes(20) <br>
+                    console.log(estPresent);
+                </code>
+
+                <br> <br> <br>
+                <h1 style="background-color: blue;color: white;">Maintenant les methodes pour travailler dans les Arrays:</h1>
+                
+                <p>Simple tableau:</p>
+                <code style="background-color: red;color: white;">
+                    let mon_array = ["Pizza", "Hamburger", "Pâtes", "Frites", "Fricadelle"];
+                </code>
+
+                <!-- push -->
+                <p><mark>push</mark></p>
+                <p>Pour rajouter une nouvelle donnes à mon "Array".</p>
+                <p>ça sera rajouter à la fin.</p>
+                <code>
+                    mon_array.push("Raclette"); <br>
+                    console.log(mon_array);
+                </code>
+
+                <!-- unshift -->
+                <p><mark>unshift</mark></p>
+                <p>Pour rajouter une nouvelle donnes à mon "Array".</p>
+                <p>Mais cette fois si au debout de mon "Array".</p>
+                <code>
+                    mon_array.unshift("Raclette"); <br>
+                    console.log(mon_array);
+                </code>
+
+                <!-- pop -->
+                <p><mark>pop</mark></p>
+                <p>Methode sans argument qui suppimera la dernier donnes de mon "Array".</p>
+                <code>
+                    mon_array.pop(); <br>
+                    console.log(mon_array);
+                </code>
+
+                <!-- shift -->
+                <p><mark>shift</mark></p>
+                <p>Methode sans argument qui suppimera la premier donnes de mon "Array".</p>
+                <code>
+                    mon_array.shift(); <br>
+                    console.log(mon_array);
+                </code>
+
+                <!-- splice -->
+                <p><mark>splice</mark></p>
+                <p>Methode avec 2 arguments (de depart, de fin) qui suppimera les donnes de tel à tel endroit du tableau.</p>
+                <p>Dans ce cas si, supprimera les donnes de "Hamburger" à "Pâtes".</p>
+                <code>
+                    mon_array.splice(1, 2); <br>
+                    console.log(mon_array);
+                </code>
+
+                <!-- reverse -->
+                <p><mark>reverse</mark></p>
+                <p>Methode qui renverse le sens d'un tableau.</p>
+                <p>Dans ce cas les donnes du tableau serent envoyer à partir de la fin vers le debut.</p>
+                <code>
+                    mon_array.reverse(); <br>
+                    console.log(mon_array);
+                </code>
+                <p>OU</p>
+                <code>
+                    console.log(mon_array.reverse());
+                </code>
+
+                <!-- indexOf -->
+                <p><mark>indexOf</mark></p>
+                <p>Methode qui permet de faire une recherche dans le tableau.</p>
+                <p>Nous reenvera son index execte dans le tableau.</p>
+                <p>Dans ce cas ça reponse serait "3"</p>
+                <code>
+                    mon_array.indexOf("Frites"); <br>
+                    console.log(mon_array);
+                </code>
+            </div>
+
+
+<!-- BACK-END -->
+            <div id="node">
+                <h1>NODE : bases</h1>
+            </div>
+
+            <div id="express">
+                <h1>Express :</h1>
+                <!-- &lt; &gt; -->
+
+                <!-- <h3></h3>
+                <code>
+                    
+                </code> -->
+
+                <h3>npm init</h3>
+                <p>On demarre un projet server.js en utilisant la commande npm init pour creer le package.json 
+                   apres avoir creer le fichier de base du server (nom.js), qui sera le resumé et les infos de notre serveur.</p>
+                
+                <h3>Importation d'une librairie</h3>
+                <code>
+                var express = require('express')
+                </code>
+
+                <h3>créer un server avec node...</h3>
+                <code>
+                var http = require('http')<br>
+                var server = http.createServer(function(req,res){ //… })<br>
+                server.listen(8888)
+                </code>
+
+                <h3>...et avec express</h3>
+                <code>
+                var express= require('express')<br>
+                var app = express()<br>
+                var port = 3000<br>
+
+                app.listen(port)
+                </code>
+
+                <h3>Importation d'une page ou fragment de page, EX:</h3>
+                <code>
+                &lt;% include fragment/head.ejs %&gt;<br>
+                &lt;div class="main-content"&gt;<br>
+                &lt;%- include(page); -%&gt;<br>
+                &lt;/div&gt;<br>
+                &lt;% include fragment/foot.ejs %&gt;
+                </code>
+
+                <h3>Nodemon...</h3>
+                <p>Pour nous faciliter la vie, à nous et au server, 
+                    on utilise <mark>nodemon nomServeur.js</mark> à la place de <mark>node nomServeur.js</mark>,
+                ça nous permettra de relance le serveur automatiquement en cas de changement dans les fichiers du server.</p>
+
+                <h3>...Installation:</h3>
+                <p><mark>
+                    npm install -g nodemon      <code>//En mode global, pour tous les servers</code>
+                </mark></p>
+                <p><mark>
+                    npm install nodemon      <code>//En mode local pour le server de ce projet</code>
+                </mark></p>
+
+                <p style="background-color: red;color: white;">Si une erreur de type interdiction de lancer nodemon à cause de policy de lancement de script
+                    extérieur, il suffit de taper cette ligne pour régler le soucis. (console powershell en administrateur)</p>
+                <p>Regarder la restrinction de powershell</p>
+                <mark>
+                    Get-ExecutionPolicy
+                </mark>
+
+                <p>Si 'Restricted'</p>
+
+                <mark>
+                    Get-ExecutionPolicy Unrestricted
+                </mark>
+
+                <p>Verifier à nouveau</p>
+                <mark>
+                    Get-ExecutionPolicy
+                </mark>
+
+                <p>Si 'Unrestricted'</p>
+
+                <p>C'est bon !</p>
+                
+                <!-- &lt; &gt; -->
+
+                <!-- <h3></h3>
+                <code>
+                    
+                </code> -->
+            </div>
+
+            <div id="lesRoutes">
+                <h1>Les Routes :</h1>
+
+                <p><strong>App :</strong> L’application express en elle même</p>
+                <p><strong>Method :</strong> l’un des verbes http : GET, POST, PATCH, PUT, DELETE,…</p>
+                <p><strong>Path :</strong> Chemin de l’url qui doit être capturée</p>
+                <p><strong>handler :</strong> fonction anonyme ou fléchée :) qui doit être exécutée</p>
+
+                <h3>Le routing de base suit un pattern très simple:</h3>
+                <mark>app.METHOD(PATH, HANDLER)</mark>
+                <p>Exemple:</p>
+                <code>
+                    app.get(‘/’, function(req, res) {<br>
+                        console.log(‘hello world’)<br>
+                        })
+                </code>
+                <p>Le <strong>req :</strong> contient toute les informations concernant la requête capturée.</p>
+                <p>Le <strong>res :</strong> est l’élément que le serveur express va renvoyer à son interlocuteur. (le navigateur par ex)</p>
+
+                <h3>Res</h3>
+                <p><strong>res.download(“pathFileName”) </strong>vous invite à telecharger un fichier</p>
+                <p><strong>res.end() </strong>mets fins au processus de reponse</p>
+                <p><strong>res.json() </strong>envoie une reponse Json</p>
+                <p><strong>res.redirect(URI) </strong>redirige une demande</p>
+                <p><strong>res.render(“viewName”) </strong>genere un modele de vue</p>
+                <p><strong>res.send(“string”) </strong>envoie une reponse de divers type</p>
+            </div>
+
+            <div id="body_parser">
+                <h1>body-parser :</h1>
+            </div>
+
+            <div id="template_ejs">
+                <h1>Template ejs :</h1>
+
+                <p>Pour "ejs" le tag principal est "&lt;% ... %&gt;"</p>
+                <p>Et on le trouve sous plusieurs déclinaisons:</p>
+                <p>&lt;% 🡺 Contrôle du flow d’instruction</p>
+                <p>&lt;%= 🡺 Affichage d’une valeur de variable, avec échappement des tags HTML</p>
+                <p>&lt;%- 🡺 Affichage d’une valeur sans échappement, injections de données</p>
+                <p>&lt;%# 🡺 Commentaires</p>
+                <p>&lt;%% 🡺 Permet de sortir ‘&gt;%’</p>
+
+                <h3></h3>
+                <p>L’intérêt des templates est de pouvoir retrouver l’utilisation des inclusions de fichiers au
+                    moyen de la méthode <mark>‘include()’</mark>.</p>
+                <p>par exemple : l’<strong>index.ejs</strong>, sera le point d’entrée commun à toutes les
+                    vues de notre site :</p>
+                <code>
+                    &lt;%- include(page); -&gt;>
+                </code>
+            </div>
+
+            <!-- <div id="">
+                <h1></h1>
+            </div> -->
+        </section>
+
+        <footer></footer>
+    </div>
+</body>
+</html>
