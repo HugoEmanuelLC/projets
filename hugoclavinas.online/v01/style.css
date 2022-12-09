@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-shadow: 4px 4px 4px black;
+}
+#page{
+    background-image: url('./images/bckgrd2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.dark_opos{
+    background-color: rgba(0, 0, 255, 0.3);
+    height: 100%;
+    width: 100%;
+}
+.titre{
+    border-left: solid 20px blue;
+    border-bottom: solid 4px blue;
+    position: absolute;
+        top: 100px;
+        left: 10%;
+    padding: 10px ;
+}
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 2.5rem;
+    line-height: 0.5; 
+}
+.nav{
+    position: absolute;
+        bottom: 100px;
+        right: 10%;
+    display: flex;
+        flex-wrap: wrap;
+}
+a{
+    border: solid 3px rgb(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 10px;
+}
+a:hover{
+    background-color: rgb(255, 255, 255, 0.8);
+    color: black;
+}
+
+
+@media screen AND (max-width: 800px) {
+    h1{
+        font-size: 3.3rem;
+    }
+    h2{
+        font-size: 1.6rem; 
+    }
+}
