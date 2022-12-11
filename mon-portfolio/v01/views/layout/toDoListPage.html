@@ -15,75 +15,175 @@
         
         <div class="list">
             <h1>LIST</h1>
-            <div class="items" id="AddFiel">
-                <ul>
-                    <li>Vide</li>
-                </ul>
+            <div class="items" id="list">
+                <!--<select name="list" id="list">
+                    <label for="list"></label>
+                    <option value="done">done</option>
+                    <option value="later">later</option>
+                </select>-->
             </div>
         </div>
 
         <div class="done">
             <h1>DONE</h1>
-            <div class="items">
-                <p>Vide</p>
+            <div class="items" id="done">
             </div>
         </div>
 
         <div class="later">
             <h1>LATER</h1>
-            <div class="items">
-                <p>Vide</p>
+            <div class="items" id="later">
             </div>
         </div>
     </div>
 </div>
 
 
-
 <script>
 
     let addToDoButton = $("#addToDo");
     let inputAdd = $("#inputAdd");
-    let list = $("#AddFiel ul");
-    let li = $("#AddFiel li");
+    let list = $("#list");
+    let list_done = $("#done");
+    let list_later = $("#later");
+    
+    //let done = $(".done ul");
+    //let later = $(".later ul");
 
-    let done = $(".done .items");
-    let later = $(".later .items");
+    //let DONE = $(".DONE");
+    //let LATER = $(".LATER");
+
+    let list_tab = [];
+    let done_tab = [];
+    let later_tab = [];
+
+    let val_done = [];
+    let val_later = [];
+
+    let last_item = "";
+    let done = "";
+    let later = "";
     
     //'<p>'+data.item+'<span onclick="spanX('+data.id+')" class="X" value="data.id">X</span> <span onclick="spanV('+data.id+')" class="V" value="data.id">V</span></p>';
+    //list.append('<li value="'+elem+'" onclick="test()">'+elem+'</li>');
 
     addToDoButton.click(function(){
-        console.log("click " + inputAdd.val())
+
         if( inputAdd.val() != ""){
-            li.html("");
-            list.append('<li value="'+inputAdd.val()+'">'+inputAdd.val()+'</li>');
+
+            list_tab.push( inputAdd.val() );
+            last_item = inputAdd.val();
             inputAdd.val("");
-        }else{false}
-    })
+            //console.log(list_tab);
 
-    
-    li.click(function(){
-        console.log(li.val());
+            List();
+            
+        }else{"error first else"}
     })
-    //if( li.val() == "hugo" ){
-    //    console.log("ça marche " +li.val())
-    //}
- 
-
     
 
-    function spanV(val){
-        console.log("test spanV " +val)
+
+    function List(){
+        let item = "";
+        list_tab.forEach(elem => {
+            
+            if( elem == last_item){
+                
+                item += '<label for="'+elem+'">'+elem+'</label>';
+                item += '<select name="'+elem+'" id="'+elem+'">';
+                item += '<option >options :</option>';
+                item += '<option value="done/'+elem+'">done</option>';
+                item += '<option value="later/'+elem+'">later</option>';
+                item += '</select>';
+
+                done = "done/"+elem;
+                later = "later/"+elem;
+
+                list.append(item);
+                
+                //console.log("elem -> " + elem + " last_item " + last_item)
+            }else{false}
+
+        })
     }
 
-    function spanX(val){
-        console.log("test spanX " +val)
+    list.change(function(val){
+
+        if( `${val.target.value}` == done ){
+            console.log("done "+done);
+
+            done = val.target.value.replace("done/", "");
+            done_tab.push(done);
+            later_tab.shift(done);
+            Done();
+            Later();
+            done = "";
+            later = "";
+
+        }else if( `${val.target.value}` == later ){
+            console.log("done "+later);
+
+            later = val.target.value.replace("later/", "");
+            later_tab.push(later);
+            Later();
+            //later = "";
+        }
+    })
+
+
+    function Done(){
+        console.log("done_tab:")
+        console.log(done_tab)
+        let item = "";
+        done_tab.forEach(elem => {
+
+            item += '<label for="'+elem+'">'+elem+'</label><br>';
+            list_done.html(item);
+        })
+        //Later()
+        
     }
+
+    function Later(){
+        console.log("later_tab:");
+        console.log(later_tab);
+        let item = "";
+        later_tab.forEach(elem => {
+
+            item += '<label for="'+elem+'">'+elem+'</label>';
+            item += '<select name="'+elem+'" id="'+elem+'">';
+            item += '<option >options :</option>';
+            item += '<option value="done/'+elem+'">done</option>';
+            item += '</select>';
+            list_later.html(item);
+
+        })
+    }
+
+
+
     
 
-    //si l'input n'est pas vide
+    list_later.change(function(val){
+        let item = "";
 
-    //rajouter au contener 
+        if( `${val.target.value}` == done ){
+            done = val.target.value.replace("done/", "");
+
+            done_tab.push(done);
+
+            later_tab.shift(done);
+            
+            Later();
+            
+
+        }else{}
+        
+        Done();
+    })  
+
+    
+  
 
 
     
