@@ -68,29 +68,49 @@
         height: 100%;
         width: 100%;
         padding: 10px;
+
+        li{
+            border-bottom: solid 1px white;
+            // background-color: blueviolet;
+            padding: 0 0 0 5px;
+            margin-bottom: 10px;
+            display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            p{
+                // background-color: red;
+                display: flex;
+            }
+            span{
+                border: solid 2px white;
+                padding: 4px 6px;
+                margin-left: 4px;
+            }
+        }
     }
     h1{
         font-size: 2rem;
     }
-    p{
-        // color: black;
-        border-bottom: solid 2px black;
-        display: flex;
-            justify-content: space-between;
-            align-items: center;
-        span{
-            padding: 4px 8px;
-            border-radius: 50%;
-            border: solid 1px;
-            cursor: pointer;
-        }
-        .X{
-            color: red;
-        }
-        .V{
-            color: green;
-        }
-    }
+    // p{
+    //     // color: black;
+    //     border-bottom: solid 2px black;
+    //     display: flex;
+    //         justify-content: space-between;
+    //         align-items: center;
+    //     span{
+    //         padding: 4px 8px;
+    //         border-radius: 50%;
+    //         border: solid 1px;
+    //         cursor: pointer;
+    //     }
+    //     .X{
+    //         color: red;
+    //     }
+    //     .V{
+    //         color: green;
+    //     }
+    // }
 }
 .box_contenu_list .list{
     background-color: blue;
