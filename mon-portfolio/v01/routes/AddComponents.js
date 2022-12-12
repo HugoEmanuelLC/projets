@@ -32,7 +32,7 @@ console.log(hash)
             const route = routes[ind];
             if (window.location.hash == route["path"]) {
                 hashRoutes = route["name"];
-                hashComponent = route["component"]
+                hashComponent = route["component"];
             }
         }
         if (hashRoutes) {

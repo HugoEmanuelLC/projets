@@ -15,15 +15,9 @@
         <div class="list">
             <h1>LIST</h1>
             <div class="items" >
-                <!--<select name="list" id="list">
-                    <label for="list"></label>
-                    <option value="done">done</option>
-                    <option value="later">later</option>
-                </select>-->
 
                 <ul id="list_items">
-                    <!--<li value="0test">item name <p><span class="X">X</span> <span class="V">V</span></p></li>
-                    <li value="1test">item name <p><span class="X">X</span> <span class="V">V</span></p></li>-->
+                    <li>List vide !</li>
                 </ul>
             </div>
         </div>
@@ -42,12 +36,12 @@
     let list_items = $("#list_items");
     let list_items_li = $("#list_items li");
 
+    let X = $(".X");
+    let V = $(".V");
+
     let list_tab = [];
 
     let last_item = "";
-    
-    //'<p>'+data.item+'<span onclick="spanX('+data.id+')" class="X" value="data.id">X</span> <span onclick="spanV('+data.id+')" class="V" value="data.id">V</span></p>';
-    //list.append('<li value="'+elem+'" onclick="test()">'+elem+'</li>');
 
 //boxAddField:
     addToDoButton.click(function(){
@@ -64,44 +58,57 @@
     })
 
 //list items:
-    list_items.change(function(val){
 
-        console.log("test list_items -> "+`${val.target.value}`);
+    function Later(val){
+        
+        list_tab.forEach(elem => {
+            if( elem.name == val ){
+                elem["niveau"] = "later";
+            }
+        })
+        List();
+    }
 
-        if( `${val.target.value}` ){
-            console.log("in IF ");
-
-        }else{
-            console.log("in ELSE ");
-        }
-    })
-
-    
+    function Done(val){
+        
+        list_tab.forEach(elem => {
+            if( elem.name == val ){
+                elem["niveau"] = "done";
+            }
+        })
+        List();
+    }
     
 
 
     function List(){
         let item = "";
+        
         list_tab.forEach(elem => {
 
-            //item += '<li>'+elem.name+'<p><span class="X">X</span> <span class="V">V</span></p></li>';
-
             if( elem.niveau == "false"){
-                item += '<li>'+elem.name+'</li>';
-                list_items.html(item);
+                console.log("FALSE => ");
+                item += '<li>'+elem.name+'<p><span onclick="Later(\''+elem.name+'\')" class="X">X</span> <span onclick="Done(\''+elem.name+'\')" class="V">V</span></p></li>';
+                return list_items.html(item);
             }
             else if( elem.niveau == "later"){
-                item += '<li>'+elem.name+'<p><span class="X">X</span> <span class="V">V</span></p></li>';
-                list_items.html(item);
+                console.log("LATER => ");
+                item += '<li>'+elem.name+'<p><span onclick="Later('+elem.name+')" class="X" style="color:blue">X</span> <span onclick="Done(\''+elem.name+'\')" class="V">V</span></p></li>';
+                return list_items.html(item);
             }
             else if( elem.niveau == "done"){
-                item += '<li>'+elem.name+'<p><span class="X">X</span> <span class="V">V</span></p></li>';
-                list_items.html(item);
+                console.log("DONE => ");
+                item += '<li>'+elem.name+'<p><span class="V" style="color:green">V</span></p></li>';
+                return list_items.html(item);
             }
             else{false}
 
         })
+
+        
     }
 
-//done = val.target.value.replace("done/", "");
+    
+
+            //item += '<li>'+elem.name+'<p><span class="X">X</span> <span class="V">V</span></p></li>';
 </script>
