@@ -60,23 +60,47 @@
 //list items:
 
     function Later(val){
-        
         list_tab.forEach(elem => {
             if( elem.name == val ){
                 elem["niveau"] = "later";
             }
         })
         List();
+        console.log("LATER");
+        console.log(list_tab);
     }
 
     function Done(val){
-        
         list_tab.forEach(elem => {
             if( elem.name == val ){
                 elem["niveau"] = "done";
             }
         })
         List();
+        console.log("DONE");
+        console.log(list_tab);
+    }
+
+    function Delete(val){
+        list_tab.forEach(elem => {
+            if(  elem["name"] == val && elem["niveau"] == null ){
+                list_tab.splice(0);
+                list_items.html("<li>List vide !</li>");
+                List();
+                console.log("IF");
+                console.log(list_tab);
+
+            }
+            else if( elem["name"] == val && elem["niveau"] != null){
+                elem["niveau"] = null;
+                console.log(elem["name"] +" <-> " +val +" niveau " + elem["niveau"]);
+                List();
+                console.log("ELSE");
+                console.log(list_tab);
+                
+            }
+            else{false}
+        })
     }
     
 
@@ -87,19 +111,16 @@
         list_tab.forEach(elem => {
 
             if( elem.niveau == "false"){
-                console.log("FALSE => ");
                 item += '<li>'+elem.name+'<p><span onclick="Later(\''+elem.name+'\')" class="X">X</span> <span onclick="Done(\''+elem.name+'\')" class="V">V</span></p></li>';
-                return list_items.html(item);
+                list_items.html(item);
             }
             else if( elem.niveau == "later"){
-                console.log("LATER => ");
                 item += '<li>'+elem.name+'<p><span onclick="Later('+elem.name+')" class="X" style="color:blue">X</span> <span onclick="Done(\''+elem.name+'\')" class="V">V</span></p></li>';
-                return list_items.html(item);
+                list_items.html(item);
             }
             else if( elem.niveau == "done"){
-                console.log("DONE => ");
-                item += '<li>'+elem.name+'<p><span class="V" style="color:green">V</span></p></li>';
-                return list_items.html(item);
+                item += '<li>'+elem.name+'<p><span class="V" style="color:green">V</span> <span onclick="Delete(\''+elem.name+'\')">delete</span></p></li>';
+                list_items.html(item);
             }
             else{false}
 
