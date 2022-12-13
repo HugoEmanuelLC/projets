@@ -1,0 +1,5 @@
+PRIORITES:
+
+    --> dashboard universal,
+    --> c.v. papier,
+    --> mise à jour site web wawmomo.be 
