@@ -57,7 +57,7 @@ if ($(".box_list_menus")) {
 
                     nameMenu = dataProduits.NAME;
 
-                    if(nameMenu){
+                    if(nameMenu ){
                         titre.html(nameMenu.toUpperCase());
                     }else{
                         titre.html("<h1>menu</h1>".toUpperCase());
