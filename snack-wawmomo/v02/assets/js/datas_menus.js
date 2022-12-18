@@ -8,7 +8,7 @@ if ($(".box_list_menus")) {
     let list_menus = $(".box_list_menus"); 
     let menus = "";
     $.ajax({
-        async: false,
+        async: true,
         url: "http://localhost/projets/dashboard/0",
         dataType: "json",
         success: function(data){
