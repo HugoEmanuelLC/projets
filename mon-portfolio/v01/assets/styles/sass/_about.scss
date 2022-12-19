@@ -1,11 +1,12 @@
 
 .about{
+    // border: solid red 2px;
     background-color: var(--backColorOrange);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    background-attachment: fixed;
-
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: bottom;
+    // background-attachment: fixed;
+    min-height: 80vh;
     padding: 200px 30px;
 }
 .about h1{

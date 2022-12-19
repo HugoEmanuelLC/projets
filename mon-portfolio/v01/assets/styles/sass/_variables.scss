@@ -16,6 +16,7 @@
     --box_shadow: 4px 4px 4px rgb(0, 0, 0);
     
     --backColorGreen: green;
-    --backColorOrange: chocolate;
+    --backColorOrange: rgb(210, 105, 30, 0.8);
+    --backColorOrange2: linear-gradient( var(--bg_color_dark_1) 10%, var(--backColorOrange) , var(--bg_color_dark_1));
     --backColorRed: red;
 }
