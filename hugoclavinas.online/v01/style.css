@@ -1,3 +1,5 @@
+@import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+
 *{
     margin: 0;
     padding: 0;
@@ -5,44 +7,149 @@
     font-size: 16px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
-    text-shadow: 4px 4px 4px black;
+    text-shadow: 4px 4px 4px rgb(0, 0, 0, 0.8);
+    transition: 300ms;
+}
+a,li{
+    text-decoration: none;
+    list-style: none;
+}
+h1{
+    font-size: 2em;
+}
+
+h2{
+    font-size: 1.5em;
+}
+h3{
+    font-size: 1.3em;
+}
+p{
+    font-size: 1;
+}
+
+
+body{
+    background-color: chocolate;
 }
 #page{
-    background-image: url('./images/bckgrd2.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 100vh;
-    position: relative;
 }
-.dark_opos{
+
+.box_contenue{
+    /* border: solid red 3px; */
+    display: flex;
+    /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+    min-height: 100%;
+}
+.box_navbar{
+    /* border: solid 5px white; */
+    position: relative;
+    width: 40px;
+}
+.navbar{
+    background-color: blueviolet;
+    box-shadow: 5px 0px 20px black;
+    position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5;
+    height: 100vh;
+    padding: 20px;
+    border-radius: 20px;
+}
+.navbar:hover{
+    width: 30%;
+    transition: 300ms ease-in-out;
+}
+.contenue{
+    /* flex: 1; */
+    border-radius: 20px;
+    box-shadow: 0px 10px 100px 10px black;
+    width: 80%;
+    height: 80vh;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    /* margin: 0 0 100px; */
+}
+.profil{
+    background-color: blue;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.profil .photo_profil{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: url('images/0.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.profil .opo{
+    background-color: rgb(0, 0, 0, 0.6);
+    position: relative;
+    height: 100%;
+    border-radius: 50%;
+}
+.profil .opo h1{
+    position: absolute;
+    font-size: 8em;
+    color: rgb(199, 199, 199);
+}
+.profil .opo h1:nth-child(1){
+    top: -25px;
+    left: -10px;
+}
+.profil .opo h1:nth-child(2){
+    top: 0px;
+    right: -10px;
+}
+.profil .opo h1:nth-child(3){
+    bottom: 0px;
+    left: -10px;
+}
+.profil .opo h1:nth-child(4){
+    bottom: -25px;
+    right: -10px;
+}
+.profil .titre h1 span{
+    font-size: 1em;
+    color: chocolate;
+}
+
+
+/* .dark_opos{
     background-color: rgba(0, 0, 255, 0.3);
     height: 100%;
     width: 100%;
-}
-.titre{
+} */
+/* .titre{
     border-left: solid 20px blue;
     border-bottom: solid 4px blue;
     position: absolute;
         top: 100px;
         left: 10%;
     padding: 10px ;
-}
-h1{
+} */
+/* h1{
     font-size: 5rem;
 }
 h2{
     font-size: 2.5rem;
     line-height: 0.5; 
-}
-.nav{
+} */
+/* .nav{
     position: absolute;
         bottom: 100px;
         right: 10%;
     display: flex;
         flex-wrap: wrap;
-}
-a{
+} */
+/* a{
     border: solid 3px rgb(255, 255, 255, 0.8);
     padding: 5px 10px;
     text-decoration: none;
@@ -52,14 +159,43 @@ a{
 a:hover{
     background-color: rgb(255, 255, 255, 0.8);
     color: black;
+} */
+
+/* SCROLLBAR */
+::-webkit-scrollbar{
+    background-color: chocolate;
+    pointer-events: visible;
+    width: 5px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px grey;  */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: blue; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: green;
 }
 
-
 @media screen AND (max-width: 800px) {
-    h1{
+    .profil{
+        flex-direction: column;
+    }
+    .profil .photo_profil{
+        width: 200px;
+        height: 200px;
+    }
+    .profil .opo h1{
+        position: absolute;
+        font-size: 5em;
+    }
+    /* h1{
         font-size: 3.3rem;
     }
     h2{
         font-size: 1.6rem; 
-    }
+    } */
 }
