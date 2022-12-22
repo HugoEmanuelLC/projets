@@ -22,13 +22,13 @@ header{
 }
 .header_contenu h1{
     color: var(--backColorOrange);
-    font-size: 10rem;
+    // font-size: 10rem;
     font-family: 'Gentium Plus', serif;
     line-height: 0.5;
 }
 .header_contenu h3{
     color: var(--backColorOrange);
-    font-size: 1.5rem;
+    // font-size: 1.5rem;
     letter-spacing: 6px;
     // letter-spacing: 2px;
     font-family: 'Gentium Plus', serif;
@@ -84,7 +84,7 @@ header{
     }
 }
 
-@media screen and (max-width: 1312px){
+@media screen and (min-width: 993px){
     .header_contenu h1{
         font-size: 7rem;
     }
