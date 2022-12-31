@@ -11,11 +11,25 @@
 
     <div class="contenue_mcu_body">
         <h1>Accueil MCU</h1>
+        <div class="presentation_principal"></div>
     </div>
 </div>
 
-
+<script src="./assets/js/datas/data.js"></script>
 <script>
     title = "MCU | Accueil Mcu";
     $("title").append().html(title);
+    
+
+    $(function(){
+        
+        let item = "";
+        allMcuMoviesSeries.forEach(elem => {
+            console.log(elem.name)
+
+            item +=     '<div class="items" style="background-image: url('+elem.image+')">'
+            item +=     '</div>';
+        })
+        $(".contenue_mcu_body .presentation_principal").append(item)
+    })
 </script>
