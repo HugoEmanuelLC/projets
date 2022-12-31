@@ -1,0 +1,29 @@
+
+
+.subscription, 
+.login{
+    // border: solid 3px white;
+    padding: 25px;
+    display: inline-block;
+}
+.subscription input, 
+.login input{
+    border-radius: 10px;
+    padding: 5px;
+    background-color: var(--color_white_opo);
+    color: black;
+}
+.subscription button,
+.login button{
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: var(--color_light_blue);
+    cursor: pointer;
+}
+.subscription button:hover,
+.login button:hover
+{
+    background-color: rgb(0, 85, 255);
+}

@@ -1,0 +1,16 @@
+{
+  "name": "mcu",
+  "version": "1.0.0",
+  "description": "projet movies demostration",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./assets/styles/main.scss:./assets/styles/css/style.css --style compressed"
+  },
+  "keywords": [
+    "mcu",
+    "disney+"
+  ],
+  "author": "Hugo L. Clavinas",
+  "license": "ISC"
+}

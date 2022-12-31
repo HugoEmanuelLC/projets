@@ -1,0 +1,37 @@
+.box_login{
+    // border: solid 5px white;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    height: 100vh;
+    hr{
+        width: 100vw;
+        position: absolute;
+            top: 80px;
+        border-color: var(--color_white_opo);
+    }
+}
+.box_login .login_head{
+    // border: solid 5px red;
+    position: absolute;
+        top: 0;
+        left: 0;
+    // width: 100%;
+    img{
+        width: 150px;
+    }
+}
+.box_login .login{
+    // border: solid 5px white;
+    width: 100%;
+    // display: flex;
+}
+.box_login .login{
+    // border: solid 5px red;
+    width: 100%;
+    margin: auto;
+    max-width: 600px;
+    input{
+        width: 100%;
+    }
+}

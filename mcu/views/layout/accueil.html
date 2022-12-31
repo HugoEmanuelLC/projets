@@ -1,0 +1,79 @@
+
+
+<!--SLIDE BOX-->
+<div class="slide_box hide">
+    <!-- DEACTIVE SLIDE BOX-->
+    <a class="btn_slide_box a_out_slide_box"><i class="fa-solid fa-xmark"></i></a>
+    
+    <div class="box_login">
+        <div class="login_head">
+            <img src="./assets/images/background/logoMcu.png" alt="" srcset="">
+        </div>
+        <hr>
+
+        <div class="login">
+            <h3>Log in :</h3>
+            <br>
+            <div class="">
+                <label for=""></label>
+                <input type="text" name="" id="" placeholder="Username">
+            </div>
+    
+            <div class="">
+                <label for=""></label>
+                <input type="password" name="" id="" placeholder="Password">
+            </div>
+    
+            <button class="btn_login" type="submit">Continue</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="contenue">
+    <!-- ACTIVE SLIDE BOX-->
+    <a class="btn_login a_in_slide_box">LOG IN</a>
+
+    <div class="contenue_head">
+        <div class="opo"></div>
+
+        <img src="./assets/images/background/logoMcu.png" alt="" srcset="">
+    </div>
+
+    <div class="contenue_body">
+        <div class="subscription">
+            <h3>Subscription :</h3>
+            <br>
+            <div class="">
+                <label for=""></label>
+                <input type="text" name="" id="" placeholder="Username">
+            </div>
+
+            <div class="">
+                <label for=""></label>
+                <input type="password" name="" id="" placeholder="Password">
+            </div>
+
+            <button class="btn_subscription" type="submit">Continue</button>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- BOX SLIDE -->    
+<script type="text/javascript" src="./assets/js/slide_box.js"></script>
+<script>
+    title = "MCU | Accueil";
+    $("title").html(title);
+
+    $(function(){
+        //SIBLE
+        let btn = $("button");
+
+        btn.click(function(){
+            window.location = "#/accueilmcu";
+        })
+    })
+</script>
