@@ -9,6 +9,10 @@ const allMcuMoviesSeries = [
             {name: "iron man"},
             {name: "captain america"},
             {name: "thor"},
+        ],
+        collection:[
+            {name: "Avengers"},
+            {name: "iron man"}
         ]
     },
     {
@@ -21,6 +25,10 @@ const allMcuMoviesSeries = [
             {name: "iron man"},
             {name: "captain america"},
             {name: "thor"},
+        ],
+        collection:[
+            {name: "Avengers"},
+            {name: "iron man"}
         ]
     },
     {
@@ -33,6 +41,10 @@ const allMcuMoviesSeries = [
             {name: "iron man"},
             {name: "captain america"},
             {name: "thor"},
+        ],
+        collection:[
+            {name: "Avengers"},
+            {name: "iron man"}
         ]
     },
     {
@@ -45,7 +57,38 @@ const allMcuMoviesSeries = [
             {name: "iron man"},
             {name: "captain america"},
             {name: "thor"},
+        ],
+        collection:[
+            {name: "Avengers"},
+            {name: "iron man"}
         ]
-    }
+    },
+    {
+        name: "Iron man",
+        type: "movie",
+        date: 2008,
+        image: "https://wallpapercave.com/wp/wp2547005.jpg",
+        phase: 1,
+        personages: [
+            {name: "iron man"},
+        ],
+        collection:[
+            {name: "iron man"}
+        ]
+    },
+    {
+        name: "Captain America",
+        type: "movie",
+        date: 2011,
+        image: "https://wallpapercave.com/wp/wp3775632.jpg",
+        phase: 1,
+        personages: [
+            {name: "captain america"},
+        ],
+        collection:[
+            {name: "captain america"}
+        ]
+    },
+
 ]
 

@@ -1,0 +1,56 @@
+<div class="contenue_mcu">
+    <div class="contenue_mcu_head">
+        <img src="./assets/images/background/logoMcu.png" alt="" srcset="">
+        
+        <div class="link">
+            <a href="#/accueilmcu"><i class="fa-solid fa-house"></i></a>
+            <a href="#/films"><i class="fa-solid fa-film"></i></a>
+            <a href="#/series"><i class="fa-regular fa-tv-retro"></i></a>
+        </div>
+    </div>
+
+    <div class="contenue_mcu_body">
+        <h1>Films</h1>
+        <div class="presentation_principal"></div>
+    </div>
+</div>
+
+
+
+<script src="./assets/js/datas/data.js"></script>
+<script>
+
+    $(function(){
+        let hashUrl = "phases";
+        let titre_phase = $(".contenue_mcu_body")
+
+        switch (window.location.hash) {
+            case '#/phase1':
+                hashUrl = window.location.hash;
+                hashUrl = hashUrl.replace("#/", "");
+                titre_phase.html("<h1>"+hashUrl.toUpperCase()+"</h1>")
+              break;
+            case '#/phase2':
+                hashUrl = window.location.hash;
+                hashUrl = hashUrl.replace("#/", "");
+                titre_phase.html("<h1>"+hashUrl.toUpperCase()+"</h1>")
+            break;
+            case '#/phase3':
+                hashUrl = window.location.hash;
+                hashUrl = hashUrl.replace("#/", "");
+                titre_phase.html("<h1>"+hashUrl.toUpperCase()+"</h1>")
+            break;
+            case '#/phase4':
+                hashUrl = window.location.hash;
+                hashUrl = hashUrl.replace("#/", "");
+                titre_phase.html("<h1>"+hashUrl.toUpperCase()+"</h1>")
+              break;
+            default:
+              false
+          }
+
+        title = "MCU | "+hashUrl;
+        $("title").append().html(title);
+    })
+
+</script>

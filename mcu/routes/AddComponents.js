@@ -11,6 +11,10 @@ var routes = [
     {path: "#/accueilmcu", name: "accueilmcu", component: "accueilMcuPage.html"},
     {path: "#/films", name: "films", component: "filmsPage.html"},
     {path: "#/series", name: "series", component: "seriesPage.html"},
+    {path: "#/phase1", name: "phase1", component: "phasePage.html"},
+    {path: "#/phase2", name: "phase2", component: "phasePage.html"},
+    {path: "#/phase3", name: "phase3", component: "phasePage.html"},
+    {path: "#/phase4", name: "phase4", component: "phasePage.html"},
     {path: "#/pagetest", name: "page", component: "pageTest.html"},
 
     // mode target
