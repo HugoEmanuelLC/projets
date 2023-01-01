@@ -56,7 +56,7 @@
         avengers_item.append(avengers_elem)
 
         //Presentation collection iron man
-        allMcuMoviesSeries.forEach(elem => {
+        /*allMcuMoviesSeries.forEach(elem => {
             elem.collection.forEach(elem2 => {
                 console.log(elem2.name)
                 if( elem2.name == "iron man" ){
@@ -67,7 +67,19 @@
             })
             
         })
-        ironman_item.append(ironman_elem)
+        ironman_item.append(ironman_elem)*/
+
+        let tabTempo = [];
+        for( i=0; i <= allMcuMoviesSeries.length; i++ ){
+            for( j=1; j <= allMcuMoviesSeries.length; j++ ){
+                if( allMcuMoviesSeries[i] < allMcuMoviesSeries[j] ){
+                    tabTempo = allMcuMoviesSeries[i];
+                }
+                
+            }
+        }
+        console.log(tabTempo)
+        console.log(allMcuMoviesSeries)
         
     })
 </script>
