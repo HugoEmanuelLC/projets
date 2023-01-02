@@ -43,6 +43,7 @@
         let avengers_elem= "";
         let ironman_elem= "";
 
+
         //Presentation films avengers 
         allMcuMoviesSeries.forEach(elem => {
             if( elem.collection[0].name == "Avengers" ){
@@ -55,10 +56,22 @@
         })
         avengers_item.append(avengers_elem)
 
+
         //Presentation collection iron man
+        let tabTempo = [];
+        for( i=1; i < allMcuMoviesSeries.length; i++ ){
+
+            for( j=0; j < allMcuMoviesSeries.length; j++ ){
+
+                if( allMcuMoviesSeries[i].date <= allMcuMoviesSeries[j].date){
+                    tabTempo[i] = allMcuMoviesSeries[j]
+                    allMcuMoviesSeries[j] = allMcuMoviesSeries[i]
+                    allMcuMoviesSeries[i] = tabTempo[i]
+                }
+            }
+        }
         allMcuMoviesSeries.forEach(elem => {
             elem.collection.forEach(elem2 => {
-                /*console.log(elem2.name)*/
                 if( elem2.name == "iron man" ){
                     ironman_elem += '<div class="item" style="background-image: url('+elem.image+')"><a class="opo" href="">'+elem.name+'</a></div>'
                 }else{
@@ -68,22 +81,5 @@
             
         })
         ironman_item.append(ironman_elem)
-
-        /*let tabTempo = [];
-        let x ;
-        for( i=0; i < allMcuMoviesSeries.length; i++ ){
-            x = allMcuMoviesSeries[i].date;
-
-            for( j=1; j < allMcuMoviesSeries.length; j++ ){
-
-                if( allMcuMoviesSeries[i].date < allMcuMoviesSeries[j].date){
-                    x = allMcuMoviesSeries[i].date
-                    tabTempo[i] = x
-                }
-                else{}
-            }
-        }
-        console.log(tabTempo)*/
-        
     })
 </script>
