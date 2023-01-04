@@ -1,0 +1,23 @@
+:root{
+    --color_dark_blue: rgb(0, 0, 114);
+    --color_orange: orange;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 250ms;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+#page{
+    background-color: var(--color_dark_blue);
+    min-height: 100vh;
+}

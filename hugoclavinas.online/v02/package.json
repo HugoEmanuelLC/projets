@@ -1,0 +1,15 @@
+{
+  "name": "hclavinas-v02",
+  "version": "2.0.0",
+  "description": "mon site web",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./assets/styles/main.scss:./assets/styles/css/style.css --style compressed"
+  },
+  "keywords": [
+    "developpeurweb"
+  ],
+  "author": "Hugo L. Clavinas",
+  "license": "ISC"
+}

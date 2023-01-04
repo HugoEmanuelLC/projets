@@ -1,0 +1,16 @@
+.intitule{
+    height: 100vh;
+    background-color: orange;
+    color: var(--color_dark_blue);
+    font-family: 'Faster One', cursive;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    h1{
+        font-size: 8em;
+    }
+    h2{
+        font-size: 5em;
+    }
+}
