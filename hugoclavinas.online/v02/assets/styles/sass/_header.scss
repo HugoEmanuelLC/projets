@@ -1,0 +1,16 @@
+header{
+    // border: solid 2px red;
+    background-color: var(--color_orange);
+    text-shadow: var(--txt_shadow);
+    display: flex;
+    position: sticky;
+        top: 0;
+    .nom{
+        font-family: 'Fjalla One', serif;
+        color: white;
+        font-size: 2em;
+        text-align: center;
+        padding: 5px;
+    }
+}
+

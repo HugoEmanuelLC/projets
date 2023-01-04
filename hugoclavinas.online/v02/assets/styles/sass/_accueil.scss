@@ -1,16 +1,71 @@
 .intitule{
-    height: 100vh;
-    background-color: orange;
-    color: var(--color_dark_blue);
+    // height: 100vh;
+    background-color: black;
+    color: white;
     font-family: 'Faster One', cursive;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-attachment: fixed;
     display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     h1{
-        font-size: 8em;
+        font-size: 4em;
     }
     h2{
-        font-size: 5em;
+        font-size: 2em;
+    }
+}
+.intitule .dark_opo{
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+.intitule .dark_opo h1{
+    font-size: 5rem;
+    text-shadow: var(--txt_shadow);
+    font-family: 'Fjalla One', serif;
+}
+.intitule .dark_opo h3{
+    font-size: 2.5rem;
+    text-shadow: var(--txt_shadow);
+    line-height: 1px;
+    font-family: 'Fjalla One', serif;
+}
+.intitule .link_social{
+    position: absolute;
+        bottom: 0;
+        right: 0;
+    display: flex;
+}
+.intitule .link_social a{
+    background-color: var(--txt_color_light_1);
+    padding: 5px;
+    margin: 5px;
+}
+.intitule .link_social a:hover{
+    background-color: var(--txt_color);
+}
+.intitule .link_social a i{
+    color: var(--txt_color_blue);
+}
+
+
+// @media (max-width: 800px) {
+// }
+@media (min-width: 801px) {
+    .intitule{
+        background-position: center;
+        background-size: contain;
+    }
+    .intitule .dark_opo h1{
+        font-size: 8rem;
+    }
+    .intitule .dark_opo h3{
+        font-size: 4rem;
     }
 }
