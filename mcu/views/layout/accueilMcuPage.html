@@ -24,6 +24,12 @@
         <div class="box_collections">
             <h3>Collection Iron Man</h3>
             <div class="collections ironman"></div>
+            
+            <h3>Collection Captain America</h3>
+            <div class="collections captainamerica"></div>
+            
+            <h3>Collection Thor</h3>
+            <div class="collections thor"></div>
         </div>
 
     </div>
@@ -39,9 +45,13 @@
         //sibles
         let avengers_item = $(".contenue_mcu_body .presentation_principal");
         let ironman_item = $(".contenue_mcu_body .ironman");
+        let captainamerica_item = $(".contenue_mcu_body .captainamerica");
+        let thor_item = $(".contenue_mcu_body .thor");
         
         let avengers_elem= "";
         let ironman_elem= "";
+        let captainamerica_elem= "";
+        let thor_elem= "";
 
 
         //Presentation films avengers 
@@ -57,7 +67,7 @@
         avengers_item.append(avengers_elem)
 
 
-        //Presentation collection iron man
+        //Presentation collection
         let tabTempo = [];
         for( i=1; i < allMcuMoviesSeries.length; i++ ){
 
@@ -70,16 +80,28 @@
                 }
             }
         }
+
         allMcuMoviesSeries.forEach(elem => {
             elem.collection.forEach(elem2 => {
-                if( elem2.name == "iron man" ){
-                    ironman_elem += '<div class="item" style="background-image: url('+elem.image+')"><a class="opo" href="">'+elem.name+'</a></div>'
-                }else{
-                    false
+                switch( elem2.name ) {
+                    case "iron man":
+                        ironman_elem += '<div class="item" style="background-image: url('+elem.image+')"><a class="opo" href="">'+elem.name+'</a></div>';
+                    break;
+
+                    case "captain america":
+                        captainamerica_elem += '<div class="item" style="background-image: url('+elem.image+')"><a class="opo" href="">'+elem.name+'</a></div>';
+                    break;
+
+                    case "thor":
+                    thor_elem += '<div class="item" style="background-image: url('+elem.image+')"><a class="opo" href="">'+elem.name+'</a></div>';
+                    break;
+
+                    default:false;
                 }
             })
-            
         })
-        ironman_item.append(ironman_elem)
+        ironman_item.append(ironman_elem);
+        captainamerica_item.append(captainamerica_elem);
+        thor_item.append(thor_elem);
     })
 </script>

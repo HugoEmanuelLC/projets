@@ -3,15 +3,24 @@
         <img src="./assets/images/background/logoMcu.png" alt="" srcset="">
         
         <div class="link">
-            <a href="#/accueilmcu"><i class="fa-solid fa-house"></i></a>
-            <a href="#/films"><i class="fa-solid fa-film"></i></a>
-            <a href="#/series"><i class="fa-regular fa-tv-retro"></i></a>
+            <a href="#/accueilmcu" title="Accueil"><i class="fa-solid fa-house"></i></a>
+            <a href="#/films" title="Films"><i class="fa-solid fa-film"></i></a>
+            <a href="#/series" title="Series"><i class="fa-regular fa-tv-retro"></i></a>
         </div>
     </div>
 
     <div class="contenue_mcu_body">
-        <h1>Films</h1>
-        <div class="presentation_principal"></div>
+        <!-- PAR PHASES -->
+        <div class="box_phases">
+            <div class="phases"><a href="#/phase1">Phase 1</a></div>
+            <div class="phases"><a href="#/phase2">Phase 2</a></div>
+            <div class="phases"><a href="#/phase3">Phase 3</a></div>
+            <div class="phases"><a href="#/phase4">Phase 4</a></div>
+        </div>
+
+        <h2>phase</h2>
+        
+        <div class="presentation_phase"></div>
     </div>
 </div>
 
@@ -22,28 +31,29 @@
 
     $(function(){
         let hashUrl = "phases";
-        let titre_phase = $(".contenue_mcu_body")
+        let titre_phase = $(".contenue_mcu_body h2");
+
 
         switch (window.location.hash) {
             case '#/phase1':
                 hashUrl = window.location.hash;
                 hashUrl = hashUrl.replace("#/", "");
-                titre_phase.html("<h1>"+hashUrl.toUpperCase()+"</h1>")
+                titre_phase.html(hashUrl.toUpperCase());
               break;
             case '#/phase2':
                 hashUrl = window.location.hash;
                 hashUrl = hashUrl.replace("#/", "");
-                titre_phase.html("<h1>"+hashUrl.toUpperCase()+"</h1>")
+                titre_phase.html(hashUrl.toUpperCase());
             break;
             case '#/phase3':
                 hashUrl = window.location.hash;
                 hashUrl = hashUrl.replace("#/", "");
-                titre_phase.html("<h1>"+hashUrl.toUpperCase()+"</h1>")
+                titre_phase.html(hashUrl.toUpperCase());
             break;
             case '#/phase4':
                 hashUrl = window.location.hash;
                 hashUrl = hashUrl.replace("#/", "");
-                titre_phase.html("<h1>"+hashUrl.toUpperCase()+"</h1>")
+                titre_phase.html(hashUrl.toUpperCase());
               break;
             default:
               false
@@ -51,6 +61,30 @@
 
         title = "MCU | "+hashUrl;
         $("title").append().html(title);
+        
+
+        //Presentation phase
+        let phase_items = $(".presentation_phase");
+        let phase_elem = "";        
+        let tabTempo = [];
+        for( i=1; i < allMcuMoviesSeries.length; i++ ){
+
+            for( j=0; j < allMcuMoviesSeries.length; j++ ){
+
+                if( allMcuMoviesSeries[i].date <= allMcuMoviesSeries[j].date){
+                    tabTempo[i] = allMcuMoviesSeries[j]
+                    allMcuMoviesSeries[j] = allMcuMoviesSeries[i]
+                    allMcuMoviesSeries[i] = tabTempo[i]
+                }
+            }
+        }
+        allMcuMoviesSeries.forEach(elem => {
+            if( elem.phase == hashUrl ){
+                console.log(elem.phase +" " +hashUrl +" " +elem.name)
+                phase_elem += '<div class="item" style="background-image: url('+elem.image+')"><a class="opo" href="">'+elem.name+'</a></div>';
+            }
+        })
+        phase_items.append(phase_elem);
     })
 
 </script>
