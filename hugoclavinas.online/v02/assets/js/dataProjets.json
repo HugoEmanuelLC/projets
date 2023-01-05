@@ -6,7 +6,8 @@
         "Year": "01/2023",
         "Description": [
             "Creation d'une demo d'application style disney + de l'univers cinematique de marvel",
-            " developpé en frontend avec des donnes en objet javascript."
+            " developpé en frontend avec des donnes en objet javascript.",
+            " actuellement en developpement!"
         ],
         "Technologies": ["","",""],
         "Image": "hero-image.jpeg",
