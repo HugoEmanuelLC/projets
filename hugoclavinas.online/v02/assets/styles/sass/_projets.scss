@@ -44,13 +44,18 @@
 }
 
 @media screen AND (max-width: 900px) {
-    .projet{
-        flex-direction: column;
-        img{
-            min-width: 100%;
-        }
-        .description{
-            padding: 40px 10px 200px;
+    .box_projets{
+        .projet{
+            flex-direction: column;
+            a{
+                top: 5%;
+            }
+            img{
+                min-width: 100%;
+            }
+            .description{
+                padding: 40px 10px 200px;
+            }
         }
     }    
 }

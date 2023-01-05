@@ -1,5 +1,4 @@
 header{
-    // border: solid 2px red;
     background-color: var(--color_orange);
     text-shadow: var(--txt_shadow);
     display: flex;
@@ -15,3 +14,11 @@ header{
     }
 }
 
+@media screen AND (max-width: 800px) {
+    header{
+        flex-direction: column;
+        .nom{
+            font-size: 1.8em;
+        }
+    }
+}

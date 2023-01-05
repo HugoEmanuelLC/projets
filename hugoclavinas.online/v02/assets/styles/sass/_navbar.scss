@@ -20,3 +20,12 @@
         // background-color: var(--color_dark_blue);
     }
 }
+
+@media screen AND (max-width: 800px) {
+    .nav{
+        justify-content: center;
+        a{
+            font-size: 0.9em;
+        }
+    }
+}

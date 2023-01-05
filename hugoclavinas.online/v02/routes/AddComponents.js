@@ -10,7 +10,6 @@ var routes = [
     {path: "#/accueil", name: "accueil", component: "accueil.html"},
     {path: "#/projets", name: "projets", component: "projets.html"},
     {path: "#/apropos", name: "apropos", component: "apropos.html"},
-    {path: "#/contact", name: "contact", component: "contact.html"},
 
     // mode target
     // {path: "#top", name: "#top", component: "home.html"}, 

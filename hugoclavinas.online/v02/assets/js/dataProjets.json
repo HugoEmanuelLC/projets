@@ -10,17 +10,17 @@
         ],
         "Technologies": ["","",""],
         "Image": "hero-image.jpeg",
-        "Url": "./mcu"
+        "Url": "./Mcu"
     },
 
 
-    
+
     {
         "Name": "Site web wawmom snack",
         "TypeProjet": "Projet",
         "Year": "12/2022",
         "Description": [
-            "Creation d'un site web pour un petit et simpa snack",
+            "Creation d'un site web pour un petit et sympa snack",
             " cote frontend je utilise Sass et JQuery principalment",
             " cote backend j'ai creer un petit panel de configuration pour le control de donnes du menu sont Api en php."
         ],

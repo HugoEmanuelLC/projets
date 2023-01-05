@@ -1,0 +1,46 @@
+.box_contact{
+    // border: solid red 4px;
+    height: 100%;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    ul{
+        // border: solid green 4px;
+        display: flex;
+            flex-direction: column;
+        li{
+            // border: solid white 4px;
+            display: flex;
+                align-items: center;
+            i{
+                font-size: 20px;
+            }
+            img{
+                height: 20px;
+            }
+            a{
+                // background-color: aqua;
+                font-size: 2em;
+                padding: 10px;
+                width: 100%;
+                justify-content: start;
+            }
+            a:hover{
+                background-color: white;
+                color: var(--color_dark_blue);
+            }
+        }
+    }
+}
+
+@media screen AND (max-width: 800px) {
+    .box_contact{
+        ul{
+            li{
+                a{
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }    
+}

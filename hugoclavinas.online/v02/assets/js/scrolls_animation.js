@@ -4,7 +4,7 @@
 $(function(){
 
     // SIBLES
-    // let html_body = $('html, body');
+    let html_body = $('html, body');
     // let contact = $('.contact');
     // let formations = $('.formations');
     // let objectifs = $('.objectifs');
@@ -14,7 +14,7 @@ $(function(){
     // let footer = $('footer');
 
     // BTS
-    // let a_scroll_up = $(".a_scroll_up");
+    let a_scroll_up = $(".a_scroll_up");
     // let a_contact = $(".a_contact");
     // let a_formations = $(".a_formations");
     // let a_objectifs = $(".a_objectifs");
@@ -23,11 +23,11 @@ $(function(){
     // let a_demos = $(".a_demos");
     // let a_scroll_down = $(".a_scroll_down");
 
-    // a_scroll_up.click(function(){
-    //     html_body.animate({
-    //         scrollTop: html_body.offset().top
-    //     }, 2000);
-    // })
+    a_scroll_up.click(function(){
+        html_body.animate({
+            scrollTop: html_body.offset().top
+        }, 2000);
+    })
     
     // a_contact.click(function(){
     //     html_body.animate({
