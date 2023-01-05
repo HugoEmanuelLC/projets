@@ -1,8 +1,10 @@
 :root{
     --color_dark_blue: rgb(0, 0, 65);
+    --color_dark: #151515;
     --color_orange: rgb(146, 58, 0);
     --color_gray: gray;
     --txt_shadow: 4px 4px 4px rgb(0, 0, 0);
+    --txt_color_blue: rgb(0, 81, 255);
 }
 
 *{
@@ -14,15 +16,29 @@
     font-weight: 500;
     letter-spacing: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
 }
 
 a{
     text-decoration: none;
+    cursor: pointer;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    background-color: var(--color_dark);
 }
 
 #page{
-    background-color: var(--color_dark_blue);
+    // background-color: var(--color_dark_blue);
     min-height: 100vh;
+    overflow: hidden;
 }
 
 .dark_opo{
@@ -31,11 +47,15 @@ a{
     height: 100%;
 }
 
+img{
+    max-width: 100%;
+}
+
 
 
 /* SCROLLBAR */
 ::-webkit-scrollbar{
-    background-color: black;
+    background-color: var(--color_dark);
     pointer-events: visible;
     width: 5px;
     height: 4px;

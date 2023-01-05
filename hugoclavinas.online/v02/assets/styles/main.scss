@@ -1,8 +1,14 @@
+//GLOBAL
 @import 'sass/info';
 @import 'sass/imports';
 @import 'sass/global';
 @import 'sass/header';
-@import 'sass/footer';
 @import 'sass/navbar';
+@import 'sass/footer';
 
+//ACCUEIL
 @import 'sass/accueil';
+@import 'sass/box_contenu';
+
+//APROPOS
+@import 'sass/box_profil';

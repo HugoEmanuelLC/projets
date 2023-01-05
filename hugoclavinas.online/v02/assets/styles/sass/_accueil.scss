@@ -21,10 +21,19 @@
 .intitule .dark_opo{
     height: 95vh;
     display: flex;
-    flex-direction: column;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+}
+.intitule .dark_opo div:first-child{
+    display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
 }
+// .intitule .dark_opo div{
+//     border: solid 3px red;
+// }
 .intitule .dark_opo h1{
     font-size: 5rem;
     text-shadow: var(--txt_shadow);
@@ -36,6 +45,8 @@
     line-height: 1px;
     font-family: 'Fjalla One', serif;
 }
+
+
 .intitule .link_social{
     position: absolute;
         bottom: 0;
