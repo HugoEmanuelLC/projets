@@ -11,6 +11,7 @@
 </div>
 
 
+
 <script>
     title = "HClavinas | Projets";
     $("title").append().html(title);
@@ -30,6 +31,7 @@
                 data.forEach(ele => {
                     if( i %2==0 ){
                         elem += '<div class="projet" data-aos="fade-right" >'
+                        elem +=     '<a href="'+ele.Url+'" target="_blank"> VOIR ICI:</a>'
                         elem +=     '<img src="./assets/images/projets/'+ele.Image+'" alt="">'
                         elem +=     '<div class="description">'
                         elem +=         '<h3>'+ele.TypeProjet+':</h3>'
@@ -38,7 +40,8 @@
                         elem += '</div></div>'
                     }
                     else{
-                        elem += '<div class="projet"data-aos="fade-left" >'
+                        elem += '<div class="projet"data-aos="fade-right" >'
+                        elem +=     '<a href="'+ele.Url+'" target="_blank"> VOIR ICI:</a>'
                         elem +=     '<img src="./assets/images/projets/'+ele.Image+'" alt="">'
                         elem +=     '<div class="description add_color">'
                         elem +=         '<h3>'+ele.TypeProjet+':</h3>'

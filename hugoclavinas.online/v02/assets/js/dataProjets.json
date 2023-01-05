@@ -4,16 +4,26 @@
         "Name": "Application marvel cinematic universe",
         "TypeProjet": "Demo",
         "Year": "01/2023",
-        "Description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos accusamus beatae doloribus, esse similique, libero quis nihil id cumque nemo voluptates odio eaque eligendi mollitia aperiam impedit. Incidunt, ullam eum!",
+        "Description": [
+            "Creation d'une demo d'application style disney + de l'univers cinematique de marvel",
+            " developpé en frontend avec des donnes en objet javascript."
+        ],
         "Technologies": ["","",""],
         "Image": "hero-image.jpeg",
         "Url": "./mcu"
     },
+
+
+    
     {
         "Name": "Site web wawmom snack",
         "TypeProjet": "Projet",
         "Year": "12/2022",
-        "Description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos accusamus beatae doloribus, esse similique, libero quis nihil id cumque nemo voluptates odio eaque eligendi mollitia aperiam impedit. Incidunt, ullam eum!",
+        "Description": [
+            "Creation d'un site web pour un petit et simpa snack",
+            " cote frontend je utilise Sass et JQuery principalment",
+            " cote backend j'ai creer un petit panel de configuration pour le control de donnes du menu sont Api en php."
+        ],
         "Technologies": ["","",""],
         "Image": "snack-wawmomo.png",
         "Url": "https://www.wawmomo.be"

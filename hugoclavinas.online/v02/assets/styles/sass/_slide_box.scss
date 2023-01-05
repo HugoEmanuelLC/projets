@@ -1,0 +1,51 @@
+.slide_box{
+    background-color: var(--color_dark_blue);
+    // background-color: var(--backColorOrange);
+    color: white;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+        top: 0;
+    z-index: 20;
+    transition: 700ms;
+}
+
+
+
+.btn_slide_box{
+    padding: 10px 12px;
+    position: absolute;
+        top: 5px;
+        right: 5px;
+}
+.btn_slide_box i{
+    font-size: 1.7rem;
+    color: var(--txt_color_light_1);
+}
+.btn_slide_box:hover i{
+    color: var(--txt_color_choco);
+}
+
+
+
+.hide{
+    left: -105vw;
+    width: 10%;
+}
+.hide ul li{
+    font-size: 0;
+    text-shadow: none;
+}
+.show{
+    left: 0;
+    width: 100%;
+}
+.show ul li{
+    font-size: 0.8em;
+    transition: 200ms;
+}
+
+.show2{
+    left: 0;
+    width: 100%;
+}
