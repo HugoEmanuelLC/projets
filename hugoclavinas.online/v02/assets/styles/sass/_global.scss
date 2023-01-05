@@ -31,6 +31,10 @@ li{
     list-style: none;
 }
 
+p{
+    font-size: 0.9em;
+}
+
 body{
     background-color: var(--color_dark);
 }
@@ -38,6 +42,9 @@ body{
 #page{
     // background-color: var(--color_dark_blue);
     min-height: 100vh;
+}
+
+#AddComponents{
     overflow: hidden;
 }
 

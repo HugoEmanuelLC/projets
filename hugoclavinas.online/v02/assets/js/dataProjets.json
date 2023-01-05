@@ -1,0 +1,21 @@
+
+[
+    {
+        "Name": "Application marvel cinematic universe",
+        "TypeProjet": "Demo",
+        "Year": "01/2023",
+        "Description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos accusamus beatae doloribus, esse similique, libero quis nihil id cumque nemo voluptates odio eaque eligendi mollitia aperiam impedit. Incidunt, ullam eum!",
+        "Technologies": ["","",""],
+        "Image": "hero-image.jpeg",
+        "Url": "./mcu"
+    },
+    {
+        "Name": "Site web wawmom snack",
+        "TypeProjet": "Projet",
+        "Year": "12/2022",
+        "Description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos accusamus beatae doloribus, esse similique, libero quis nihil id cumque nemo voluptates odio eaque eligendi mollitia aperiam impedit. Incidunt, ullam eum!",
+        "Technologies": ["","",""],
+        "Image": "snack-wawmomo.png",
+        "Url": "https://www.wawmomo.be"
+    }
+]

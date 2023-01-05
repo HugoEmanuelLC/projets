@@ -1,0 +1,42 @@
+.box_projets{
+    // border: solid 3px red;
+
+    .projet{
+        display: flex;
+
+        img{
+            width: 50%;
+        }
+        .description{
+            h3{
+                // background-color: green;
+                padding: 0 0 20px;
+                text-decoration: underline;
+                font-size: 1.2em;
+            }
+        }
+    }
+}
+.add_color{
+    background-color: var(--color_orange);
+}
+
+@media screen AND (min-width: 901px) {
+    .projet{
+        .description{
+            padding: 10px;
+        }
+    }    
+}
+
+@media screen AND (max-width: 900px) {
+    .projet{
+        flex-direction: column;
+        img{
+            min-width: 100%;
+        }
+        .description{
+            padding: 40px 10px 200px;
+        }
+    }    
+}

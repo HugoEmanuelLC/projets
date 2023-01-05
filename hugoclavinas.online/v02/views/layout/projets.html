@@ -1,7 +1,62 @@
-<h1>Projets</h1>
+
+
+<div class="box_projets">
+    <!--<div class="projet">
+        <h3></h3>
+        <img src="" alt="">
+        <div class="description">
+            <p></p>
+        </div>
+    </div>-->
+</div>
 
 
 <script>
     title = "HClavinas | Projets";
     $("title").append().html(title);
+
+
+    $(function(){
+        //sibles
+        let projet_item = $(".box_projets");
+
+        let elem = "";
+        let i = 0;
+
+        //affichage des projets
+        fetch("./assets/js/dataProjets.json")
+            .then(res => res.json())
+            .then(data => {
+                data.forEach(ele => {
+                    if( i %2==0 ){
+                        elem += '<div class="projet" data-aos="fade-right" >'
+                        elem +=     '<img src="./assets/images/projets/'+ele.Image+'" alt="">'
+                        elem +=     '<div class="description">'
+                        elem +=         '<h3>'+ele.TypeProjet+':</h3>'
+                        elem +=         '<h3>'+ele.Name+'</h3>'
+                        elem +=         '<p>'+ele.Description+'</p>'
+                        elem += '</div></div>'
+                    }
+                    else{
+                        elem += '<div class="projet"data-aos="fade-left" >'
+                        elem +=     '<img src="./assets/images/projets/'+ele.Image+'" alt="">'
+                        elem +=     '<div class="description add_color">'
+                        elem +=         '<h3>'+ele.TypeProjet+':</h3>'
+                        elem +=         '<h3>'+ele.Name+'</h3>'
+                        elem +=         '<p>'+ele.Description+'</p>'
+                        elem += '</div></div>'
+                    }
+                    i = i +1;
+                })
+                projet_item.append(elem);
+            })
+
+    })
+
+    // BIBLIOTHEQUE AOS ANIMATION "data-aos"
+    AOS.init({
+        duration: 600,
+        delay: 50,
+    });
+        
 </script>
