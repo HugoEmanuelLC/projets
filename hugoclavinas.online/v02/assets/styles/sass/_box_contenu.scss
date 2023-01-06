@@ -1,7 +1,7 @@
 
 .box_contenue{
     // border: solid red 2px;
-    background-color: var(--color_orange);
+    background-image: var(--color_mouve);
     // background-repeat: no-repeat;
     // background-size: cover;
     // background-position: bottom;
@@ -11,7 +11,7 @@
     // text-shadow: var(--txt_shadow);
 }
 .box_contenue h1{
-    background-color: gray;
+    background-color: rgb(128, 128, 128, 0.5);
     color: white;
     // border-bottom: solid 1px black;
     font-size: 1.5rem;
@@ -25,6 +25,7 @@
 }
 .formations p:last-child{
     border-bottom: solid 2px gray;
+    padding-bottom: 10px;
 }
 
 .box_contenue h3{
@@ -34,6 +35,8 @@
     margin: 0 auto;
 }
 .box_contenue p{
+    font-weight: 0;
+    font-size: 0.8em;
     max-width: 800px;
     margin: 0 auto;
     // border: solid green 2px;

@@ -2,6 +2,7 @@
     --color_dark_blue: rgb(0, 0, 65);
     --color_dark: #151515;
     --color_orange: rgb(146, 58, 0);
+    --color_mouve: linear-gradient(to bottom, #6666ff 0%, #660066 100%);
     --color_gray: gray;
     --txt_shadow: 4px 4px 4px rgb(0, 0, 0);
     --txt_color_blue: rgb(0, 81, 255);
@@ -73,7 +74,7 @@ img{
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--color_orange); 
+    background-color: blue; 
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
