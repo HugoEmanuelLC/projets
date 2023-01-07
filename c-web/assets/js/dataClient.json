@@ -1,0 +1,35 @@
+[
+    {
+        "User": "",
+        "Pswr": "",
+        "Contact":[
+            {
+                "Name": "",
+                "Mail": "",
+                "Phone": "",
+                "Adress": [
+                    {
+                        "Country": "",
+                        "City": "",
+                        "Street": ""
+                    }
+                ]
+            }
+        ],
+        "Title": "",
+        "JobType": "",
+        "About": "",
+        "Gallery": [
+            "","","",""
+        ],
+        "Hours": "",
+        "ImageProfil": "",
+        "ImageBackground": "",
+        "Partage": [
+            {
+                "Image": "",
+                "Description": ""
+            }
+        ]
+    }
+]
