@@ -16,6 +16,7 @@
             <div class="phases"><a href="#/phase2">Phase 2</a></div>
             <div class="phases"><a href="#/phase3">Phase 3</a></div>
             <div class="phases"><a href="#/phase4">Phase 4</a></div>
+            <div class="phases"><a href="#/phase5">Phase 5</a></div>
         </div>
 
         <h2>phase</h2>
@@ -38,23 +39,30 @@
             case '#/phase1':
                 hashUrl = window.location.hash;
                 hashUrl = hashUrl.replace("#/", "");
-                titre_phase.html(hashUrl.toUpperCase());
+                titre_phase.html(hashUrl);
+                //titre_phase.html(hashUrl.toUpperCase());
+
               break;
             case '#/phase2':
                 hashUrl = window.location.hash;
                 hashUrl = hashUrl.replace("#/", "");
-                titre_phase.html(hashUrl.toUpperCase());
+                titre_phase.html(hashUrl);
             break;
             case '#/phase3':
                 hashUrl = window.location.hash;
                 hashUrl = hashUrl.replace("#/", "");
-                titre_phase.html(hashUrl.toUpperCase());
+                titre_phase.html(hashUrl);
             break;
             case '#/phase4':
                 hashUrl = window.location.hash;
                 hashUrl = hashUrl.replace("#/", "");
-                titre_phase.html(hashUrl.toUpperCase());
+                titre_phase.html(hashUrl);
               break;
+              case '#/phase5':
+                  hashUrl = window.location.hash;
+                  hashUrl = hashUrl.replace("#/", "");
+                  titre_phase.html(hashUrl);
+                break;
             default:
               false
           }

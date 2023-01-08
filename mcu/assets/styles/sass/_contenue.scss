@@ -55,6 +55,7 @@
 .contenue_mcu_body{
     margin: 50px 0;
     h2{
+        font-size: 2em;
         margin-top: 120px;
         margin-bottom: 20px;
         padding-left: 20px;
@@ -87,6 +88,7 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        
     .phases{
         height: 60px;
         width: 120px;
@@ -114,6 +116,7 @@
         flex-wrap: wrap;
         .item{
             height: 120px;
+            width: 250px;
             min-width: 250px;
             margin: 0 20px 20px;
             box-shadow: var(--shadow);
@@ -122,11 +125,13 @@
             background-size: cover;
             overflow: hidden;
             a{
-                background-color: rgb(0, 0, 0, 0.4);
+                background-color: rgb(0, 0, 0, 0.5);
                 height: 100%;
                 width: 100%;
                 font-size: 1.2em;
+                text-align: center;
                 display: flex;
+                    flex-wrap: wrap;
                     justify-content: center;
                     align-items: center;
                 text-shadow: var(--shadow_txt);
@@ -142,6 +147,7 @@
 .box_collections{
     // padding: 50px 0 0;
     h3{
+        font-size: 1.2em;
         margin-top: 120px;
         padding-left: 20px;
         text-decoration: underline;
@@ -154,6 +160,7 @@
     overflow-x: scroll;
         .item{
             height: 120px;
+            width: 250px;
             min-width: 250px;
             margin: 0 20px 10px;
             box-shadow: var(--shadow);
@@ -162,11 +169,13 @@
             background-size: cover;
             overflow: hidden;
             a{
-                background-color: rgb(0, 0, 0, 0.4);
+                background-color: rgb(0, 0, 0, 0.5);
                 height: 100%;
                 width: 100%;
                 font-size: 1.2em;
+                text-align: center;
                 display: flex;
+                    flex-wrap: wrap;
                     justify-content: center;
                     align-items: center;
                 text-shadow: var(--shadow_txt);
@@ -176,4 +185,14 @@
             background-color: var(--color_light_blue);
             border: solid gray 4px;
         }
+}
+
+
+@media screen AND (max-width: 800px) {
+    .contenue_mcu_body .presentation_principal{
+        .items{
+            min-width: 350px;
+            height: 180px;
+        }
+    }
 }

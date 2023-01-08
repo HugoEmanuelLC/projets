@@ -18,6 +18,7 @@
             <div class="phases"><a href="#/phase2">Phase 2</a></div>
             <div class="phases"><a href="#/phase3">Phase 3</a></div>
             <div class="phases"><a href="#/phase4">Phase 4</a></div>
+            <div class="phases"><a href="#/phase5">Phase 5</a></div>
         </div>
 
         <!-- PAR COLLECTTION -->
@@ -30,6 +31,9 @@
             
             <h3>Collection Thor</h3>
             <div class="collections thor"></div>
+            
+            <h3>Collection Hulk</h3>
+            <div class="collections hulk"></div>
         </div>
 
     </div>
@@ -47,11 +51,13 @@
         let ironman_item = $(".contenue_mcu_body .ironman");
         let captainamerica_item = $(".contenue_mcu_body .captainamerica");
         let thor_item = $(".contenue_mcu_body .thor");
+        let hulk_item = $(".contenue_mcu_body .hulk");
         
         let avengers_elem= "";
         let ironman_elem= "";
         let captainamerica_elem= "";
         let thor_elem= "";
+        let hulk_elem= "";
 
 
         //Presentation films avengers 
@@ -93,7 +99,11 @@
                     break;
 
                     case "thor":
-                    thor_elem += '<div class="item" style="background-image: url('+elem.image+')"><a class="opo" href="">'+elem.name+'</a></div>';
+                        thor_elem += '<div class="item" style="background-image: url('+elem.image+')"><a class="opo" href="">'+elem.name+'</a></div>';
+                    break;
+
+                    case "hulk":
+                        hulk_elem += '<div class="item" style="background-image: url('+elem.image+')"><a class="opo" href="">'+elem.name+'</a></div>';
                     break;
 
                     default:false;
@@ -103,5 +113,6 @@
         ironman_item.append(ironman_elem);
         captainamerica_item.append(captainamerica_elem);
         thor_item.append(thor_elem);
+        hulk_item.append(hulk_elem);
     })
 </script>
