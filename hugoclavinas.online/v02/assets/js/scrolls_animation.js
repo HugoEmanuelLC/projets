@@ -26,7 +26,7 @@ $(function(){
     a_scroll_up.click(function(){
         html_body.animate({
             scrollTop: html_body.offset().top
-        }, 2000);
+        }, 200);
     })
     
     // a_contact.click(function(){
