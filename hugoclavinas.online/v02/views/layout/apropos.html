@@ -17,22 +17,15 @@
 
 <!-- ABOUT -->
 <div class="box_contenue about">
-    <h1 data-aos="fade-right">A propos de moi :</h1>
-    <p data-aos="fade-left">Je suis arrivé en Belgique en 2006 et j’ai commencé à travailler en 2007 dans une fabrique de raffinage de métaux précieux.</p>
-    <p>En 2012, j’ai fait une formation (ELECTRICIEN INSTALATEUR) après avoir tombe sur le marchez de l’emploi.</p>
-    <p>Entre 2013 et 2016, j’ai travaillé comme intérimaire dans des entreprises de chantier (la plupart), lecture et exécution des plans d’implantation.</p>
-    <p>Fin 2016 vers 2017, j’ai été technicien en dépannage en portes/portails électrique, je disposais d’une camionnette afin de travailler seul.</p>
-    <p></p>
-    <p>J’ai acquis une expérience en atelier, on fabriquait mécaniquement et électriquement de « A » à « Z » des armoires électriques industriels, on se basait sur des listes de fils, plans électriques, photos, et plans de principe.</p>
-    <p>Actuellement (jusqu’au mois d’Aout) j’étais responsable du control d’accès (câblage, raccordement, installation et dépannage des lecteurs de badge) ainsi que du réseau informatique dans le site GSK (maintenance du site) (métier que j’avais déjà eu le plaisir de pratiquer au Parlement Européen).</p>
-    <p>Aujourd’hui je suis à la recherche d’un emploi où je pourrais me consacrer à 100% au développement de l’entreprise et une stabilité pour mon bien être.</p>
-    <p data-aos="fade-left">Continuer à m'améliorer et acquérir des compétences dans le domaine du développement des sites et applications web comme développeur front et back end tout en mettant à disposition mes connaissances déjà acquises, ma bonne humeur et mon esprit d’équipe.</p>
+    <div class="add_about">
+        <h1 data-aos="fade-right"></h1>
+    </div>
+
     <br>
-    <h1>Mes qualités :</h1>
-        <p>Professionnel,</p>
-        <p>Faciliter d’adaptation,</p>
-        <p>Responsable,</p>
-        <p>Motiver…</p>
+
+    <div class="add_quality">
+        <h1 data-aos="fade-right"></h1>
+    </div>
 </div>
 
 <!-- IMAGE DE FOND SIMPLE -->
@@ -164,7 +157,39 @@
 
     // BIBLIOTHEQUE AOS ANIMATION "data-aos"
     AOS.init({
-        duration: 600,
+        duration: 300,
         delay: 100,
     });
+
+    $(function(){
+        //SIBLES
+        let about_title_item = $(".add_about h1");
+        let about_text_item = $(".add_about");
+        let quality_title_item = $(".add_quality h1");
+        let quality_text_item = $(".add_quality");
+
+        //VARIABLES INIT
+        let about_text_elem = "";
+        let quality_text_elem = "";
+
+        //AFFICHAGE DES INFOS
+        fetch("./assets/js/dataInfos.json")
+            .then(res => res.json())
+            .then(data => {
+                about_title_item.append(data[0].About[0].Title)
+                quality_title_item.append(data[0].Quality[0].Title)
+
+                data[0].About[1].Text.forEach(elem => {
+                    console.log(elem)
+                    about_text_elem += '<p data-aos="fade-left">'+elem+'</p>'
+                })
+                about_text_item.append(about_text_elem)
+
+                data[0].Quality[1].Text.forEach(elem => {
+                    console.log(elem)
+                    quality_text_elem += '<p data-aos="fade-left">'+elem+'</p>'
+                })
+                quality_text_item.append(quality_text_elem)
+            })
+    })
 </script>

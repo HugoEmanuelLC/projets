@@ -2,24 +2,30 @@
     {
         "About": [
             {"Title": "A propos de moi"},
-            "Arrivé en Belgique en décembre de 2006 j’ai commencé à travailler en 2007 dans une fabrique de raffinage de métaux précieux.",
-            "En 2012, j’ai fait une formation (ELECTRICIEN INSTALATEUR) après avoir tombe sur le marchez de l’emploi.",
-            "Entre 2013 et 2016, j’ai travaillé comme intérimaire dans des entreprises de chantier (la plupart), lecture et exécution des plans d’implantation.",
-            "Fin 2016 vers fins 2017, j’ai été technicien en dépannage en portes/portails électrique, je disposais d’une camionnette afin de travailler seul.",
-            "J’ai acquis une expérience en atelier, on fabriquait mécaniquement et électriquement de « A » à « Z » des armoires électriques industriels, on se basait sur des listes de fils, plans électriques, photos, et plans de principe.",
-            "De 2018 à l'été 2019 j’étais responsable du control d’accès (câblage, raccordement, installation et dépannage des lecteurs de badge) ainsi que du réseau informatique dans le site GSK (maintenance du site) (métier que j’avais déjà eu le plaisir de pratiquer au Parlement Européen).",
-            "Pendent cette années la je me former deja aux metier du web avec des formations à distance chez technofutur tic, en commencent par le Html5, Css3.",
-            "",
-            "",
-            "Aujourd’hui je suis à la recherche d’un emploi où je pourrais me consacrer à 100% au développement de l’entreprise et une stabilité pour mon bien être.",
-            "Continuer à m'améliorer et acquérir des compétences dans le domaine du développement des sites et applications web comme développeur front et back end tout en mettant à disposition mes connaissances déjà acquises, ma bonne humeur et mon esprit d’équipe."
+            {"Text": [
+                "Arrivé en Belgique en décembre de 2006 j’ai commencé à travailler en 2007 dans une fabrique de raffinage de métaux précieux.",
+                "En 2012, j’ai fait une formation (ELECTRICIEN INSTALATEUR) après avoir tombe sur le marchez de l’emploi.",
+                "Entre 2013 et 2016, j’ai travaillé comme intérimaire dans des entreprises de chantier (la plupart), lecture et exécution des plans d’implantation.",
+                "Fin 2016 vers fins 2017, j’ai été technicien en dépannage en portes/portails électrique, je disposais d’une camionnette afin de travailler seul.",
+                "J’ai acquis une expérience en atelier, on fabriquait mécaniquement et électriquement de « A » à « Z » des armoires électriques industriels, on se basait sur des listes de fils, plans électriques, photos, et plans de principe.",
+                "De 2018 à l'été 2019 j’étais responsable du control d’accès (câblage, raccordement, installation et dépannage des lecteurs de badge) ainsi que du réseau informatique dans le site GSK (maintenance du site) (métier que j’avais déjà eu le plaisir de pratiquer au Parlement Européen).",
+                "Pendent cette années là je me formé deja aux metier du web avec des formations à distance chez technofutur tic, en commencent par le Html5, Css3.",
+                "En 2020 j'ai participé à la formation 'Acces aux Metiers du Numerique' au CESEP - Nivelles, c'etait mon premier vrais pas pour une reconvertion professionnel.",
+                "Entre 2021 et 2022 une formation chez technofutur-tic m'as permit de les connaissances nécessaires pour debuter le metier de developpeur web apps junior.",
+                "Aujourd’hui je suis à la recherche d’un emploi où je pourrais me consacrer à 100% au metier du développement web, ",
+                "Continuer à m'améliorer et acquérir des compétences dans le domaine du développement des sites et applications web comme développeur front et back end tout en mettant à disposition mes connaissances déjà acquises, ma bonne humeur et mon esprit d’équipe."
+                ]
+            }
         ],
         "Quality": [
             {"Title": "Mes qualités"},
-            "Professionnel",
-            "Faciliter d’adaptation",
-            "Responsable",
-            "Motiver"
+            {"Text": [
+                "Professionnel",
+                "Faciliter d’adaptation",
+                "Responsable",
+                "Motiver"
+                ]
+            }
         ]
     }
 ]
