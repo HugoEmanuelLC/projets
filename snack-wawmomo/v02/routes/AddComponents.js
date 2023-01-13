@@ -6,6 +6,7 @@ title = "C-Link ";
 var routes = [
     // changement de page
     {path: "#/notfound", name: "notfound", component: "errorPage.html"},
+    {path: "/", name: "home", component: "home.html"},
     {path: "#/", name: "home", component: "home.html"},
     {path: "#/home", name: "home", component: "home.html"},
     {path: "#/gallerie", name: "gallerie", component: "gallerie.html"},
@@ -56,7 +57,10 @@ console.log(hash)
         }
     }
     else{
-        window.location = "#/home";
+        // window.location = "#/home";
+        hashRoutes = "";
+        hashComponent = "home.html";
+        AddComponents.load( "views/layout/" +hashComponent );
     }
 }
 
