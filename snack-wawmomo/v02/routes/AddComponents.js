@@ -9,24 +9,20 @@ var routes = [
     {path: "/", name: "home", component: "home.html"},
     {path: "#/", name: "home", component: "home.html"},
     {path: "#/home", name: "home", component: "home.html"},
-    {path: "#/gallerie", name: "gallerie", component: "gallerie.html"},
-    {path: "#/pagetest", name: "page", component: "pageTest.html"},
-
-    // mode target
-    // {path: "#projets", name: "#projets", component: "home.html"},
-    // {path: "#demos", name: "#demos", component: "home.html"},
-    // {path: "#contact", name: "#contact", component: "home.html"},
-
-    
 ];
 
 var HashChange = function(){
-var hash = window.location.hash;
+var hash;
 var hashRoutes;
 var hashComponent;
-console.log(hash)
+
+    if( window.location.hash ){
+        hash = window.location.hash;
+    }else{
+        hash = "";
+    }
+
     if (hash.startsWith("#/") && hash.length>2){
-        // hash = hash.replace("#/", "");
 
         for (let ind = 0; ind < routes.length; ind++) {
             const route = routes[ind];

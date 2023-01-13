@@ -1,24 +1,14 @@
 // LIST DE MENUS
 .box_list_menus{
-    // border-top: solid 10px var(--bckgd_color_light_1);
-    // border: solid red 3px;
-    // background-color: var(--);
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
-    // background-attachment: fixed;
     display: flex;
         flex-wrap: nowrap;
         justify-content: flex-start;
     overflow-x: scroll;
 }
 .box_list_menus div{
-    // border: solid green 3px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    // border-radius: 20px;
-    // margin: 5px;
     background-position: top left;
     background-size: cover;
     width: 100%;
@@ -46,17 +36,12 @@
 
 // LIST DE PRODUITS
 .box_list_produits{
-    // margin: 10px;
     padding: 10px;
-    // border: solid green 2px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    // min-height: 50vh;
-    // text-shadow: var(--shadowText);
     display: flex;
         flex-direction: column;
-        // justify-content: center;
         align-items: center;
 }
 .box_list_produits .produits{
@@ -71,14 +56,12 @@
     border-radius: 20px;
     width: 90%;
     max-width: 920px;
-    // margin-bottom: 100px;
 }
 .none{
     background-color: transparent;
 }
 .box_list_produits .produits tr{
     background-color: rgb(255, 255, 255,0.6);
-    // padding: 5px 20px;
 }
 
 .box_list_produits .produits tr td{
@@ -103,40 +86,11 @@
     text-align: center;
     text-decoration: underline;
     color: rgb(225, 225, 225);
-
-    // background-color: green;
-    // display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    // padding: 30px 0;
-    // font-size: 3rem;
-    // text-decoration: underline 2px var(--bg_color_light_1);
-    // text-shadow: var(--txt_shadow);
-    // border: solid green 2px;
-    // width: 100%;
-    // align-self: flex-start;
 }
-// .box_list_produits table{
-//     // border: solid 4px red;
-//     width: 50%;
-//     max-width: 800px;
-// }
-// .box_list_produits table td{
-//     padding: 10px 20px;
-//     border-bottom: solid 1.5px var(--bg_color_light_1);
-// }
-// .box_list_produits table .color1{
-//     background-color: var(--bckgd_color_light_12);
-// }
-// .box_list_produits table .color2{
-//     background-color: #ffffff36;
-// }
 
 @media screen And (max-width: 800px) {
     .box_list_produits .produits{
-        // border: solid red 3px;
         width: 100%;
-        // padding: 0;
     }
     .box_list_produits h1{
         font-size: 2rem;
@@ -144,7 +98,6 @@
     }
     .box_list_produits table{
         min-width: 100%;
-        // border: solid blue 3px;
     }
     .box_list_produits .produits tr td{
         font-size: 1rem;

@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // font-size: 16px;
     font-family: 'Gentium Plus', serif;
     transition: 300ms;
 }
@@ -10,16 +9,7 @@
 
 body{
     background-color: var(--bg_color_dark_1);
-    // border: solid green 4px;
 }
-// #page{
-//     border: solid blue 4px;
-//     padding-top: none;
-// }
-// #AddComponents{
-//     margin-top: none;
-//     border: solid red 4px;
-// }
 
 .box_contenu{
     position: relative;
@@ -42,7 +32,6 @@ li{
 }
 
 h1{
-    // text-align: center;
     display: flex;
         justify-content: space-around;
         align-items: center;
@@ -66,23 +55,6 @@ h4{
     color: white;
     font-size: 1.5rem;
 }
-// .titre_Portfolio a{
-//     cursor: pointer;
-//     position: absolute;
-//         top: 0;
-//         right: 5px;
-//     height: 100%;
-//     padding: 0 10px;
-//     font-size: 3em;
-// }
-// .titre_Portfolio a i{
-//     font-size: 0.25em;
-//     color: var(--backColorOrange);
-// }
-// .titre_Portfolio a:hover > i{
-//     font-size: 0.2em;
-//     color: white;
-// }
 
 
 //un filtre noir sur une image pour un beau contraste

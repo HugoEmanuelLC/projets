@@ -1,7 +1,4 @@
 header{
-    // border: solid white 4px;
-    // position: sticky;
-    // top: 0;
     background-color: var(--bckgd_color_light_1);
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,28 +19,14 @@ header{
 }
 .header_contenu h1{
     color: var(--backColorOrange);
-    // font-size: 10rem;
     font-family: 'Gentium Plus', serif;
     line-height: 0.5;
 }
 .header_contenu h3{
     color: var(--backColorOrange);
-    // font-size: 1.5rem;
     letter-spacing: 6px;
-    // letter-spacing: 2px;
     font-family: 'Gentium Plus', serif;
 }
-// .header_contenu .reseaux_social{
-//     position: absolute;
-//         top: 5px;
-//         right: 5px;
-// }
-// .header_contenu .reseaux_social i{
-//     background-color: var(--bckgd_color_light_2);
-//     // color: white;
-//     font-size: 1.5rem;
-//     padding: 4px 6px;
-// }
 .header_contenu .btn_reservation{
     display: none;
     position: absolute;
@@ -106,10 +89,6 @@ header{
 }
 
 @media screen and (max-width: 688px){
-    // .header_contenu h1{
-    //     // font-size: 4.2rem;
-    // }
-    
     .header_contenu h3{
         font-size: 0.75rem;
         letter-spacing: 2.2px;

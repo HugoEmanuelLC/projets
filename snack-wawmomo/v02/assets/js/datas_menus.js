@@ -9,7 +9,7 @@ if ($(".box_list_menus")) {
     let menus = "";
     $.ajax({
         async: false,
-        url: "http://localhost/projets/dashboard/0",
+        url: "http://localhost/projets/dashboard/0", //https://www.wawmomo.be/Api/0
         dataType: "json",
         success: function(data){
                 
@@ -45,7 +45,7 @@ if ($(".box_list_menus")) {
         let i = 0;
         $.ajax({
             async: true,
-            url: "http://localhost/projets/dashboard/0/"+id,
+            url: "http://localhost/projets/dashboard/0/"+id, //https://www.wawmomo.be/Api/0/"+id
             dataType: "json",
             success: function(data){
 
