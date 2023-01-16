@@ -6,9 +6,14 @@ title = "C-Link ";
 var routes = [
     // changement de page
     {path: "#/notfound", name: "notfound", component: "errorPage.html"},
-    {path: "#/", name: "accueil", component: "accueil.html"},
-    {path: "#/accueil", name: "accueil", component: "accueil.html"},
-    {path: "#/accueilmcu", name: "accueilmcu", component: "accueilMcuPage.html"},
+    // {path: "/", name: "accueil", component: "accueil.html"},
+    // {path: "#/", name: "accueil", component: "accueil.html"},
+    // {path: "#/accueil", name: "accueil", component: "accueil.html"},
+
+    {path: "/", name: "accueilmcu", component: "accueilMcuPage.html"},
+    {path: "#/", name: "accueilmcu", component: "accueilMcuPage.html"},
+    // {path: "#/accueilmcu", name: "accueilmcu", component: "accueilMcuPage.html"},
+
     {path: "#/films", name: "films", component: "filmsOrSeriesPage.html"},
     {path: "#/series", name: "series", component: "filmsOrSeriesPage.html"},
     {path: "#/phase1", name: "phase1", component: "phasePage.html"},
@@ -64,7 +69,10 @@ console.log(hash)
         }
     }
     else{
-        window.location = "#/accueil";
+        // window.location = "#/accueil";
+        hashRoutes = "";
+        hashComponent = "accueilMcuPage.html";
+        AddComponents.load( "views/layout/" +hashComponent );
     }
 }
 
