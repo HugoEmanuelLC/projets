@@ -11,6 +11,7 @@ var routes = [
     {path: "#/home", name: "home", component: "home.html"},
     {path: "#/projets", name: "projets", component: "projets.html"},
     {path: "#/apropos", name: "apropos", component: "apropos.html"},
+    {path: "#/oxo", name: "oxo", component: "oxo.html"},
 
     // mode target
     // {path: "#top", name: "#top", component: "home.html"}, 

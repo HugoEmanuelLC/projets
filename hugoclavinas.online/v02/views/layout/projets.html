@@ -41,14 +41,26 @@
                         elem += '</div></div>'
                     }
                     else{
-                        elem += '<div class="projet"data-aos="fade-right" >'
-                        elem +=     '<a href="'+ele.Url+'" target="_blank"> VOIR ICI:</a>'
-                        elem +=     '<img src="./assets/images/projets/'+ele.Image+'" alt="">'
-                        elem +=     '<div class="description">'
-                        elem +=         '<h3>'+ele.TypeProjet+':</h3>'
-                        elem +=         '<h3>'+ele.Name+'</h3>'
-                        elem +=         '<p>'+ele.Description+'</p>'
-                        elem += '</div></div>'
+                        if( ele.Name == "Jeu OXO" ){
+                            elem += '<div class="projet"data-aos="fade-right" >'
+                                elem +=     '<a class="a_scroll_up" href="'+ele.Url+'"> VOIR ICI:</a>'
+                                elem +=     '<img src="./assets/images/projets/'+ele.Image+'" alt="">'
+                                elem +=     '<div class="description">'
+                                elem +=         '<h3>'+ele.TypeProjet+':</h3>'
+                                elem +=         '<h3>'+ele.Name+'</h3>'
+                                elem +=         '<p>'+ele.Description+'</p>'
+                                elem += '</div></div>'
+                        }
+                        else{
+                            elem += '<div class="projet"data-aos="fade-right" >'
+                                elem +=     '<a href="'+ele.Url+'" target="_blank"> VOIR ICI:</a>'
+                                elem +=     '<img src="./assets/images/projets/'+ele.Image+'" alt="">'
+                                elem +=     '<div class="description">'
+                                elem +=         '<h3>'+ele.TypeProjet+':</h3>'
+                                elem +=         '<h3>'+ele.Name+'</h3>'
+                                elem +=         '<p>'+ele.Description+'</p>'
+                                elem += '</div></div>'
+                        }
                     }
                     i = i +1;
                 })

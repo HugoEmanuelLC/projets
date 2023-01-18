@@ -17,6 +17,21 @@
 
 
     {
+        "Name": "Jeu OXO",
+        "TypeProjet": "Demo",
+        "Year": "01/2022",
+        "Description": [
+            "Creation d'un Jeu oxo",
+            " à l'aide de javascript "
+        ],
+        "Technologies": ["","",""],
+        "Image": "oxo-img.jpg",
+        "Url": "./#/oxo"
+    },
+
+
+
+    {
         "Name": "Site web wawmom snack",
         "TypeProjet": "Projet",
         "Year": "12/2022",
