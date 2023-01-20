@@ -4,18 +4,55 @@
         <h3>PC:</h3>
         <p>Points: 0</p>
 
-        <h3>Player</h3>
+        <h3>Player:</h3>
         <p>Pnoints: 0</p>
     </div>
 
     <div class="tableau">
+        <ul id="tab_1">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
         
+        <ul id="tab_2">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        
+        <ul id="tab_3">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
 </div>
 
-<script>
+<script type="text/javascript">
     title = "HClavinas | Projets";
     $("title").append().html(title);
 
+    let tab_1 = $(" #tab_1 ")
+    let tab_2 = $(" #tab_2 ")
+    let tab_3 = $(" #tab_3 ")
 
+    let tab_player = ["","","","","",""]
+    let tab_robot = ["","","","","",""]
+
+    let tab_plateau_1 = ["1","2","3"] 
+    let tab_plateau_2 = ["","",""] 
+    let tab_plateau_3 = ["","",""] 
+
+    let tableau = []
+
+    $(function(){
+        function creationPlateau(){
+            tab_plateau_1.forEach(elem => {
+                console.log("elem")
+                console.log(elem)
+            })
+        }
+        creationPlateau()
+    })
 </script>
