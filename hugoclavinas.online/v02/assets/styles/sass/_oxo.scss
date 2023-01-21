@@ -5,5 +5,9 @@
     width: 60px;
     height: 60px;
     border: solid 2px black;
-    background-color: white;
+    background-color: yellow;
+    color: red;
+    display: flex;
+        justify-content: center;
+        align-items: center;
 }

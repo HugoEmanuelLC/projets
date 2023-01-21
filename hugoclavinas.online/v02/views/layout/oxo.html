@@ -9,23 +9,11 @@
     </div>
 
     <div class="tableau">
-        <ul id="tab_1">
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+        <ul id="tab_1"></ul>
         
-        <ul id="tab_2">
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+        <ul id="tab_2"></ul>
         
-        <ul id="tab_3">
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+        <ul id="tab_3"></ul>
     </div>
 </div>
 
@@ -37,22 +25,51 @@
     let tab_2 = $(" #tab_2 ")
     let tab_3 = $(" #tab_3 ")
 
-    let tab_player = ["","","","","",""]
-    let tab_robot = ["","","","","",""]
+    let Player = [
+        {
+            nom: "",
+            symbole: "" // X ou O
+        }
+    ]
+    let Robot = [
+        {
+            nom: "Machine",
+            symbole: "" // X ou O
+        }
+    ]
 
     let tab_plateau_1 = ["1","2","3"] 
-    let tab_plateau_2 = ["","",""] 
-    let tab_plateau_3 = ["","",""] 
+    let tab_plateau_2 = ["a","b","c"]
+    let tab_plateau_3 = ["5","g","a"]
 
-    let tableau = []
+    let elem_tampo_1 = "";
+    let elem_tampo_2 = "";
+    let elem_tampo_3 = "";
 
     $(function(){
         function creationPlateau(){
             tab_plateau_1.forEach(elem => {
-                console.log("elem")
-                console.log(elem)
+                elem_tampo_1 += '<li onclick="click('+elem+')">'+elem+'</li>';
             })
+            tab_1.append(elem_tampo_1);
+            
+            tab_plateau_2.forEach(elem => {
+                elem_tampo_2 += '<li onclick="click('+elem+')">'+elem+'</li>';
+            })
+            tab_2.append(elem_tampo_2);
+            
+            tab_plateau_3.forEach(elem => {
+                elem_tampo_3 += '<li onclick="click('+elem+')">'+elem+'</li>';
+            })
+            tab_3.append(elem_tampo_3);         
         }
+
+        //---------------------------------------
+        
+        function click(tab_id){
+            console.log(tab_id)
+        }
+        console.log(tab_plateau_1[2]="r")
         creationPlateau()
     })
 </script>
