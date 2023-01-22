@@ -8,12 +8,13 @@
         <p>Pnoints: 0</p>
     </div>
 
+    <p onclick="creationPlateau()">start</p>
     <div class="tableau">
-        <ul id="tab_1"></ul>
+        <ul id="tab_A"></ul>
         
-        <ul id="tab_2"></ul>
+        <ul id="tab_B"></ul>
         
-        <ul id="tab_3"></ul>
+        <ul id="tab_C"></ul>
     </div>
 </div>
 
@@ -21,9 +22,9 @@
     title = "HClavinas | Projets";
     $("title").append().html(title);
 
-    let tab_1 = $(" #tab_1 ")
-    let tab_2 = $(" #tab_2 ")
-    let tab_3 = $(" #tab_3 ")
+    let tab_A = $(" #tab_A ")
+    let tab_B = $(" #tab_B ")
+    let tab_C = $(" #tab_C ")
 
     let Player = [
         {
@@ -38,38 +39,32 @@
         }
     ]
 
-    let tab_plateau_1 = ["1","2","3"] 
-    let tab_plateau_2 = ["a","b","c"]
-    let tab_plateau_3 = ["5","g","a"]
+    let tab_plateau_A = ["1","2","3"] 
+    let tab_plateau_B = ["a","b","c"]
+    let tab_plateau_C = ["5","g","a"]
 
-    let elem_tampo_1 = "";
-    let elem_tampo_2 = "";
-    let elem_tampo_3 = "";
+    let elem_tampo_A = "";
+    let lettre_A = "A";
+    let elem_tampo_B = "";
+    let lettre_B = "B";
+    let elem_tampo_C = "";
+    let lettre_C = "C";
 
-    $(function(){
-        function creationPlateau(){
-            tab_plateau_1.forEach(elem => {
-                elem_tampo_1 += '<li onclick="click('+elem+')">'+elem+'</li>';
-            })
-            tab_1.append(elem_tampo_1);
-            
-            tab_plateau_2.forEach(elem => {
-                elem_tampo_2 += '<li onclick="click('+elem+')">'+elem+'</li>';
-            })
-            tab_2.append(elem_tampo_2);
-            
-            tab_plateau_3.forEach(elem => {
-                elem_tampo_3 += '<li onclick="click('+elem+')">'+elem+'</li>';
-            })
-            tab_3.append(elem_tampo_3);         
+    function creationPlateau(){ 
+        for( let i=0; i<3; i++ ){
+            elem_tampo_A += '<li onclick="clickA('+tab_plateau_A[i]+')">'+tab_plateau_A[i]+'</li>';
         }
+        tab_A.append().html(elem_tampo_A);
+    }
 
-        //---------------------------------------
-        
-        function click(tab_id){
-            console.log(tab_id)
+    
+    function clickA(nr){
+        for( let i=0; i<3; i++ ){
+            if( tab_plateau_A[i] == nr ){
+                tab_plateau_A[i] = "X";
+                creationPlateau();
+            }
         }
-        console.log(tab_plateau_1[2]="r")
-        creationPlateau()
-    })
+    }
+    
 </script>
