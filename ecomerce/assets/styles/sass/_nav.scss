@@ -1,3 +1,11 @@
 .nav{
-    background-color: black;
+    // background-color: red;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    a{
+        color: white;
+        padding: 5px 10px;
+    }
 }

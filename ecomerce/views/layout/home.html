@@ -1,20 +1,34 @@
 <h1>Accueil</h1>
 
-<p>installer package.json pour puvoir installer :</p>
+<div class="box_produits">
+    <div class="produit">
+        <img src="https://www.motorlegend.com/modules/breve/photos/src/montre-bugatti-chiron-blue-sapphire-crystal-24345-1-P.jpg" alt="">
+        <h3>Nom produit</h3>
+        <p>prix: 200 €</p>
+        <a href="">Panier</a>
+    </div>
 
-<ul>
-    <li>sass si nécessaire
-        <ul>
-            <li>Creer le fichier main.scss en assets/styles/</li>
-            <li>( Terminal ):  sass --watch ./assets/styles/main.scss:./assets/styles/css/style.css --style compressed</li>
-            <li>( fichier package.json ):  "sass": "sass --watch ./assets/styles/main.scss:./assets/styles/css/style.css --style compressed"</li>
-        </ul>
-    </li>
-    <li>ou ...autres</li>
-</ul>
+    
+    <div class="produit">
+        <img src="https://www.motorlegend.com/modules/breve/photos/src/montre-bugatti-chiron-blue-sapphire-crystal-24345-1-P.jpg" alt="">
+        <h3>Nom produit</h3>
+        <p>prix: 200 €</p>
+        <a href="">Panier</a>
+    </div>
+</div>
+
+<div class="test" style="background-color: green;color: white;"></div>
 
 
 <script>
     title = "HC-DEV | Accueil";
     $("title").html(title);
+
+    let search = $("#search");
+    let test = $(".test");
+
+    search.change(function(id){
+        console.log(`${id.target.value}`);
+        test.html(`${id.target.value}`);
+    })
 </script>
