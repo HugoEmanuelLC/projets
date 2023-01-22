@@ -1,0 +1,16 @@
+{
+  "name": "ecomerce",
+  "version": "1.0.0",
+  "description": "site web e-comerce",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./assets/styles/main.scss:./assets/styles/css/style.css --style compressed"
+  },
+  "keywords": [
+    "ecomerce",
+    "website"
+  ],
+  "author": "Hugo L. Clavinas",
+  "license": "ISC"
+}
