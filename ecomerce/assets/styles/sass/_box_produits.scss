@@ -1,6 +1,7 @@
 .box_produits{
     background-color: rgb(214, 214, 214);
     display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
 

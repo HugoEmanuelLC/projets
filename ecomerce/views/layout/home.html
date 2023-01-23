@@ -1,21 +1,6 @@
 <h1>Accueil</h1>
 
-<div class="box_produits">
-    <div class="produit">
-        <img src="https://www.motorlegend.com/modules/breve/photos/src/montre-bugatti-chiron-blue-sapphire-crystal-24345-1-P.jpg" alt="">
-        <h3>Nom produit</h3>
-        <p>prix: 200 €</p>
-        <a href="">Panier</a>
-    </div>
-
-    
-    <div class="produit">
-        <img src="https://www.motorlegend.com/modules/breve/photos/src/montre-bugatti-chiron-blue-sapphire-crystal-24345-1-P.jpg" alt="">
-        <h3>Nom produit</h3>
-        <p>prix: 200 €</p>
-        <a href="">Panier</a>
-    </div>
-</div>
+<div class="box_produits"></div>
 
 <div class="test" style="background-color: green;color: white;"></div>
 
@@ -24,11 +9,41 @@
     title = "HC-DEV | Accueil";
     $("title").html(title);
 
+    //SIBLES
     let search = $("#search");
     let test = $(".test");
+    let box_produits = $(".box_produits");
+
+    //VARIABLES INIT
+    let tampon = "";
+    let item_produit = "";
+    let elem_produit = "";
 
     search.change(function(id){
-        console.log(`${id.target.value}`);
-        test.html(`${id.target.value}`);
+        fetch("./assets/js/datas/dataProduits.json")
+            .then(res => res.json())
+            .then(data => {
+                data.forEach(elem => {
+                    elem.Keywords.forEach(key => {
+                        if( `${id.target.value}` == key ){
+                            tampon = elem.Name
+                            elem_produit += '<div class="produit">';
+                            elem_produit += '<img src="'+elem.Image+'" alt="">';
+                            elem_produit += '<h3>'+elem.Name+'</h3>';
+                            elem_produit += '<p>prix: '+elem.Prix+'</p>';
+                            elem_produit += '<a href="">Panier</a>';
+                            elem_produit += '</div>';
+                        }else{
+                            if( tampon != "" ){    
+                                false
+                            }else{  
+                                elem_produit = "Rien";
+                            }
+                        }
+                    })
+                    box_produits.html(elem_produit);
+                })
+                tampon = "";
+            })
     })
 </script>

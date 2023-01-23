@@ -1,0 +1,26 @@
+
+[
+    {
+        "Name": "montre bugatti",
+        "Image": "https://www.motorlegend.com/modules/breve/photos/src/montre-bugatti-chiron-blue-sapphire-crystal-24345-1-P.jpg",
+        "Prix": "100 €",
+        "Description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias doloremque iusto ab aut possimus exercitationem iste atque ratione. Ab, dolores!",
+        "Collection": [
+            {"name": ""},
+            {"name": ""}
+        ],
+        "Keywords": ["montre","bugatti","luxe"]
+    },
+    
+    {
+        "Name": "montre bugatti",
+        "Image": "https://www.motorlegend.com/modules/breve/photos/src/montre-bugatti-chiron-blue-sapphire-crystal-24345-1-P.jpg",
+        "Prix": "100 €",
+        "Description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias doloremque iusto ab aut possimus exercitationem iste atque ratione. Ab, dolores!",
+        "Collection": [
+            {"name": ""},
+            {"name": ""}
+        ],
+        "Keywords": ["montre","bugatti","luxe"]
+    }
+]
