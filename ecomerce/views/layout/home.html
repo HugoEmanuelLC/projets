@@ -18,14 +18,29 @@
     let tampon = "";
     let item_produit = "";
     let elem_produit = "";
+    let id_produit = "";
+
+    
 
     search.change(function(id){
+        id_produit = `${id.target.value}`;
+
+        $.ajax({
+            url: "./assets/js/datas/dataProduits.json",
+            dataType: "json",
+            success: function(data){
+                data.forEach(elem => {
+                    console.log(elem)
+                })
+            }
+        });
+
         fetch("./assets/js/datas/dataProduits.json")
             .then(res => res.json())
             .then(data => {
                 data.forEach(elem => {
                     elem.Keywords.forEach(key => {
-                        if( `${id.target.value}` == key ){
+                        if( id_produit == key ){
                             tampon = elem.Name
                             elem_produit += '<div class="produit">';
                             elem_produit += '<img src="'+elem.Image+'" alt="">';
