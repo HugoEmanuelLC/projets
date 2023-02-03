@@ -13,7 +13,7 @@
     },
     
     {
-        "Name": "montre bugatti",
+        "Name": "montre bugatti 2023",
         "Image": "https://www.motorlegend.com/modules/breve/photos/src/montre-bugatti-chiron-blue-sapphire-crystal-24345-1-P.jpg",
         "Prix": "100 €",
         "Description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias doloremque iusto ab aut possimus exercitationem iste atque ratione. Ab, dolores!",
@@ -21,6 +21,18 @@
             {"name": ""},
             {"name": ""}
         ],
-        "Keywords": ["montre","bugatti","luxe"]
+        "Keywords": ["montre","bugatti","luxe", "montre 2023"]
+    },
+    
+    {
+        "Name": "voiture bugatti",
+        "Image": "https://www.supercars.net/blog/wp-content/uploads/2020/07/906689-scaled.jpg",
+        "Prix": "100 000 €",
+        "Description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias doloremque iusto ab aut possimus exercitationem iste atque ratione. Ab, dolores!",
+        "Collection": [
+            {"name": ""},
+            {"name": ""}
+        ],
+        "Keywords": ["voiture","bugatti","luxe","confort"]
     }
 ]
