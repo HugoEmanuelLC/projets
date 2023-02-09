@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./page-default.component.scss']
 })
 export class PageDefaultComponent {
-
+  title = 'front-end | page default';
 }
