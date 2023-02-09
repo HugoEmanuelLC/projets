@@ -1,0 +1,45 @@
+-----------------------Terminal:
+
+ng new front-end
+ng add ... 
+ng g component ... 
+ng serve
+
+npm install ...
+npm uninstall ...
+
+
+------------------------router:
+
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'test', component: TestComponentComponent },
+  { path: 'default', component: DefaultComponent },
+  { path: 'testid/:id', component: PageIdComponent },
+
+
+-----------------------app.html:
+
+<a routerLink="/test"> TEST </a> | 
+<a routerLink="/default"> DEFAULT </a> | 
+<a routerLink="/testid/85"> ID </a> | 
+
+<router-outlet></router-outlet>
+
+
+--------------------------.ts:
+
+  title = 'front-end';
+
+
+-----------------------------page id:
+
+mon_id = 0;
+  
+  constructor(private route: ActivatedRoute){}
+
+  ngOnInit(){
+    this.route.params.subscribe(params => {
+      this.mon_id = params["id"];
+    })
+  }
