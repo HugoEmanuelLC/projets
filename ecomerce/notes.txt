@@ -1,14 +1,3 @@
------------------------Terminal:
-
-ng new front-end
-ng add ... 
-ng g component ... 
-ng serve
-
-npm install ...
-npm uninstall ...
-
-
 ------------------------router:
 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
