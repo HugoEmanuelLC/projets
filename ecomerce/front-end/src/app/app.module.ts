@@ -7,6 +7,7 @@ import { PageDefaultComponent } from './page-default/page-default.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ItemPageComponent } from './item-page/item-page.component';
 import { ArticlesPageComponent } from './articles-page/articles-page.component';
+import { VueTestComponent } from './vue-test/vue-test.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ArticlesPageComponent } from './articles-page/articles-page.component';
     PageDefaultComponent,
     HomePageComponent,
     ItemPageComponent,
-    ArticlesPageComponent
+    ArticlesPageComponent,
+    VueTestComponent
   ],
   imports: [
     BrowserModule,
