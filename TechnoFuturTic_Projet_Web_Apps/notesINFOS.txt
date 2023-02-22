@@ -1,0 +1,58 @@
+const DBConnection = require('./DBconfig');
+const mySql = require('promise-mysql');
+
+//afficher toutes les categories
+exports.getAllCategories = () => {
+    return DBConnection.then((conn) => {
+        return conn.query("SELECT `Nom_Catg_ID` FROM `categorie`");   //OK
+    })
+};
+
+//afficher les produits de chaque categorie
+exports.getOneCategorieAndProd = (id) => {
+    return DBConnection.then((conn) => {
+        return conn.query("SELECT `Nom` FROM produits, categorie WHERE `Catg_nom_id`= ? GROUP BY `Nom`", id);   //OK
+    })
+};
+
+//creation d une nouvelle categorie
+exports.postInsertionNewCategorie = (body) => {
+    return DBConnection.then((conn) => {
+        //requete prepare
+        const sqlQuery = "INSERT INTO `categorie`(`Nom_Catg_ID`, `Tva_id`) "
+            +   "VALUES (?, (SELECT `Tva` FROM `type-tva` WHERE `tva` LIKE ?) )";   //OK
+        const sqlData = [body.nom , body.tva];
+        const query = mySql.format(sqlQuery, sqlData);
+
+        return conn.query( query )
+        .then(function(r) {
+            return { insertId: r.insertId }
+        }).catch(e => {
+            return e
+        });
+    });
+};
+
+//modification d une des categories
+exports.UpdateCategorie = (body) => {
+    console.log(body);
+    return DBConnection.then((conn) => {
+        //requete preparé
+        const sqlQuery = "UPDATE `categorie` SET ? WHERE `Nom_Catg_ID`= ? ";   //OK
+        const sqlData = [{ Nom_Catg_ID: body.nouveau_nom }, body.ancien_nom ];
+            
+        const query = mySql.format(sqlQuery, sqlData);
+
+        return conn.query( query )
+    })
+};
+
+//supretion d une des categories
+exports.DeleteCategorie = (id) => {
+    console.log(id);
+    return DBConnection.then((conn) => {
+        const sqlQuery = "DELETE FROM categorie WHERE Nom_Catg_ID= ? ";   //OK
+        const sqlData = id;
+        return conn.query( sqlQuery, sqlData )
+    })
+};

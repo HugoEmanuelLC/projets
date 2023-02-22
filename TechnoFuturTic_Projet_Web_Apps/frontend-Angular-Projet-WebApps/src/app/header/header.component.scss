@@ -1,0 +1,67 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1,h2,h3,h4{
+    text-decoration: underline 4px;
+    text-align: center;
+}
+
+
+
+.nav-box-ul, .nav-box-ul h3, .nav-box-ul ul, .nav-box-ul li, .nav-box-ul a{
+    display: flex;
+}
+.contenue-box-ul{
+    margin: 10px;
+} 
+
+.nav-box-ul{
+    background: linear-gradient(#000000, #9370db);
+    // box-shadow: 0 4px 4px rgb(70, 47, 116);
+    border-radius: 5px;
+    flex-direction: row;justify-content: space-around;flex-wrap: wrap;
+}
+// .nav-box-ul:hover{
+//     box-shadow: 0 0 0 rgb(68, 68, 68);
+//     transition: 400ms ease-in-out;
+// }
+.nav-box-ul h1{
+    text-decoration: underline 4px;color: white;
+    margin: 10px 0;
+    justify-content: center;align-items: center;
+    min-width: 100%;
+}
+.nav-box-ul ul{
+    margin: 5px 10px 5px 0;
+    justify-content: center;align-items: center;flex-wrap: wrap;
+}
+.nav-box-ul li{
+    margin: 4px;list-style: none;
+    justify-content: center;align-items: center;
+}
+.nav-box-ul a{
+    justify-content: center;align-items: center;
+}
+.nav-box-ul .liens, .nav-box-ul .lienDecon, .nav-box-ul .lienAdd{
+    background-color: white; color: black;
+    box-shadow: 0 4px 4px rgb(56, 56, 56);
+    padding: 1px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.nav-box-ul .liens:hover, .nav-box-ul .lienDecon:hover, .nav-box-ul .lienAdd:hover{
+    box-shadow: 0 0 0 rgb(56, 56, 56);
+    transition: 300ms ease-in-out;
+    text-decoration: underline 2px;
+}
+.nav-box-ul .liens:hover{
+    background-color: green; color: white;
+}
+.nav-box-ul .lienDecon:hover{
+    background-color: red; color: white;
+}
+.nav-box-ul .lienAdd:hover{
+    background-color: gray; color: white;
+}
+
+

@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+<div style="margin: 10px;">
+
+    <h2 style="text-align: left; margin-left: 20%; color: white;">{{ title }}</h2>
+    <br>
+
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="nomtva" style="color: white;">
+                        Type de Tva :
+                    </label>
+                    <input class="form-control" type="text" id="nomtva" placeholder="Rajouter une nouvelle tva à la liste" formControlName="newTva" required>
+                </div>
+
+                <button class="btn btn-primary" 
+                        [disabled]="!profileForm.valid"
+                        onclick=" alert('Tva envoyé !')"
+                        type="submit">Envoyé la Tva</button>
+                
+            </form>
+        </div>
+    </div>
+
+
+
+    <div class="contenue-box-ul">
+        <div class="box-ul" *ngFor="let lt of listTvas">
+            <h4 class="titre-box">{{ lt.Tva }} %</h4>
+            <ul>
+                <!-- <li><a class="infosLink" [routerLink]="['/menuUnique/'+lt.Tva]">infos</a></li> -->
+                <li><a class="editeLink" [routerLink]="['editTva/'+lt.Tva]">Edite</a></li>
+                <!-- <li><a class="deleteLink" routerLink="categories">delete</a></li> -->
+            </ul>
+        </div>
+    </div>
+</div>

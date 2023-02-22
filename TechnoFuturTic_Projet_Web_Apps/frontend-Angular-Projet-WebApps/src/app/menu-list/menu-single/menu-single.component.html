@@ -1,0 +1,45 @@
+<app-header></app-header>
+
+<div class="img" style="margin: 10px;">
+
+    <!-- <div  *ngFor="let listimg of listMenu">
+         <img style="border: 2px solid black; height: 50px;" src="" alt="image"> 
+        {{listimg.imgDB}}
+    </div> -->
+
+    <a class="deleteLink" 
+            onclick="return confirm('En supprimant ce menu, vous supprimer tous le produits que y ci trouvent, êtes-vous sûr ?')"
+            routerLink="/menus" (click)="onDelete()">
+                Supprimer le menu
+            </a>
+
+            <br>
+    <br>
+
+    <h2 style="text-align: left; margin-left: 20%;">{{ title }} : <b>{{ id }}</b></h2>
+
+    
+    <br>
+    <br>
+
+    
+
+    <div class="contenue-box-ul">
+
+    
+        <div class="box-ul" *ngFor="let prods of listProd">
+            <ul>
+                <li><h4 class="titre-box">{{ prods.Nom }}</h4></li>
+                <li><h4 class="titre-box">Prix : {{ prods.Prix }} €</h4></li>
+            </ul>
+
+            <ul>
+                <li><a class="editeLink" [routerLink]="['/editProduit/'+prods.Nom]">Edite</a></li>
+                <!-- <li><a class="deleteLink" routerLink="menuUnique/:id" alert="Etes vous sur?">delete</a></li> -->
+            </ul>
+        </div>
+
+        
+    </div>
+    <!-- <img style="border: 2px solid black; height: 50px;" src="prods.Url_img" alt="image"> -->
+</div>

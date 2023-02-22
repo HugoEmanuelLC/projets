@@ -1,0 +1,100 @@
+
+
+INSERT INTO `categorie`(`nom`, `TYPE_TVA_ID`) VALUES ('test01', ( 
+	SELECT TYPE_TVA_ID FROM TYPE_TVA 
+	WHERE tva LIKE 16 
+))
+
+
+javascript truthy falsy
+
+lambda function nodejs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+exports.postCategorie = (body) => {
+    return DBConnection.then((conn) => {
+        //requete prepare
+
+        const sqlQuery = "INSERT INTO `categorie`(`nom`, `TYPE_TVA_ID`) "
+            +   "VALUES (?, (SELECT TYPE_TVA_ID FROM TYPE_TVA WHERE tva LIKE ?) )";
+        const sqlData = [body.nom , body.tva];
+            
+        const query = mySql.format(sqlQuery, sqlData);
+
+        return conn.query(
+            query
+        ).then(function(r) {
+            return {
+                insertId: r.insertId
+            }
+        })
+        .catch(e => {
+            return e
+        });
+
+
+    });
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INJECTION SQL | SECURITER.......................
+
+trouver sur google:
+inurl: login.php
+
+
+secuHake:
+user: admin' --
+Password: 'or1=1;--
+
+
+{
+    "nom": "test', 1)); DROP TABLE `cat`; --",
+    "tva": 42
+}
+
+
+
+

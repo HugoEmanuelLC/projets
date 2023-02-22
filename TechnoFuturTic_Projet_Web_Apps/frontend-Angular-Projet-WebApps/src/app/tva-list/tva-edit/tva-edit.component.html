@@ -1,0 +1,32 @@
+<div style="margin: 10px;">
+
+    <app-header></app-header>
+
+    <h2 style="text-align: left; margin-left: 20%; color: white;">{{ title }} {{ tva }}</h2>
+    <br>
+
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label style="background-color: green; color: white; padding: 5px;">
+                        Tva Actuelle : {{ tva }}
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="nomtva" style="color: white;">
+                        Type de Tva :
+                    </label>
+                    <input class="form-control" type="text" id="nomtva" placeholder="Modifier la tva de la liste" formControlName="Ntva" required>
+                </div>
+
+                <button class="btn btn-primary" 
+                        [disabled]="!profileForm.valid"
+                        onclick=" alert('Tva envoyé !')"
+                        type="submit">Envoyé la Tva</button>
+                
+            </form>
+        </div>
+    </div>
+</div>

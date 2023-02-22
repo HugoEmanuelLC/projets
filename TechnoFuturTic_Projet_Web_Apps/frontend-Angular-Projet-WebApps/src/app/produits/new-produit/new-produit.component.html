@@ -1,0 +1,54 @@
+
+
+
+
+<div class="img" style="margin: 10px;">
+
+    <app-header></app-header>
+
+    <a routerLink="menuUnique/:id"></a>
+
+    <h2 style="text-align: left; margin-left: 20%; margin-top: 120px;">{{ title }}</h2>
+    <br>
+
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="prod">
+                        Nom du produit :
+                    </label>
+                    <input class="form-control" type="text" id="prod" placeholder="Nom du produit" formControlName="Nprod" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prix">
+                        Prix :
+                    </label>
+                    <input class="form-control" type="text" id="prix" placeholder="Prix € ex:  3.55" formControlName="Nprix" required>
+                </div>
+                
+                <div class="form-group" >
+                    <label for="menu">
+                        Choix obligatoire du menu :
+                    </label>
+                    <select id="menu" style="color: black;"formControlName="Nmenu" required>
+                        <option > Menu</option>
+                        <option id="tva"  *ngFor="let lm of listMenu"> {{ lm.menu }}</option>
+                    </select>
+                </div>
+
+                <!-- <input type="submit" value="Enregistrer"> -->
+                <!-- <a style="border: 2px solid gray; padding: 5px;" type="button" routerLink="/menu" (click)="onSave()">Enregistrer</a> -->
+                <button class="btn btn-primary" 
+                        [disabled]="!profileForm.valid"
+                        onclick=" alert('Produit envoyé !')"
+                        type="submit">Enregistrer le Produit</button>
+                
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

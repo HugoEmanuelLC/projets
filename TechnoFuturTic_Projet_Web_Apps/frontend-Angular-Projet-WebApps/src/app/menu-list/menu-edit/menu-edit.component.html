@@ -1,0 +1,48 @@
+
+
+
+
+<div class="img" style="margin: 10px;">
+
+    <app-header></app-header>
+
+    
+
+    <h2 style="text-align: left; margin-left: 20%; margin-top: 120px;">{{ title }}</h2>
+    <br>
+
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <form  [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label style="background-color: green; color: white; padding: 5px;">
+                        Nom Actuelle : {{ oldNom }}
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="newNom">
+                        Nouveau nom : 
+                    </label>
+                    <input class="form-control" type="text" id="newNom" formControlName="newNom" placeholder="Nom menu" required>
+                </div>
+
+                <!-- <div class="form-group">
+                    <label for="newImg">
+                        Nouvelle image : 
+                    </label>
+                    <input class="form-control" type="text" id="newImg" formControlName="newImg" placeholder="Url">
+                </div> -->
+
+                <!-- <input type="submit" value="Enregistrer"> -->
+                <!-- <a style="border: 2px solid gray; padding: 5px;" routerLink="/categories">Enregistrer</a> -->
+                <button class="btn btn-primary"
+                        type="submit"
+                        onclick=" alert('Menu modifier !')"
+                        [disabled]="!profileForm.valid">Créer mon compte</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+

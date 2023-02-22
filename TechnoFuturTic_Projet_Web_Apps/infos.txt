@@ -1,0 +1,18 @@
+..........BACKEND...............................
+
+CONTROLLERS:
+
+  categorie -> fait
+  tva	  -> fait
+  produits  -> fait
+
+  auth	    -> stand by
+
+MODELS:
+
+  categorie -> fait
+  tva	  -> fait
+  produits  -> fait
+
+  auth	    -> stand by
+

@@ -1,0 +1,17 @@
+<app-header></app-header>
+
+<div style="margin: 10px;">
+
+    <h2 style="text-align: left; margin-left: 20%; color: white;">{{ title }}</h2>
+    <br>
+
+    <div class="contenue-box-ul">
+        <div class="box-ul" *ngFor="let lm of listMenu">
+            <h4 class="titre-box">{{ lm.menu }}</h4>
+            <ul>
+                <li><a class="infosLink" [routerLink]="['singleMenu/'+lm.menu]">Infos</a></li>
+                <li><a class="editeLink" [routerLink]="['editMenu/'+lm.menu]">Edite</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

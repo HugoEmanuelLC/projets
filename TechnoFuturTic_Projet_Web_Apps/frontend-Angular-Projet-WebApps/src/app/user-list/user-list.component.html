@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<div style="margin: 10px;">
+
+    <h2 style="text-align: left; margin-left: 20%; color: white;">{{ title }}</h2>
+    <br>
+
+    <div class="contenue-box-ul">
+        <div class="box-ul" *ngFor="let usr of listUsers">
+            <h4 class="titre-box">{{ usr.email }} %</h4>
+            <h4 class="titre-box">{{ usr.password }} %</h4>
+            <ul>
+                <li><a class="infosLink" [routerLink]="['/menuUnique/'+usr._id]">infos</a></li>
+                <li><a class="editeLink" [routerLink]="['editMenu/'+usr._id]">Edite</a></li>
+                <li><a class="deleteLink" routerLink="categories">delete</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+

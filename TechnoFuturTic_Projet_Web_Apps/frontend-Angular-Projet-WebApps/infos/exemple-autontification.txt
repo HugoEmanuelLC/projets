@@ -1,0 +1,256 @@
+
+
+----app.module.ts--------------------------------------------------------
+
+import { Routes } from '@angular/router';
+import { AppareilService } from 'services/apareil.service';
+import { AuthService } from 'services/auth.service';
+
+const appRoutes: Routes = [
+  { path: 'appareils', component: AppareilViewComponent },
+  { path: 'appareils/:id', component: SingleAppareilComponent },
+  { path: 'auth', component: AuthComponent },
+  { path: '', component: AppareilViewComponent }
+];
+
+imports: [
+    RouterModule.forRoot(appRoutes)
+],
+
+providers: [
+    AppareilService,
+    AuthService,
+],
+
+
+----AppareilService.ts------------------------------------------------------------
+
+import { Component, OnInit } from '@angular/core';
+import { AppareilService } from '../services/appareil.service';
+
+@Component({
+  selector: 'app-appareil-view',
+  templateUrl: './appareil-view.component.html',
+  styleUrls: ['./appareil-view.component.scss']
+})
+export class AppareilViewComponent implements OnInit {
+
+  appareils = [
+    {
+      id: 1,
+      name: 'Machine à laver',
+      status: 'éteint'
+    },
+    {
+      id: 2,
+      name: 'Frigo',
+      status: 'allumé'
+    },
+    {
+      id: 3,
+      name: 'Ordinateur',
+      status: 'éteint'
+    }
+];
+
+  constructor(private appareilService: AppareilService) { }
+
+  ngOnInit() {
+    this.appareils = this.appareilService.appareils;
+  }
+
+  onAllumer() {
+    this.appareilService.switchOnAll();
+  }
+
+  onEteindre() {
+    if(confirm('Etes-vous sûr de vouloir éteindre tous vos appareils ?')) {
+      this.appareilService.switchOffAll();
+    } else {
+      return null;
+    }
+  }
+
+  getAppareilById(id: number) {
+    const appareil = this.appareils.find(
+      (s) => {
+        return s.id === id;
+      }
+    );
+    return appareil;
+}
+
+}
+
+
+----auth.service.ts-----------------------------------------------------------------------------
+
+export class AuthService {
+
+  isAuth = false;
+
+  signIn() {
+    return new Promise(
+      (resolve, reject) => {
+        setTimeout(
+          () => {
+            this.isAuth = true;
+            resolve(true);
+          }, 2000
+        );
+      }
+    );
+  }
+
+  signOut() {
+    this.isAuth = false;
+  }
+}
+
+
+
+----app.Component.html----------------------------------------------------------
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-collapse">
+      <ul class="nav navbar-nav">
+       <li routerLinkActive="active"><a routerLink="auth">Authentification</a></li>
+       <li routerLinkActive="active"><a routerLink="appareils">Appareils</a></li>
+     </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+
+----apareil.Component.ts----------------------------------------------------------
+
+@Input() appareilName: string;
+@Input() appareilStatus: string;
+@Input() index: number;
+@Input() id: number;
+
+
+
+
+
+
+----SingleAppareilComponent.ts-------------------------------------------------------
+
+import { Component, OnInit } from '@angular/core';
+import { AppareilService } from '../services/appareil.service';
+import { ActivatedRoute } from '@angular/router';
+
+@Component({
+  selector: 'app-single-appareil',
+  templateUrl: './single-appareil.component.html',
+  styleUrls: ['./single-appareil.component.scss']
+})
+export class SingleAppareilComponent implements OnInit {
+
+  name: string = 'Appareil';
+  status: string = 'Statut';
+
+  constructor(private appareilService: AppareilService,
+            private route: ActivatedRoute) { }
+
+  ngOnInit() {
+    const id = this.route.snapshot.params['id'];
+    this.name = this.appareilService.getAppareilById(+id).name;
+    this.status = this.appareilService.getAppareilById(+id).status;
+}
+
+}
+
+
+
+
+----SingleAppareilComponent.html-------------------------------------------------------
+
+<h2>{{ name }}</h2>
+<p>Statut : {{ status }}</p>
+<a routerLink="/appareils">Retour à la liste</a>
+
+
+
+
+
+
+----auth.Component.ts----------------------------------------------------------
+
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { Routes } from '@angular/router';
+
+@Component({
+  selector: 'app-auth',
+  templateUrl: './auth.component.html',
+  styleUrls: ['./auth.component.scss']
+})
+export class AuthComponent implements OnInit {
+
+  authStatus: boolean;
+
+  constructor(private authService: AuthService, private router: Router) { }
+
+  ngOnInit() {
+    this.authStatus = this.authService.isAuth;
+  }
+
+  onSignIn() {
+    this.authService.signIn().then(
+      () => {
+        console.log('Sign in successful!');
+        this.authStatus = this.authService.isAuth;
+        this.router.navigate(['appareils']);
+      }
+    );
+  }
+
+  onSignOut() {
+    this.authService.signOut();
+    this.authStatus = this.authService.isAuth;
+  }
+
+}
+
+
+----auth.Component.html----------------------------------------------------------
+
+<h2>Authentification</h2>
+<button class="btn btn-success" *ngIf="!authStatus" (click)="onSignIn()">Se connecter</button>
+<button class="btn btn-danger" *ngIf="authStatus" (click)="onSignOut()">Se déconnecter</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
