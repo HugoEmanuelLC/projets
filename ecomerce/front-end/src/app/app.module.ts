@@ -8,6 +8,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ItemPageComponent } from './item-page/item-page.component';
 import { ArticlesPageComponent } from './articles-page/articles-page.component';
 import { VueTestComponent } from './vue-test/vue-test.component';
+import { PageTestTestComponent } from './page-test-test/page-test-test.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { VueTestComponent } from './vue-test/vue-test.component';
     HomePageComponent,
     ItemPageComponent,
     ArticlesPageComponent,
-    VueTestComponent
+    VueTestComponent,
+    PageTestTestComponent
   ],
   imports: [
     BrowserModule,

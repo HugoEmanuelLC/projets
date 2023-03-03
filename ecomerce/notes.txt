@@ -32,3 +32,12 @@ mon_id = 0;
       this.mon_id = params["id"];
     })
   }
+
+
+  --------------------------terminal:
+
+    > ng new app-name
+    > ng g c PageName   OU   ng generate component PageName
+    > ng generate service
+    > ng generate environments
+    > ng serve
