@@ -41,3 +41,5 @@ mon_id = 0;
     > ng generate service
     > ng generate environments
     > ng serve
+
+
