@@ -1,6 +1,7 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = require('./app');
+const express = require("express")
+const bodyParser = require('body-parser')
+
+const app = require('../app');
 const http = require('http');
 
 const normalizePort = val => { //la fonction normalizePort renvoie un port valide, qu'il soit fourni sous la forme d'un numéro ou d'une chaîne ;
