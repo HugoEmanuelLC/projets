@@ -1,0 +1,63 @@
+// .listDoneFalse{
+//     background-color: brown;
+// }
+// .listDoneTrue{
+//     background-color: green;
+// }
+
+.addToDo form{
+    background-color: white;
+    border: solid black 3px;
+    border-radius: 15px;
+    // overflow: hidden;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 100px 20px;
+    input{
+        background-color: wheat;
+        margin: 2px;
+        padding: 4px;
+    }
+    button{
+        background-color: green;
+    }
+}
+
+// .listDone{
+//     border: solid red 50px;
+// }
+
+.listDoneFalse, 
+.listDoneTrue{
+    background-color: white;
+    margin: 20px;
+    border: solid black 3px;
+
+    div{
+        background-color: wheat;
+        margin: 5px;
+    }
+    h4,
+    p{
+        padding: 4px;
+    }
+    div:nth-child(1){
+        display: flex;
+        justify-content: space-between;
+        div{
+            display: flex;
+            h4{
+                margin: 0 10px;
+            }
+        }
+    }
+    // h3,
+    // div:nth-child(2),
+    // div:nth-child(3) p{
+    //     background-color: wheat;
+    // }
+}
+.colorBackDone{
+    background-color: wheat;
+}

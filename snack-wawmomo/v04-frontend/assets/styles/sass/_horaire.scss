@@ -1,0 +1,111 @@
+/* HORAIRES */
+.horaires {
+    background-color: var(--bckgd_color_light_2);
+    width: 100%;
+    padding: 200px 0;
+    position: relative;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.horaires table {
+    border: dotted 5px white;
+    margin: auto;
+    padding: 30px 10px;
+    letter-spacing: 1px;
+}
+
+.horaires h2 {
+    background-color: var(--bg_color_dark_1);
+    color: white;
+    position: absolute;
+        top: -22px;
+        left: 25%;
+        right: 25%;
+    padding: 2px 0;
+    font-size: 1.5rem;
+    width: 150px;
+    margin: auto;
+    text-decoration: underline;
+}
+
+.horaires .sous_div_heures{
+    position: relative;
+    display: inline-block;
+    color: white;
+}
+.sous_div_heures td{
+    // background-color: pink;
+    color: white;
+    padding: 8px 5px;
+    font-size: 1.2rem;
+}
+.sous_div_heures td:last-child{
+    text-align: center;
+}
+.sous_div_heures tr:last-child{
+    font-size: 1rem;
+}
+
+.horaires .lienContact{
+    // border: solid 2px red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.horaires .lienContact h3{
+    margin: 100px 0;
+}
+.horaires .lienContact a{
+    background-color: chocolate;
+    border-radius: 20px;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 400ms;
+}
+.horaires .lienContact a:hover{
+    background-color: rgb(251, 132, 47);
+    color: gray;
+    transition: 400ms;
+}
+.horaires .lienContact a i{
+    // min-width: 100px;
+    font-size: 3rem;
+}
+
+// .horaires .lien_grand_ecran{
+//     display: ;
+// }
+.horaires .lienContact .lien_petit_ecran{
+    display: none;
+}
+
+.flecheUp{
+    position: absolute;
+        bottom: 25px;
+        right: 25px;
+    width: 50px;
+    border-radius: 20px;
+    border: 2px var(--backColorOrange) solid;
+}
+.flecheUp i{
+    color: var(--backColorOrange);
+}
+.flecheUp:hover{
+    border-color: var(--backColorGreen);
+}
+.flecheUp:hover i{
+    color: var(--backColorGreen);
+}
+
+@media screen and (max-width: 688px){
+    .horaires .lienContact .lien_petit_ecran{
+        display: block;
+    }
+    .horaires .lienContact .lien_grand_ecran{
+        display: none;
+    }
+}
