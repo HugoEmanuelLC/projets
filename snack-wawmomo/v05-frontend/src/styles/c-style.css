@@ -1,0 +1,19 @@
+.c_DfJcAc,
+.c_Df a,
+.c_Df li
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.c_DfFDcJsaAc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+}
+.c_DfcJsaAc{
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}

@@ -1,0 +1,38 @@
+
+.presentation{
+    // border: solid 4px red;
+    padding-top: 50px;
+}
+.presentation h1{
+    font-size: 1.8rem;
+}
+.presentation hr{
+    width: 70%;
+    margin: 0 auto 50px;
+}
+.presentation_contenu{
+    // border: solid 4px blue;
+    max-width: 1000px;
+    // height: 40vh;
+    margin: 0 auto;
+    display: flex;
+        justify-content: space-around;
+        align-items: center;
+}
+.presentation_contenu div{
+    width: 100%;
+    height: 200px;
+    margin: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen AND (max-width: 800px) {
+    // .presentation{
+    //     padding-top: 25px;
+    // }
+    .presentation_contenu div{
+        margin: 0px;
+    }
+}
