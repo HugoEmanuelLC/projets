@@ -9,7 +9,7 @@ export class ListToDoItems {
         const jsonData = await res.json();
 
         jsonData.forEach(elem => {
-            if(elem.done === "false"){
+            if(elem.done === "false" || elem.done == ""){
                 // console.log("IF "+elem.title)
                 
                 item += "<div class='listDoneFalse'>";

@@ -62,43 +62,61 @@
 <script src="./assets/js/crud.js" type="module"></script>
 
 <script type="text/javascript">
-    const url = "http://localhost/projets/Api-php-toDoList/new/1"
+    const url = "http://localhost/projets/Api-php-toDoList/new/1";
 
     console.log("out")
 
     async function validateForm() {
         console.log("in")
-        let title = document.forms["postAddToDo"]["title"].value;
-        let date = '2023-04-10';
-        let until = document.forms["postAddToDo"]["until"].value;
+        //let title = document.forms["postAddToDo"]["title"].value;
+        //let date = '2023-04-10';
+        //let until = document.forms["postAddToDo"]["until"].value;
+        //let done = "false";
+        //let description = document.forms["postAddToDo"]["description"].value;
+
+        let Title = "HUGO";
+        let date = '2023-04-11';
+        let until = "2023-05-11";
         let done = "false";
-        let description = document.forms["postAddToDo"]["description"].value;
-        //let id = 1;
+        let description = "test description";
+
+        const dataJson = {
+            title: Title,
+            date: date,
+            until: until,
+            done: done,
+            description: description
+        }
+
         let valeurs = title+" "+date+" "+until+" "+done+" "+description;
 
         if ( title == "" || until == 0 || description == "" ) {
           alert("Name must be filled out");
           return false;
         }else{
-            console.log(valeurs);
+            //console.log(valeurs);
 
-            const req = await fetch(url, {
+            let data = await fetch(url, {
                 method: "POST", // *GET, POST, PUT, DELETE, etc.
                 mode: "cors", // no-cors, *cors, same-origin
                 cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-                body: {
-                    title,
-                    date,
-                    until,
-                    done,
-                    description
-                }
-            });
+                body: JSON.stringify(dataJson),
+                
+            })
+            .then((res) => res.json())
+            .then((data) => console.log(data))
+
+            console.log("data.body.title");
+
+            header("location: http://127.0.0.1:5500/to-do-list/");
+
 
             
            // loadDoc(title,date,until,done,description)
         }
     }
+
+    //console.log(validateForm())
 
     
     //function loadDoc(title,date,until,done,description){
