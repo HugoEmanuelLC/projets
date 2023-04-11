@@ -1,13 +1,14 @@
 
 
 
+
 <h4>Home Page</h4>
 <div class="addToDo">
-    <form action="" method="post" onsubmit="return validateForm()">
-        <input name="title" type="text" placeholder="TITLE">
-        <input name="until" type="text" placeholder="DATE ex: '2023-1-1'">
-        <input name="description" type="text" placeholder="DESCRIPTION">
-        <button type="button" onclick="addNew(title,until,description)">Envoyer</button>
+    <form name="postAddToDo" action="#" method="post">
+        <input name="title" type="text" placeholder="TITLE" value="HUGO">
+        <input name="until" type="text" placeholder="DATE ex: '2023-1-1'" value="2023-10-01">
+        <input name="description" type="text" placeholder="DESCRIPTION" value="test description">
+        <button type="button" onclick="validateForm()">Submit</button>
     </form>
 </div>
 
@@ -36,9 +37,9 @@
     </div>-->
 </div>
 
-<div class="listDoneTrue">
+<!--<div class="listDoneTrue">
     <div>
-        <!--titre + button d'execution-->
+        titre + button d'execution
         <h4>Titre ...</h4>
         <div>
             <h4>Suprimer</h4>
@@ -46,17 +47,64 @@
     </div>
     
     <div>
-        <!--descriptive-->
+        descriptive
         <p>descriptive ...</p>
     </div>
 
     <div>
-        <!--dates, presente et limite-->
+        dates, presente et limite
         <p>enregistre le : 0000-00-00</p>
         <p>fait le : 0000-00-00</p>
     </div>
-</div>
+</div>-->
 
 <!-- SCRIPT logique -->
-<script src="./assets/js/crud.js" type="module"></script>µ
-<script src="./assets/js/definition.js" type="text/javascript"></script>
+<script src="./assets/js/crud.js" type="module"></script>
+
+<script type="text/javascript">
+    const url = "http://localhost/projets/Api-php-toDoList/new/1"
+
+    console.log("out")
+
+    async function validateForm() {
+        console.log("in")
+        let title = document.forms["postAddToDo"]["title"].value;
+        let date = '2023-04-10';
+        let until = document.forms["postAddToDo"]["until"].value;
+        let done = "false";
+        let description = document.forms["postAddToDo"]["description"].value;
+        //let id = 1;
+        let valeurs = title+" "+date+" "+until+" "+done+" "+description;
+
+        if ( title == "" || until == 0 || description == "" ) {
+          alert("Name must be filled out");
+          return false;
+        }else{
+            console.log(valeurs);
+
+            const req = await fetch(url, {
+                method: "POST", // *GET, POST, PUT, DELETE, etc.
+                mode: "cors", // no-cors, *cors, same-origin
+                cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                body: {
+                    title,
+                    date,
+                    until,
+                    done,
+                    description
+                }
+            });
+
+            
+           // loadDoc(title,date,until,done,description)
+        }
+    }
+
+    
+    //function loadDoc(title,date,until,done,description){
+    //    const xhp = new XMLHttpRequest();
+    //    xhp.open("POST", "http://localhost/projets/Api-php-toDoList/new/1");
+    //    xhp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    //    xhp.send(title,date,until,done,description)
+    //}
+</script>
