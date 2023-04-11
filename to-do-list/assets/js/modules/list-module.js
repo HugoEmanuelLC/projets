@@ -2,15 +2,20 @@
 
 export class ListToDoItems {
 
-    async listToDo(res){ //affiche tous les element de la list 
+    async listToDo(url){ //affiche tous les element de la list 
         const afficherList = $('.listDone');
         let item = "" ;
 
-        const jsonData = await res.json();
+        const listToDo = await fetch(url+"list", {
+            method: "GET", // *GET, POST, PUT, DELETE, etc.
+            mode: "cors", // no-cors, *cors, same-origin
+            cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+        });
+
+        const jsonData = await listToDo.json();
 
         jsonData.forEach(elem => {
             if(elem.done === "false" || elem.done == ""){
-                // console.log("IF "+elem.title)
                 
                 item += "<div class='listDoneFalse'>";
                 item += "<div>";
@@ -34,21 +39,22 @@ export class ListToDoItems {
                 afficherList.html(item);
             }else{
                 console.log("ELSE "+elem.title)
-                // menus += '<div class="item" style="background-image: url(./assets/images/menus/'+elem.URL_IMG+');">';
-                // menus +=    '<div onclick="idvalue('+elem.ID+')" class="dark_opo">';
-                // menus +=        '<h1 style="text-transform: capitalize">'+elem.NAME+'</h1>';
-                // menus += '</div></div>';
-            
-                // list_menus.html(menus);
             }
         });
     }
 
 
-    addToDo(){
+    // addToDo(dataJson){ //nouveau element dans la list
 
+    //     fetch(this.urlDataJson, {
+    //         method: "POST", // *GET, POST, PUT, DELETE, etc.
+    //         mode: "cors", // no-cors, *cors, same-origin
+    //         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    //         body: JSON.stringify(dataJson),
+    //     })
+    //     .then((res) => res.json())
+    //     .then((data) => console.log(data))
 
-
-    }
+    // }
 
 }

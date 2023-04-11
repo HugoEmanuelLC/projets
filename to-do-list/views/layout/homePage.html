@@ -8,7 +8,7 @@
         <input name="title" type="text" placeholder="TITLE" value="HUGO">
         <input name="until" type="text" placeholder="DATE ex: '2023-1-1'" value="2023-10-01">
         <input name="description" type="text" placeholder="DESCRIPTION" value="test description">
-        <button type="button" onclick="validateForm()">Submit</button>
+        <button id="btn" type="button">Submit</button>
     </form>
 </div>
 
@@ -59,62 +59,66 @@
 </div>-->
 
 <!-- SCRIPT logique -->
-<script src="./assets/js/crud.js" type="module"></script>
 
-<script type="text/javascript">
-    const url = "http://localhost/projets/Api-php-toDoList/new/1";
+<script src="./assets/js/index.js" type="module"></script>
 
-    console.log("out")
+<script >
+    
+    //const url = "http://localhost/projets/Api-php-toDoList/new/1";
 
-    async function validateForm() {
-        console.log("in")
+    //console.log("out")
+
+    //async function validateForm() {
+
+
+        //console.log(" ----- cliqué -------");
+
+        
+
+
+
+        //console.log("in")
         //let title = document.forms["postAddToDo"]["title"].value;
-        //let date = '2023-04-10';
+        //let date = '2023-04-11';
         //let until = document.forms["postAddToDo"]["until"].value;
         //let done = "false";
         //let description = document.forms["postAddToDo"]["description"].value;
 
-        let Title = "HUGO";
-        let date = '2023-04-11';
-        let until = "2023-05-11";
-        let done = "false";
-        let description = "test description";
+        //let Title = "HUGO";
+        //let date = '2023-04-11';
+        //let until = "2023-05-11";
+        //let done = "false";
+        //let description = "test description";
 
-        const dataJson = {
-            title: Title,
-            date: date,
-            until: until,
-            done: done,
-            description: description
-        }
+        //const dataJson = {
+        //    title: title,
+        //    date: date,
+        //    until: until,
+        //    done: done,
+        //    description: description
+        //}
 
-        let valeurs = title+" "+date+" "+until+" "+done+" "+description;
+        //let valeurs = title+" "+date+" "+until+" "+done+" "+description;
 
-        if ( title == "" || until == 0 || description == "" ) {
-          alert("Name must be filled out");
-          return false;
-        }else{
+        //if ( title == "" || until == 0 || description == "" ) {
+          //alert("Name must be filled out");
+          //return false;
+        //}else{
             //console.log(valeurs);
 
-            let data = await fetch(url, {
-                method: "POST", // *GET, POST, PUT, DELETE, etc.
-                mode: "cors", // no-cors, *cors, same-origin
-                cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-                body: JSON.stringify(dataJson),
+            //let data = await fetch(url, {
+                //method: "POST", // *GET, POST, PUT, DELETE, etc.
+                //mode: "cors", // no-cors, *cors, same-origin
+                //cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                //body: JSON.stringify(dataJson),
                 
-            })
-            .then((res) => res.json())
-            .then((data) => console.log(data))
-
-            console.log("data.body.title");
-
-            header("location: http://127.0.0.1:5500/to-do-list/");
-
-
+            //})
+            //.then((res) => res.json())
+            //.then((data) => console.log(data))
             
            // loadDoc(title,date,until,done,description)
-        }
-    }
+        //}
+    //}
 
     //console.log(validateForm())
 

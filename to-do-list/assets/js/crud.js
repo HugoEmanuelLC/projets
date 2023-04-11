@@ -1,16 +1,39 @@
 
-import { ListToDoItems } from "./modules/list-module.js";
+// import { ListToDoItems } from "./modules/list-module.js";
+
+// console.log("-- SELECT --");
+// const listToDoItems = new ListToDoItems;
+
+// const urlDatas = "http://localhost/projets/Api-php-toDoList/";
+
+// listToDoItems.listToDo();
 
 
-const listToDoItems = new ListToDoItems;
+
+function validateForm() {
+    console.log(" Validate form");
+        // let title = document.forms["postAddToDo"]["title"].value;
+        // let date = '2023-04-11';
+        // let until = document.forms["postAddToDo"]["until"].value;
+        // let done = "false";
+        // let description = document.forms["postAddToDo"]["description"].value;
+    
+        // const dataJson = {
+        //     title: title,
+        //     date: date,
+        //     until: until,
+        //     done: done,
+        //     description: description
+        // }
+    
+        // if ( title == "" || until == 0 || description == "" ) {
+        //     alert("Name must be filled out");
+        //     return false;
+    
+        //   }else{
+    
+        //     this.listToDoItems.addToDo(dataJson);
+        //   }
+}
 
 
-const listToDo = await fetch("http://localhost/projets/Api-php-toDoList/list", {
-            method: "GET", // *GET, POST, PUT, DELETE, etc.
-            mode: "cors", // no-cors, *cors, same-origin
-            cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-        });
-
-const load = listToDoItems.listToDo(listToDo);
-
-load
