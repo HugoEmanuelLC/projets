@@ -7,13 +7,11 @@ const listToDoItems = new ListToDoItems;
 
 listToDoItems.listToDo(urlDatas);
 
-function validateForm(){
-    console.log(document.forms["postAddToDo"]["title"].value);
-}
-
 const btn = document.querySelector("#btn");
 btn.addEventListener("click", () => {
     console.log("il ecoute bien")
 
     validateForm();
+    return setTimeout(listToDoItems.listToDo(urlDatas), 2000)
+    
 })
