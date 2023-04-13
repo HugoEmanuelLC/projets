@@ -15,8 +15,8 @@ export async function listToDo(url){ //affiche tous les element de la list
             item += "<div>";
             item +=     "<h4>"+elem.title+"</h4>";
             item +=     "<div>";
-            item +=         "<h4>Fait</h4>";
-            item +=         "<h4>Suprimer</h4>";
+            item +=         "<button class=\"btnDoneTrue\" type=\"button\">Fait</button>";
+            item +=         "<button type=\"button\">Suprimer</button>";
             item +=     "</div>";
             item += "</div>";
             
