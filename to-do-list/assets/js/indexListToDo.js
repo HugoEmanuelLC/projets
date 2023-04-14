@@ -1,10 +1,11 @@
 
-import { listToDo , addToDo } from "./modules/listToDo/crud.js";
-import { urlDataAllListToDo , urlDataAddListToDoItems } from "./modules/serviceUrl.js";
+import { listToDo , addToDo, verifList } from "./modules/listToDo/crud.js";
+import { urlDataAllListToDo , urlDataAddListToDoItems , urlDataListToDoItems } from "./modules/serviceUrl.js";
+
 
 listToDo(urlDataAllListToDo);
 const d = new Date();
-const btn = document.querySelector("#btn");
+const btn = document.getElementById("btn");
 
 btn.addEventListener("click", () => {
 
@@ -30,7 +31,6 @@ btn.addEventListener("click", () => {
         addToDo(urlDataAddListToDoItems, dataJson);
 
         if (dataJson != "") {
-            console.log("dataJson")
             setTimeout(() => {
                 listToDo(urlDataAllListToDo)
             }, 180);
@@ -42,16 +42,12 @@ btn.addEventListener("click", () => {
     }
 });
 
-// const btnDoneTrue = "";
 
-// if (document.getElementsByClassName("listDoneFalse")) {
 
-//     console.log("LE #btnDoneTrue");
-//     btnDoneTrue = document.getElementsByClassName("btnDoneTrue");
-    
-// }else{
-//     console.log("PAS de btnDoneTrue");
-// }
-// btnDoneTrue.addEventListener("click", () => {
-//         console.log("Done deviens TRUE");
-//     });
+if (localStorage.getItem("idValue")) {
+    verifList(urlDataAllListToDo, urlDataListToDoItems, localStorage.getItem("idValue"));
+    localStorage.clear();
+    console.log(localStorage.getItem("idValue"))
+}else{
+    console.log("rien dans le stock");
+}

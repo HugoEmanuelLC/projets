@@ -1,4 +1,7 @@
 
+export function text(){
+    console.log("text test");
+}
 
 export async function listToDo(url){ //affiche tous les element de la list 
     const afficherList = $('.listDone');
@@ -15,7 +18,7 @@ export async function listToDo(url){ //affiche tous les element de la list
             item += "<div>";
             item +=     "<h4>"+elem.title+"</h4>";
             item +=     "<div>";
-            item +=         "<button class=\"btnDoneTrue\" type=\"button\">Fait</button>";
+            item +=         "<button class=\"btnDoneTrue\" type=\"button\" onclick=\"idvalue("+elem.id+")\" >Fait</button>";
             item +=         "<button type=\"button\">Suprimer</button>";
             item +=     "</div>";
             item += "</div>";
@@ -35,6 +38,40 @@ export async function listToDo(url){ //affiche tous les element de la list
             console.log("ELSE "+elem.title)
         }
     });
+}
+
+
+async function changeDone(urlItem, idValue){
+    const listToDo = await fetch(urlItem+idValue, {
+        method: "PUT", 
+        mode: "cors", 
+        cache: "no-cache", 
+    })
+    .then((res) => res.json())
+    .then((data))
+}
+
+
+export async function verifList(urlList, urlItem, idValue){
+    const listToDo = await fetch(urlList, {
+        method: "GET", 
+        mode: "cors", 
+        cache: "no-cache", 
+    })
+    .then((res) => res.json())
+    .then((data) => {
+        console.log("data")
+        console.log(data)
+        data.find(elem => {
+            if (elem.id == idValue) {
+                console.log(elem.id+" "+elem.done);
+                console.log("element trouver : " +elem.id+" "+elem.done);
+                changeDone(urlItem, elem.id)
+            }else{
+                console.log("aucun element data touver");
+            }
+        })
+    })
 }
 
 
