@@ -1,15 +1,31 @@
 
 import { listToDo , addToDo, verifList } from "./modules/listToDo/crud.js";
-import { urlDataAllListToDo , urlDataAddListToDoItems , urlDataListToDoItems } from "./modules/serviceUrl.js";
+import { urlDataAllListToDo , urlDataAddListToDoItems , urlDataListToDoUpdateDone } from "./modules/serviceUrl.js";
 
 
 listToDo(urlDataAllListToDo);
+
 const d = new Date();
 const btn = document.getElementById("btn");
+const dateActuelle = d.toLocaleDateString('fr-CA');
+
+const dataJson = {
+    done: "true",
+    date: dateActuelle,
+}
+
+if (localStorage.getItem("idValue")) {
+    verifList(urlDataAllListToDo, urlDataListToDoUpdateDone, localStorage.getItem("idValue"), dataJson);
+    localStorage.clear();
+    
+    setTimeout(() => {
+        document.location.reload();
+    }, 180);
+}else{
+    console.log("rien dans le stock");
+}
 
 btn.addEventListener("click", () => {
-
-    const dateActuelle = d.toLocaleDateString('fr-CA');
     
     let title = document.forms["postAddToDo"]["title"].value;
     let date = dateActuelle;
@@ -44,10 +60,4 @@ btn.addEventListener("click", () => {
 
 
 
-if (localStorage.getItem("idValue")) {
-    verifList(urlDataAllListToDo, urlDataListToDoItems, localStorage.getItem("idValue"));
-    localStorage.clear();
-    console.log(localStorage.getItem("idValue"))
-}else{
-    console.log("rien dans le stock");
-}
+

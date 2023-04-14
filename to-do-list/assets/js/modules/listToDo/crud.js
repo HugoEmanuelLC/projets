@@ -1,4 +1,7 @@
 
+
+let tampom = "";
+
 export function text(){
     console.log("text test");
 }
@@ -13,7 +16,8 @@ export async function listToDo(url){ //affiche tous les element de la list
     });
     const jsonData = await listToDo.json();
     await jsonData.forEach(elem => {
-        if(elem.done === "false" || elem.done == ""){
+        if(elem.done === "false"){
+            tampom = "true";
             item += "<div class='listDoneFalse'>";
             item += "<div>";
             item +=     "<h4>"+elem.title+"</h4>";
@@ -33,26 +37,30 @@ export async function listToDo(url){ //affiche tous les element de la list
             item += "</div>";
             item += "</div>";
             
-            afficherList.html(item);
+            return afficherList.html(item);
         }else{
             console.log("ELSE "+elem.title)
+            if (tampom == "") {
+                return afficherList.html("");
+            }
         }
     });
 }
 
 
-async function changeDone(urlItem, idValue){
-    const listToDo = await fetch(urlItem+idValue, {
-        method: "PUT", 
+async function changeDone(urlItemDone, idValue, dataJson){
+    const listToDo = await fetch(urlItemDone+idValue, {
+        method: "POST", 
         mode: "cors", 
         cache: "no-cache", 
+        body: JSON.stringify(dataJson),
     })
     .then((res) => res.json())
-    .then((data))
+    console.log("tampom1 ->" + tampom)
 }
 
 
-export async function verifList(urlList, urlItem, idValue){
+export async function verifList(urlList, urlItem, idValue, dataJson){
     const listToDo = await fetch(urlList, {
         method: "GET", 
         mode: "cors", 
@@ -60,16 +68,13 @@ export async function verifList(urlList, urlItem, idValue){
     })
     .then((res) => res.json())
     .then((data) => {
-        console.log("data")
-        console.log(data)
         data.find(elem => {
             if (elem.id == idValue) {
-                console.log(elem.id+" "+elem.done);
-                console.log("element trouver : " +elem.id+" "+elem.done);
-                changeDone(urlItem, elem.id)
+                changeDone(urlItem, elem.id, dataJson);
             }else{
                 console.log("aucun element data touver");
             }
+            console.log("tampom2 ->" + tampom)
         })
     })
 }
@@ -86,3 +91,5 @@ export function addToDo(urlDatas, dataJson){ //nouveau element dans la list
     .then((res) => res.json())
     .then((data) => console.log(data))
 }
+
+console.log("tampom ->" + tampom)
